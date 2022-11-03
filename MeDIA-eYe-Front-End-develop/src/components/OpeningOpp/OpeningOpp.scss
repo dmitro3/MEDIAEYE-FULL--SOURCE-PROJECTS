@@ -1,0 +1,145 @@
+.mediaeye {
+  &-layout {
+    &-container {
+      &.mid_cont {
+        width: 55vw;
+      }
+      &-heading {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3vw;
+        line-height: 119%;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-left: 4.125vw;
+      }
+      &-box {
+        &-gateway {
+          display: flex;
+          gap: 1.5625vw;
+          span {
+            margin-top: 0.7vw;
+            svg , img {
+              width: 2.5625vw;
+            }
+          }
+          .plus_svg {
+            margin: 0;
+            
+          }
+          &-meta-detail {
+            &-head {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 3vw;
+              line-height: 119%;
+              text-transform: uppercase;
+              color: #c150fd;
+            }
+            &-head1 {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 3vw;
+              line-height: 119%;
+              text-transform: uppercase;
+              color: #facb26;
+            }
+            &-head2 {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 2.9vw;
+              line-height: 119%;
+              text-transform: uppercase;
+              color: #09b2e8;
+              margin-bottom: 20px;
+              
+            }
+            &-head-one {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 2vw;
+              line-height: 119%;
+              text-transform: uppercase;
+              color: #27f2ff;
+            }
+            .social-link-box {
+              margin: 0 -15vw;
+              margin-top: 2.5vw;
+              @media (max-width: 1536px) {
+                margin: 0 -20vw;
+              }
+              .mediaeye {
+                &-marketing {
+                  &-campaigns {
+                    &-box {
+                      &-row {
+                        &-items {
+                          display: flex;
+                          flex-wrap: wrap;
+                          align-items: center;
+                          &-img {
+                            display: block;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &-meta-list-box {
+            margin: 0.5vw 0 2.625vw 0 !important;
+            list-style: disc !important;
+            p {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1vw;
+              line-height: 135.5%;
+              color: #ffffff;
+            }
+          }
+          &-meta-list-box1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            list-style: disc !important;
+            margin: 1.5vw 0 !important;
+          }
+          &-meta-list {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1vw;
+            line-height: 135.5%;
+            color: #ffffff;
+          }
+        }
+        .gatwboxway {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}
+.OpeningOpp {
+  position: relative;
+  .splanet5 {
+    position: absolute;
+    top: -18%;
+    right: 0%;
+    mix-blend-mode: lighten;
+    height: 40.66875vw;
+  }
+  .splanet4 {
+    position: absolute;
+    top: 40%;
+    right: -4.5%;
+    height: 17.695625vw;
+  }
+  .splanet3 {
+    position: absolute;
+    top: 35%;
+    left: 0%;
+    height: 38.903125vw;
+  }
+}

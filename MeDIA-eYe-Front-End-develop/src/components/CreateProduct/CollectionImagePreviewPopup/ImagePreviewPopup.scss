@@ -1,0 +1,45 @@
+@import '../../../assets/css/variables.scss';
+
+.image-preview-popup {
+    .mediaeye-popup-content {
+        width: 80%;
+    }
+
+    &-header {
+        @include fontStyle(24px, 24px, 600);
+        margin: 30px 0;
+    }
+
+    &-content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 40px;
+
+        &-col {
+            width: 20%;
+            height: 200px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+        }
+
+    }
+
+    &-bottom_row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 10px;
+        background: rgba(36, 34, 66, 0.8);
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+        margin: 20px -50px -50px;
+    }
+
+}

@@ -1,0 +1,105 @@
+@import '../../../assets/css/variables.scss';
+
+.mediaeye-topsellers {
+    &-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-top: 35px;
+
+        .mediaeye-topsellers-card {
+            width: 50%;
+            margin-bottom: 15px;
+
+
+            @media(max-width: 991.98px) {
+                width: 100%;
+            }
+
+        }
+    }
+
+    &-card {
+        position: relative;
+        padding: 0 15px;
+
+        &-inner {
+            background: transparent;
+            position: relative;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            @include vendor-prefix(border-radius, 10px);
+            @include vendor-prefix(transition, all 0.3s);
+
+            &-srno {
+                width: 20px;
+                text-align: center;
+            }
+
+            &-imgbox {
+                position: relative;
+                width: 40px;
+                height: 40px;
+                overflow: hidden;
+                @include vendor-prefix(border-radius, 50px);
+                background: $default-color;
+
+                img {
+                    min-height: 100%;
+                    width: 100%;
+                    align-self: center;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+
+                }
+            }
+
+            &-content {
+                @include vendor-prefix(border-radius, 10px);
+                @include vendor-prefix(transition, all 0.3s);
+                padding-left: 10px;
+                position: relative;
+                min-height: 21px;
+                overflow: hidden;
+                flex: 1;
+                text-align: left;
+                display: flex;
+
+                &-title {
+                    font-weight: 500;
+                    font-size: 14px;
+                    // color: #928BB0;
+                    color: #b5aed0;
+                    line-height: 21px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 25%;
+                    text-align: left;
+                }
+
+                &-price {
+                    width: 25%;
+                    text-align: start;
+                }
+
+                &-usd {
+                    width: 25%;
+                    text-align: start;
+                }
+
+                &-amount {
+                    width: 25%;
+                    text-align: start;
+                }
+            }
+
+            &:hover {
+                background: #24224280;
+            }
+        }
+    }
+}

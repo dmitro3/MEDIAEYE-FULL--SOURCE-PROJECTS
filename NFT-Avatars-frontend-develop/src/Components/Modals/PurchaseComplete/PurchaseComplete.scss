@@ -1,0 +1,111 @@
+@import "../../../assets/css/variables.scss";
+.purchasecomplete-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(167, 166, 166, 0.6117647059);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  z-index: 9999;
+  overflow-y: scroll;
+  align-items: center;
+}
+.disable {
+  display: none;
+}
+.purchasecomplete-main {
+  &-inner {
+    position: relative;
+    background: $default-color;
+    max-width: 100%;
+    padding: 50px 50px;
+    width: 500px;
+    height: 700px;
+    border-radius: 14px;
+    margin: 0 auto;
+    @media (max-width: 425px) {
+      width: 400px;
+      height: auto;
+      padding: 35px 30px;
+    }
+    @media (max-width: 375px) {
+      width: 350px;
+      height: auto;
+      padding: 32px 28px;
+    }
+    .purchasecomplete-close {
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      top: 3%;
+      right: 3%;
+      @media (max-width: 425px) {
+        top: 1%;
+      right: 3%;
+      }
+      svg {
+        width: 12px;
+        height: 12px;
+        :hover {
+          color: green;
+        }
+        path {
+          stroke: $white-color;
+        }
+      }
+    }
+    &-heading {
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 50px;
+      font-family: $Poppins-font;
+      @media (max-width: 425px) {
+        font-size: 18px;
+        margin-bottom: 35px;
+      }
+    }
+    &-image {
+      margin-bottom: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+      .bid-img {
+        margin: 0 auto;
+        width: 370px;
+        height: 382.6px;
+        border-radius: 10px;
+        @media (max-width: 425px) {
+          width: auto;
+          height: auto;
+        }
+      }
+      @media (max-width: 425px) {
+        padding: 0px 12px;
+        
+      }
+    }
+  }
+  &-details {
+    margin-bottom: 80px;
+    .purchasecomplete-value {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 30px;
+      font-family: $Poppins-font;
+      text-align: center;
+      @media(max-width:425px){
+        font-size: 12px;
+      }
+      @media(max-width:375px){
+        font-size: 10px;
+      }
+    }
+    span {
+      color: gray;
+    }
+  }
+}

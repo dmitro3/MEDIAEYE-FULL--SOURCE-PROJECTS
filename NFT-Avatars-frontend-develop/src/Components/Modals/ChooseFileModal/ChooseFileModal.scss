@@ -1,0 +1,113 @@
+@import "../../../assets/css/variables.scss";
+
+.choose-file-modal {
+  position: absolute;
+  z-index: 99;
+  top: 120px;
+  width: 100%;
+  font-family: $Poppins-font;
+  &-close {
+    background: transparent;
+    padding: 0;
+    line-height: normal;
+    border: none;
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    cursor: pointer;
+    path {
+      stroke: $white-color;
+      transition: 0.3s;
+    }
+    &:hover {
+      path {
+        stroke: $pink-color;
+        transition: 0.3s;
+      }
+    }
+  }
+  &-ct {
+    background: linear-gradient(126.6deg, #430a5f 28.69%, #1a0b17 100%);
+    border-radius: 10px;
+    padding: 33px 15px 26px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    min-height: 258px;
+    &-heading {
+      font-size: 16px;
+      font-weight: 400;
+      color: $white-color;
+      text-transform: uppercase;
+      margin-bottom: 35px;
+    }
+    &-max-file {
+      margin-bottom: 20px;
+    }
+    &-text {
+      width: 370px;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    &-max-file,
+    &-text {
+      font-size: 14px;
+      line-height: 21px;
+      color: #b5b5b5;
+      display: block;
+    }
+    &-btn {
+      margin-top: 26px;
+      &-label {
+        background: #462f53;
+        backdrop-filter: blur(140px);
+        border-radius: 5px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 4px 16px;
+        cursor: pointer;
+        color: $white-color;
+        transition: 0.3s;
+        // margin-bottom: 26px;
+        display: inline-block;
+        &:hover {
+          background: #5f3a75;
+          transition: 0.3s;
+        }
+      }
+    }
+    &-file-input {
+      display: none;
+    }
+    .mediaeyeAvatar-Circleloader {
+      width: auto;
+      height: auto;
+      margin: auto;
+    }
+    &-file-status {
+      color: $white-color;
+      font-size: 16px;
+      text-align: center;
+      display: block;
+      margin-top: 24px;
+      text-transform: capitalize;
+    }
+    &-mid-right {
+      path {
+        stroke-dasharray: 18;
+        stroke-dashoffset: 18;
+        animation: draw 1s forwards 1s infinite;
+      }
+      @keyframes draw {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    }
+  }
+}

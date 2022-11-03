@@ -1,0 +1,64 @@
+@import '../../../assets/css/variables.scss';
+
+.box-4 {
+          display: flex;
+          align-items: center;
+          height: 100%;
+}
+
+.loader-4 {
+          position: relative;
+          height: 32px;
+          width: 32px;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-content: center;
+          align-items: center;
+
+          .dbl-spin-1,
+          .dbl-spin-2 {
+                    position: absolute;
+                    box-sizing: border-box;
+                    display: block;
+                    margin: auto;
+                    border: 3px solid transparent;
+                    border-radius: 50%;
+          }
+
+          .dbl-spin-1 {
+                    height: 52px;
+                    width: 52px;
+                    border-top: 3px solid #34ebfe;
+                    border-left: 3px solid #34ebfe;
+                    animation: loader-4-dblspin 1.8s linear infinite;
+          }
+
+          .dbl-spin-2 {
+                    height: 52px;
+                    width: 52px;
+                    border-bottom: 3px solid #9904de;
+                    border-left: 3px solid #9904de;
+                    animation: loader-4-dblspin2 1.2s linear infinite;
+          }
+}
+
+@keyframes loader-4-dblspin {
+          0% {
+                    transform: rotate(0deg);
+          }
+
+          100% {
+                    transform: rotate(-720deg);
+          }
+}
+
+@keyframes loader-4-dblspin2 {
+          0% {
+                    transform: rotate(0deg);
+          }
+
+          100% {
+                    transform: rotate(360deg);
+          }
+}

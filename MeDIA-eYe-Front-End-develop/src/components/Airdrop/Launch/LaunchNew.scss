@@ -1,0 +1,601 @@
+@import '../../../assets/css/variables.scss';
+
+.new-launch-airdrop-page {
+    &-inner {
+        &-content {
+            &-row {
+                background: $block-section-color;
+                padding: 30px;
+                margin-bottom: 30px;
+                border-radius: 12px;
+
+                &-svaebutton {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                }
+                &-metadata {
+                    .airdropname {
+                        width: 400px;
+                    }
+                }
+
+                &-social {
+                    width: 60%;
+                }
+
+                &-task {
+                    background: none;
+                }
+                &-mintmetadata {
+                    width: 100%;
+                    background: $block-section-color;
+                    padding: 20px;
+                    @include vendor-prefix(border-radius, 12px);
+                    &-title {
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+                    &-inner {
+                        .collection-name {
+                            width: 30%;
+                        }
+                    }
+                }
+                &-appearance {
+                    min-width: 100%;
+                    background: $block-section-color;
+                    padding: 30px;
+                    @include vendor-prefix(border-radius, 12px);
+                    &-content {
+                        width: 100%;
+                        min-height: 170px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            aspect-ratio: 1 / 1;
+                            object-fit: cover;
+                        }
+                        &-logo {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            overflow: hidden;
+                            width: 70px;
+                            height: 70px;
+                            cursor: pointer;
+                            position: relative;
+                            &-inner {
+                                width: 100%;
+                                height: 100%;
+                                @include vendor-prefix(border-radius, 50px);
+                                overflow: hidden;
+                                background-color: rgba(255, 255, 255, 0.05);
+                                transition: background-color 0.15s ease-in-out 0.05s;
+
+                                input {
+                                    display: none;
+                                }
+                            }
+                            &-action {
+                                bottom: 5px;
+                                right: 0;
+                                top: auto;
+                                position: absolute;
+                                text-align: center;
+                                svg {
+                                    width: 15px;
+                                    height: auto;
+                                }
+                            }
+                        }
+                        &-display {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            overflow: hidden;
+                            width: 100%;
+                            height: 85px;
+                            max-width: 140px;
+                            @include vendor-prefix(border-radius, 5px);
+                            overflow: hidden;
+                            cursor: pointer;
+                            position: relative;
+                            &-inner {
+                                width: 100%;
+                                height: 100%;
+                                @include vendor-prefix(border-radius, 5px);
+                                overflow: hidden;
+                                background-color: rgba(255, 255, 255, 0.05);
+                                transition: background-color 0.15s ease-in-out 0.05s;
+                                input {
+                                    display: none;
+                                }
+                            }
+                            &-action {
+                                position: absolute;
+                                right: 5px;
+                                top: 5px;
+                                text-align: center;
+                                cursor: pointer;
+                                svg {
+                                    width: 15px;
+                                    height: auto;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                        &-banner {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            overflow: hidden;
+                            width: 100%;
+                            height: 120px;
+                            @include vendor-prefix(border-radius, 5px);
+                            overflow: hidden;
+                            cursor: pointer;
+                            position: relative;
+                            &-inner {
+                                width: 100%;
+                                height: 100%;
+                                @include vendor-prefix(border-radius, 5px);
+                                overflow: hidden;
+                                background-color: rgba(255, 255, 255, 0.05);
+                                transition: background-color 0.15s ease-in-out 0.05s;
+                                input {
+                                    display: none;
+                                }
+                            }
+                            &-action {
+                                position: absolute;
+                                right: 5px;
+                                top: 5px;
+                                text-align: center;
+                                cursor: pointer;
+                                svg {
+                                    width: 15px;
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+                    &-header {
+                        width: 100%;
+                        margin-bottom: 30px;
+                        &-heading {
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 103.5%;
+                        }
+                    }
+                    &-bottom {
+                        width: 100%;
+                        color: #a7a7a7;
+                        text-align: center;
+                    }
+                    &-body {
+                        display: flex;
+                        margin: 0 -15px;
+                        width: auto;
+                        &-colleft {
+                            width: 15%;
+                            padding: 0 15px;
+                        }
+                        &-colmiddle {
+                            width: 20%;
+                            padding: 0 15px;
+                        }
+                        &-colright {
+                            width: 65%;
+                            padding: 0 15px;
+                        }
+                    }
+                }
+                &-uploader {
+                    background: $block-section-color;
+                    padding: 20px;
+                    @include vendor-prefix(border-radius, 12px);
+                    &-section {
+                        .mediaeye-selectsearch__value {
+                            width: 30%;
+                        }
+                        &-heading {
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 103.5%;
+                        }
+                    }
+                    &-csvsection {
+                        width: 30%;
+                        &-bottom {
+                            margin-top: 30px;
+                            &-heading {
+                                font-size: 20px;
+                                line-height: 30px;
+                                font-weight: 500;
+                            }
+                            &-upload {
+                                margin-top: 10px;
+                                align-items: center;
+                                display: flex;
+                                width: 100%;
+                                input {
+                                    width: 0;
+                                    height: 0;
+                                }
+                                svg {
+                                    margin-top: 4px;
+                                    margin-right: 10px;
+                                }
+                                div {
+                                    fill: #ffffff;
+                                    margin-top: 5px;
+                                    font-size: 12px;
+                                    line-height: 18px;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+
+                    &-propertyholder {
+                        &-uploadItem {
+                            display: flex;
+                            grid-gap: 25px;
+                            grid-gap: 25px;
+                            gap: 25px;
+                            margin-top: 25px;
+                            width: 960px;
+                            position: relative;
+                            &-right {
+                                width: 100%;
+                                &-top {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 40px;
+                                }
+                            }
+                        }
+                        &-heading {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+
+                            span {
+                                font-weight: 400;
+                                font-size: 18px;
+                                line-height: 22px;
+                            }
+                        }
+                    }
+                }
+                &-subscribers {
+                    background: none;
+                    padding: 0;
+                }
+
+                &-appearance {
+                    &-image {
+                        display: flex;
+                        gap: 50px;
+
+                        .user-logo {
+                            width: 20%;
+                        }
+
+                        .user-banner {
+                            width: 70%;
+                        }
+                    }
+                }
+
+                &-tokentype {
+                    display: flex;
+                    gap: 20px;
+                    flex-wrap: wrap;
+
+                    &-bounties {
+                        // width: 50%;
+                        width: auto;
+                        min-width: 50%;
+
+                        &.unlock-wrap {
+                            width: 100%;
+                        }
+
+                        &.free-mint-wrap {
+                            width: 50%;
+                        }
+
+                        &-inner {
+                            .unlock-type {
+                                width: 52%;
+                            }
+                        }
+                    }
+
+                    &-whitelisting {
+                        // width: 50%;
+                        width: 48%;
+                    }
+                }
+
+                &-policy {
+                    display: flex;
+                    gap: 20px;
+
+                    &-privacy {
+                        width: 50%;
+
+                        // background-color: #141233;
+                        background: $block-section-color;
+                        border-radius: 12px !important;
+
+                        .launch-airdrop-page-inner-terms-box {
+                            margin-top: 0;
+                            width: 100%;
+                            background: $block-section-color;
+                            padding: 40px 40px 0;
+
+                            box-shadow: none;
+
+                            &.mediaeyeFeatureNft::after {
+                                content: none;
+                            }
+                        }
+                    }
+
+                    &-feature {
+                        width: 50%;
+                    }
+
+                    &-service {
+                        width: 50%;
+
+                        &-eyeswap {
+                            background: #242242;
+                            border-radius: 12px !important;
+                            padding: 40px;
+                            margin-bottom: 20px;
+
+                            &-header {
+                                display: flex;
+                                align-items: center;
+                                gap: 12px;
+
+                                svg {
+                                    width: 38px;
+                                    height: 38px;
+                                }
+
+                                span {
+                                    font-size: 30px;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            &-body {
+                                .eyeswap-open {
+                                    padding: 0;
+
+                                    &-inner {
+                                        background: none;
+                                        padding: 0;
+                                        margin: 30px 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        &-payment {
+                            background: $block-section-color;
+                            border-radius: 12px !important;
+                            padding: 40px;
+                        }
+                    }
+                }
+
+                &-uploadBox {
+                    &-content {
+                        width: 100%;
+                        min-height: 170px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        &-inputfile {
+                            display: none;
+                        }
+
+                        &-action {
+                            position: absolute;
+                            right: 5px;
+                            top: 5px;
+                            text-align: center;
+
+                            svg {
+                                width: 15px;
+                                height: auto;
+                            }
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            aspect-ratio: 1 / 1;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &-logo {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        width: 70px;
+                        height: 70px;
+                        cursor: pointer;
+                        position: relative;
+
+                        &-inner {
+                            width: 100%;
+                            height: 100%;
+                            @include vendor-prefix(border-radius, 50px);
+                            overflow: hidden;
+                            background-color: rgba(255, 255, 255, 0.05);
+                            @include vendor-prefix(transition, background-color 0.15s ease-in-out 0.05s);
+
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.15);
+                            }
+                        }
+
+                        &-action {
+                            bottom: 5px;
+                            right: 0;
+                            top: auto;
+                        }
+                    }
+
+                    &-display {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 85px;
+                        max-width: 140px;
+                        @include vendor-prefix(border-radius, 5px);
+                        overflow: hidden;
+                        cursor: pointer;
+                        position: relative;
+
+                        &-inner {
+                            width: 100%;
+                            height: 100%;
+                            @include vendor-prefix(border-radius, 5px);
+                            overflow: hidden;
+                            background-color: rgba(255, 255, 255, 0.05);
+                            @include vendor-prefix(transition, background-color 0.15s ease-in-out 0.05s);
+
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.15);
+                            }
+                        }
+                    }
+
+                    &-banner {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 120px;
+                        @include vendor-prefix(border-radius, 5px);
+                        overflow: hidden;
+                        cursor: pointer;
+                        position: relative;
+
+                        &-inner {
+                            width: 100%;
+                            height: 100%;
+                            @include vendor-prefix(border-radius, 5px);
+                            overflow: hidden;
+                            background-color: rgba(255, 255, 255, 0.05);
+                            @include vendor-prefix(transition, background-color 0.15s ease-in-out 0.05s);
+
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.15);
+                            }
+                        }
+                    }
+
+                    &-bottom {
+                        width: 100%;
+                        color: #a7a7a7;
+                        text-align: center;
+                    }
+                }
+
+                &-card {
+                    &-header {
+                        width: 100%;
+                        margin-bottom: 30px;
+
+                        &-heading {
+                            color: #fff;
+                            font-size: 20px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-btn {
+            margin-top: 80px;
+            text-align: center;
+        }
+    }
+
+    &-whitelisting {
+        // width: 50%;
+        width: 48%;
+    }
+
+    &-policy {
+        display: flex;
+        gap: 20px;
+
+        &-privacy {
+            width: 50%;
+            // background-color: #141233;
+            border-radius: 12px;
+            background: #24223f;
+
+            .launch-airdrop-page-inner-terms-box {
+                margin-top: 0;
+                width: 100%;
+                background: $block-section-color;
+                box-shadow: none;
+                padding: 40px 40px 0;
+
+                &.mediaeyeFeatureNft::after {
+                    content: none;
+                }
+            }
+        }
+
+        &-mint {
+            width: fit-content;
+
+            &-upload {
+                width: fit-content;
+                min-width: 500px;
+            }
+
+            &-generative {
+                display: flex;
+                gap: 20px;
+
+                &-upload {
+                    width: 45%;
+                    min-height: 500px;
+                }
+
+                &-properties {
+                    width: 54%;
+
+                    .mint-addons-row-col {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

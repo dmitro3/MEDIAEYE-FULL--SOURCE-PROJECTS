@@ -1,0 +1,24 @@
+@import '../../../assets/css/variables.scss';
+.generationerror-popup{
+    .mediaeye-popup-content-inner{
+        width: 510px;
+    }
+    &-inner{
+        &-title{
+            @include fontStyle(20px, 30px, 400);
+        }
+        &-subtitle{
+            @include fontStyle(16px, 24px, 400);
+        }
+        &-contentbox{
+            background: #211F3D;
+            padding: 30px 40px;
+            margin: 0 -24px;
+            &-inner{
+                @include fontStyle(16px, 24px, 400);
+                display: grid;
+                gap: 20px;
+            }
+        }
+    }
+}

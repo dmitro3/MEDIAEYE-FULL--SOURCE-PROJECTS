@@ -1,0 +1,191 @@
+@import '../../../assets/css/variables.scss';
+.mint-addons-row {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px;
+  &-col{
+    width: 50%;
+    padding: 15px  15px;
+  }
+  &-box { 
+    width: 100%;      
+      &-header {
+        
+        @include vendor-prefix(border-radius,5px);
+        padding: 0px 20px;
+        width: 100%;
+        display: flex;
+        align-items: center; 
+        gap: 10px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 50px;
+        &-icon{
+          margin-left: auto;
+          line-height: 20px;
+        } 
+      }
+      &-line{
+        font-size: 14px;
+        color: #A7A7A7;
+        padding: 20px 50px;
+      }
+      &-content{
+        width: 100%;
+        &-row{
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 20px;
+          &-col{
+            flex: 1;
+            &-input{
+              background: transparent;
+              border: 1px solid rgb(0 180 115 / 50%);
+              @include vendor-prefix(border-radius,5px);
+              font-size: 16px;
+              line-height: 24px;
+              color: #ebebeb;
+              padding: 0px 10px;
+              width: 100%;
+              outline: none;
+              line-height: 38px;
+              &[type="number"]{
+                @include vendor-prefix(appearance, none);
+                &::-webkit-inner-spin-button,
+                &::-webkit-outer-spin-button {
+                  @include vendor-prefix(appearance, none);
+                }
+              }
+             
+            }
+            &-num{
+              width: 20px;
+              flex: none;
+            }
+            &-value{
+              flex: none;
+              max-width: 100px;
+            }
+            &-labelvalue{
+              color: #fff;
+              flex: none;
+            }
+            &-labelof{
+              flex: none;
+              color: #646464;
+            }
+            &-action{
+              width: 30px;
+              text-align: right;
+              flex: none;
+              &-btn{
+                cursor: pointer;
+                line-height: 35px;
+                width: 30px;
+                text-align: center;
+                background: transparent;
+                font-size: 18px;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+      &-bottom{
+        padding-left: 30px;
+        margin-bottom: 30px;
+        &-btn{
+          width: 40px;
+          line-height: 38px;
+          color: #fff;
+          text-align: center;
+          font-size: 20px;
+          font-weight: 600;
+          border: 1px solid transparent;
+          @include vendor-prefix(border-radius,5px);
+          cursor: pointer;
+        }
+      }
+
+      &[type='properties'] & {
+        &-header{
+          background: linear-gradient(90deg, #59b3ff 0%, #7691ff 100%);
+        }
+        &-bottom{
+          &-btn{
+            border-color:  rgba(100, 167, 255, 0.5);
+            &:hover{
+              border-color:  rgb(100, 167, 255);
+            }
+          }
+        }
+        &-content{ 
+          &-row{ 
+            &-col{
+              &-input{
+                border-color: rgba(100, 167, 255, 0.5);
+                &:focus{
+                  border-color: rgb(100, 167, 255);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &[type='levels'] & {
+        &-header{
+          background: rgba(205, 0, 198, 0.5); 
+        }
+        &-bottom{
+          &-btn{
+            border-color: rgba(113, 9, 127, 0.5);
+            &:hover{
+              border-color: rgb(113, 9, 127);
+            }
+          }
+        }
+        &-content{ 
+          &-row{ 
+            &-col{
+              &-input{
+                border-color: rgba(113, 9, 127, 0.5);
+                &:focus{
+                  border-color: rgb(113, 9, 127);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &[type='stats'] & {
+        &-header{
+          background: #00B473;
+        }
+        &-bottom{
+          &-btn{
+            border-color: rgba(0, 180, 115, 0.5);
+            &:hover{
+              border-color: rgb(0, 180, 115);
+            }
+          }
+        }
+        &-content{ 
+          &-row{ 
+            &-col{
+              &-input{
+                border-color: rgba(0, 180, 115, 0.5);
+                &:focus{
+                  border-color: rgb(0, 180, 115);
+                }
+              }
+            }
+          }
+        }
+      }
+      
+    } 
+}

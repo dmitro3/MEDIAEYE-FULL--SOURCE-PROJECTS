@@ -1,0 +1,98 @@
+@import '../../../assets/css/variables.scss';
+
+@mixin fontStyle($fontSize, $lineHeight, $fontWeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+}
+
+.feature-popup {
+  .mediaeye-popup-content-inner{
+    min-height: 520px;
+    height: fit-content;
+  }
+  .extend-popup-content-product {
+    &[type='Spotlight My NFT'] {
+      min-width: 300px;
+      margin-left: -15px;
+    }
+
+    &[type='Spotlight My Collection'] {
+      min-width: 350px;
+      margin-left: -15px;
+    }
+  }
+
+  .mediaeye-popup-content {
+    width: 1024px;
+
+    &-inner {
+      display: flex;
+      gap: 24px;
+      padding: 34px;
+      padding-bottom: 0px;
+      width: 1042;
+      margin-left: auto;
+      margin-right: auto;
+
+      &-wrapper {
+        display: grid;
+        width: 100%;
+
+        .mediaeyeFeatureNft-switch {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  .mediaeye-datepicker-input {
+    line-height: 1.15;
+    padding: 0px;
+    border: none;
+  }
+
+  &-content {
+    .close-icon {
+      text-align: right;
+    }
+
+    &-product {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &-header {
+      @include fontStyle(24px, 103.5%, 600);
+    }
+
+    .mediaeyeFeatureNft-token {
+      background: none;
+    }
+
+    .mediaeye-nft-card,
+    .mediaeye-collection-card-inner {
+      &::after {
+        content: '';
+        height: 35px;
+        width: 100%;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        display: block;
+        margin-bottom: -62px;
+        background-image: url('../../../assets/img/bg/collection-featured.png');
+      }
+    }
+  }
+}
+
+@media (max-width: 558.98px) {
+  .feature-popup {
+    &-content {
+      &-title {
+        @include fontStyle(30px, 103.5%, 600);
+      }
+    }
+  }
+}

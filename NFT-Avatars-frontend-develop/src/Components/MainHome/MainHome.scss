@@ -1,0 +1,197 @@
+@import "../../assets/css/variables.scss";
+
+.mediaeyeAvatar {
+  &-home {
+    position: relative;
+    padding-top: 50px;
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+      padding: 50px 30px 0 30px;
+    }
+    &-mainNoise {
+      position: absolute;
+      top: -10%;
+      right: 0;
+      background: url("../../assets/images/Home/backNoise.png");
+      background-position: right;
+      background-size: contain;
+      width: 100vw;
+      height: 750vw;
+      z-index: -1;
+      @media (max-width: 767.98px) {
+        display: none;
+      }
+    }
+    &-mainback {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("../../assets/images/Home/backgard1.png") no-repeat;
+      width: 59.875vw;
+      height: 79.0625vw;
+      z-index: -1;
+      filter: blur(110px);
+      background-position-x: right;
+      background-position-y: top;
+      &.rotate {
+        transform: rotate(45deg);
+        background-position-x: left;
+        @media (max-width: 767.98px) {
+          top: 25%;
+          filter: blur(120px);
+          background-position-x: left;
+          transform: rotate(180deg);
+        }
+      }
+      @media (max-width: 767.98px) {
+        width: 100%;
+        height: 100%;
+        top: -10%;
+        left: 0%;
+        filter: none;
+        background-position: top;
+      }
+    }
+    &-mainbackg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url("../../assets/images/Home/backgard3.png") no-repeat;
+      background-position-y: top;
+      background-position-x: right;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      @media (min-width: 2048px) {
+        background-position-x: center;
+      }
+      @media (min-width: 768px) and (max-width: 1199.98px) {
+        right: -35px;
+      }
+      @media (max-width: 1199.98px) {
+        background-position-x: 175px;
+      }
+      &.left {
+        background-position-x: left;
+        left: -16%;
+        @media (max-width: 1199.98px) {
+          background-position-x: left;
+          left: -50%;
+          filter: blur(30px);
+        }
+      }
+      &.noShow {
+        @media (max-width: 767.98px) {
+          display: none;
+        }
+      }
+      &.bottomMT {
+        @media (max-width: 767.98px) {
+          background-position-x: center;
+          background-position-y: 180px;
+          z-index: -2;
+        }
+      }
+      &.topMT {
+        @media (max-width: 767.98px) {
+          background-position-x: -550px;
+          background-position-y: -148px;
+          z-index: -2;
+        }
+      }
+    }
+    &-mainbackr {
+      position: absolute;
+      top: -11%;
+      right: 0;
+      background: url("../../assets/images/Home/backgard2.png") no-repeat;
+      background-position: right;
+      background-size: contain;
+      width: 60%;
+      height: 125vw;
+      z-index: -1;
+      @media (max-width: 767.98px) {
+        display: none;
+      }
+    }
+    &-flexBox {
+      display: flex;
+      justify-content: space-between;
+      z-index: 9;
+      position: relative;
+      @media (max-width: 767.98px) {
+        flex-direction: column-reverse;
+      }
+      &-left {
+        z-index: 9;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 40px 0;
+        @media (max-width: 767.98px) {
+          flex-direction: unset;
+          align-items: center;
+          gap: 10px;
+        }
+        h1 {
+          font-family: $heading-font;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 96px;
+          line-height: 115px;
+          text-align: center;
+          text-transform: uppercase;
+          color: #ffffff;
+          margin-bottom: 20px;
+          @media (max-width: 767.98px) {
+            font-size: 48px;
+            line-height: 58px;
+            margin: 0;
+          }
+          @media (max-width: 399.98px) {
+            font-size: 38px;
+            line-height: 42px;
+            margin: 0;
+          }
+        }
+        h3 {
+          font-family: $heading-font;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 64px;
+          line-height: 77px;
+          display: flex;
+          align-items: center;
+          text-transform: uppercase;
+          color: #ffffff;
+          margin-bottom: 50px;
+          @media (max-width: 767.98px) {
+            font-size: 32px;
+            line-height: 38px;
+            margin: 0;
+          }
+          @media (max-width: 399.98px) {
+            font-size: 24px;
+            line-height: 28px;
+            margin: 0;
+          }
+        }
+        .pab {
+          @media (max-width: 767.98px) {
+            position: absolute;
+            top: 95%;
+          }
+        }
+      }
+      &-right {
+        width: 55%;
+        z-index: 9;
+        object-fit: contain;
+        @media (max-width: 767.98px) {
+          width: 95%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

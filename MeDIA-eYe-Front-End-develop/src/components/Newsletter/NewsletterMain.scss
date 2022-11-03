@@ -1,0 +1,53 @@
+.newsletter-page {
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+    &-left {
+        background: url('../../assets/img/login_left.png') no-repeat center;
+        background-size: cover;
+        width: 25.4%;
+    }
+    &-right{
+        padding: 40px;
+        &-content{
+            &-header{
+                &-signup{
+                    color: #6ec1e4;
+                }
+                &-label{
+                    font-size: 18px;
+                    margin-bottom: 30px;
+                }
+            }
+            &-inner{
+                width: 70%;
+                &-name{
+                    display: flex;
+                    gap: 20px;
+                }
+                &-captcha{
+                    margin-bottom: 10px;
+                }
+                &-checkbox{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    &-size{
+                        width: 4%;
+                        margin-bottom: 10px;
+                    }
+                }
+                .required-label{
+                    color: #ff0000;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .EmailNotValid{
+        border: 1px solid #ff5555;
+    }
+    .checkrequired{
+        color:#ff5555;
+    }
+}

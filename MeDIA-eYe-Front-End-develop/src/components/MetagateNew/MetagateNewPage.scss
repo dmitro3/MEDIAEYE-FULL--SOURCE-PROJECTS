@@ -1,0 +1,427 @@
+@import '../../assets/css/variables.scss';
+
+@mixin headerfontSize($less: 0px) {
+  font-size: calc(26px - #{$less});
+
+  @media (max-width: 1299.98px) {
+    font-size: calc(24px - #{$less});
+  }
+}
+.new-metagate {
+  .flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &.full {
+      width: 100%;
+    }
+  }
+  .flex-center-gap {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    svg,
+    img {
+      width: 30px;
+    }
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-userid {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      img {
+        width: 60px;
+        height: 60px;
+        @include vendor-prefix(border-radius, 50%);
+      }
+      span {
+        @include fontStyle(20px, 30px, 400);
+      }
+    }
+    &-metaeye {
+      align-items: flex-start !important;
+      gap: 56px;
+      &-parts {
+        display: grid;
+        gap: 6px;
+        img{
+          height: 21px;
+          margin-right: 15px;
+        }
+        span {
+          @include fontStyle(12px, 18px, 500);
+        }
+        button {
+          font-family: $button-font;
+          font-style: normal;
+          font-weight: 600;
+          @include headerfontSize(10px);
+          height: 25px;
+          line-height: 28px;
+          letter-spacing: 5px;
+          color: #ffffff;
+          background: linear-gradient(
+            90deg,
+            #2cc8ac 0%,
+            rgba(103, 63, 216, 0.812083) 55.73%,
+            rgba(255, 0, 214, 0.56) 100%
+          );
+          padding: 0 6px;
+          transition: 0.3s;
+          @include vendor-prefix(border-radius, 5px);
+
+          // min-width: 160px;
+          position: relative;
+          text-align: left;
+          display: block;
+          z-index: 1;
+        }
+      }
+      .btn{
+        min-width: 100px;
+      }
+    }
+  }
+  &-inner {
+    display: flex;
+    gap: 40px;
+    &-left {
+      width: 60%;
+      &-top {
+        display: flex;
+        gap: 40px;
+        &-block {
+          background: rgba(36, 34, 66, 0.7);
+          @include vendor-prefix(border-radius, 5px);
+          padding: 36px 60px;
+          width: 80%;
+          height: 400px;
+          &-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            span {
+              @include fontStyle(24px, 24px, 700);
+            }
+            svg {
+              position: absolute;
+              right: 0;
+              width: 48px;
+              height: 30px;
+            }
+          }
+          &-content {
+            margin-top: 37px;
+            display: grid;
+            gap: 20px;
+            &-item {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              height: 40px;
+              cursor: pointer;
+              background: rgba(255, 255, 255, 0.05);
+              padding: 8px 30px;
+              @include vendor-prefix(border-radius, 5px);
+              span {
+                @include fontStyle(16px, 24px, 500);
+              }
+              svg {
+                width: 32px;
+                height: 32px;
+              }
+              &-locked {
+                svg {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+              img {
+                width: 30px;
+                height: 30px;
+                @include vendor-prefix(border-radius, 5px);
+              }
+              &.active {
+                &:hover {
+                  background: $gaming-color;
+                }
+              }
+            }
+          }
+        }
+      }
+      &-charity {
+        width: 100%;
+        height: 410px;
+        background: rgba(36, 34, 66, 0.7);
+        @include vendor-prefix(border-radius, 5px);
+        margin-top: 40px;
+        &-inner {
+          background: url('../../assets/img/Rewards/charity.png') no-repeat
+            right;
+          @media (max-width: 1470px) {
+            background: none;
+          }
+          &-block {
+            padding: 38px 46px;
+            &-title {
+              display: flex;
+              align-items: center;
+              gap: 20px;
+              span {
+                @include fontStyle(24px, 25px, 700);
+              }
+            }
+            &-content {
+              width: 50%;
+              height: 200px;
+              overflow-y: auto;
+              overflow-x: hidden;
+              padding: 0px 10px;
+              margin-bottom: 40px;
+              @media (max-width: 1470px) {
+                width: 100%;
+              }
+              &-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: rgba(255, 255, 255, 0.05);
+                @include vendor-prefix(border-radius, 5px);
+                padding: 5px 8px;
+                &-left {
+                  display: flex;
+                  gap: 20px;
+                  align-items: center;
+                  height: 40px;
+                  img {
+                    width: 30px;
+                    @include vendor-prefix(border-radius, 5px);
+                  }
+                  span {
+                    @include fontStyle(16px, 24px, 500);
+                    color: #ffffff;
+                    overflow: hidden;
+                    max-width: 200px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                  }
+                }
+                &-right {
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  img {
+                    width: 30px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &-eyeq {
+        margin-top: 40px;
+        &-content {
+          width: 100%;
+          position: relative;
+          img {
+            height: 391px;
+          }
+          &-button {
+            position: absolute;
+            bottom: 35px;
+            left: 7%;
+            button {
+              padding: 10px 24px;
+              @include fontStyle(18px, 21px, 400);
+              border: 1px solid #bba968;
+              @include vendor-prefix(border-radius, 5px);
+              color: #bba968;
+            }
+          }
+        }
+      }
+    }
+    &-right {
+      width: 40%;
+      &-rewards {
+        &-content {
+          height: 400px;
+          background: #242242;
+          &-image {
+            height: fit-content;
+            background: #ffa41c;
+            padding-left: 50px;
+            @include vendor-prefix(border-top-left-radius, 5px);
+            @include vendor-prefix(border-top-right-radius, 5px);
+          }
+          &-bottom {
+            @include vendor-prefix(border-bottom-left-radius, 5px);
+            @include vendor-prefix(border-bottom-right-radius, 5px);
+            padding: 16px 36px;
+            &-title {
+              @include fontStyle(24px, 40px, 500);
+            }
+            &-values {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              &-data {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                grid-gap: 7px;
+                gap: 7px;
+                img {
+                  width: 30px;
+                  height: 30px;
+                }
+                span {
+                  @include fontStyle(16px, 24px, 500);
+                }
+              }
+            }
+          }
+        }
+      }
+      &-metabalance {
+        @include vendor-prefix(border-radius, 5px);
+        background: rgba(36, 34, 66, 0.7);
+        padding: 54px;
+        margin-top: 40px;
+        height: 410px;
+        &-title {
+          @include fontStyle(24px, 25px, 700);
+        }
+        &-content {
+          margin-top: 50px;
+          &-row {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            &-imgwrapper {
+              img {
+                width: 30px;
+              }
+            }
+            &-item {
+              cursor: pointer;
+              width: 100%;
+              background: rgba(255, 255, 255, 0.05);
+              @include vendor-prefix(border-radius, 5px);
+              padding: 5px 12px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+      &-eyeswap {
+        background: rgba(36, 34, 66, 0.7);
+        @include vendor-prefix(border-radius, 5px);
+        padding: 30px 60px;
+        margin-top: 40px;
+        height: 391px;
+        &-title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+              @include fontStyle(20px, 24px, 400);
+            }
+            svg{
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+        .mediaeye-layout-content {
+          padding: 0px;
+        }
+        .eyeswap-open-inner {
+          background: none;
+          margin: 0px;
+          &-header {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &-bottom {
+    background: #242242;
+    margin-top: 100px;
+    @include vendor-prefix(border-radius, 5px);
+    position: relative;
+    height: 13vw;
+    display: flex;
+    align-items: center;
+    &-app {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4vw;
+      &-img {
+        position: absolute;
+        right: 39%;
+        bottom: 0;
+        img {
+          max-width: 16vw;
+          width: 16vw;
+        }
+      }
+
+      &-eyewallet {
+        h2 {
+          font-size: 1.6vw;
+          font-weight: 500;
+        }
+
+        &-button {
+          display: flex;
+          align-items: center;
+          gap: 1.04vw;
+          margin-top: 0.93vw;
+
+          &-inner {
+            max-width: 5.83vw;
+          }
+        }
+      }
+
+      &-right {
+        max-width: 20.83vw;
+        display: flex;
+        gap: 0.52vw;
+        margin-right: 4vw;
+        svg {
+          width: 2.3vw;
+          height: 2.3vw;
+        }
+
+        span {
+          font-size: 1.04vw;
+          font-weight: 400;
+          opacity: 0.5;
+          line-height: 1.5vw;
+        }
+      }
+    }
+  }
+
+  
+}

@@ -1,0 +1,138 @@
+@import "../../../assets/css/variables.scss";
+.unlockable-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(167, 166, 166, 0.6117647059);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  z-index: 9999;
+  overflow-y: scroll;
+}
+.unlockmain-disable {
+  display: none;
+}
+.unlockable-main {
+  &-inner {
+    position: relative;
+    background-color: $default-color;
+    max-width: 100%;
+    padding: 50px 40px;
+    width: 500px;
+    border-radius: 14px;
+    margin: 0 auto;
+    background: #0d0c2c;
+    border-radius: 14px;
+    @media (max-width: 425px) {
+      width: 400px;
+      padding: 40px 30px;
+    }
+    @media (max-width: 375px) {
+      width: 350px;
+      padding: 35px 25px;
+    }
+    .unlockable-close {
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      top: 3%;
+      right: 3%;
+
+      svg {
+        width: 12px;
+        height: 12px;
+        path {
+          stroke: $white-color;
+        }
+      }
+    }
+    &-title {
+      font-size: 24px;
+      margin: 0;
+      text-align: center;
+      font-weight: 600;
+      font-family: $Poppins-font;
+      margin-bottom: 39px;
+      @media (max-width: 425px) {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+      @media (max-width: 375px) {
+        font-size: 16px;
+        margin-bottom: 28px;
+      }
+    }
+    .unlockable-value {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 5px;
+      width: 421px;
+      padding: 30px 41px;
+      font-weight: 400;
+      font-size: 16px;
+      margin-bottom: 30px;
+      @media (max-width: 425px) {
+        width: auto;
+        padding: 20px 31px;
+        margin-bottom: 28px;
+      }
+      @media (max-width: 375px) {
+        width: auto;
+        padding: 18px 28px;
+        margin-bottom: 26px;
+      }
+      &-title {
+        text-align: center;
+        margin-bottom: 12px;
+        font-weight: 400;
+        font-size: 16px;
+        @media (max-width: 425px) {
+          font-size: 12px;
+        }
+        @media (max-width: 375px) {
+          font-size: 10px;
+        }
+      }
+      &-content {
+        line-height: 17px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+        @media (max-width: 425px) {
+          font-size: 12px;
+        }
+        @media (max-width: 375px) {
+          font-size: 10px;
+        }
+        
+      }
+    }
+    .unlockable-closebtn {
+      display: block;
+      width: 120px;
+      background: #5648bb;
+      border: none;
+      border-radius: 20px;
+      text-align: center;
+      font-weight: 400;
+      font-size: 16px;
+      color: $white-color;
+      padding: 7px 38px;
+      margin: 0 auto;
+      @media (max-width: 425px) {
+        font-size: 12px;
+        width: 100px;
+        padding: 5px 30px;
+      }
+      @media (max-width: 375px) {
+        font-size: 10px;
+        width: 88px;
+        padding: 4px 28px;
+      }
+    }
+  }
+}

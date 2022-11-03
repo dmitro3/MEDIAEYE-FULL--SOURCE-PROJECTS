@@ -1,0 +1,342 @@
+@import '../../assets/css/variables.scss';
+
+@mixin adjustFontSize($less: 0px) {
+    font-size: calc(30px - #{$less});
+
+    @media(max-width: 1399.98px) {
+        font-size: calc(28px - #{$less});
+    }
+
+    @media(max-width: 1299.98px) {
+        font-size: calc(24px - #{$less});
+    }
+
+    @media(max-width: 399.98px) {
+        font-size: calc(22px - #{$less});
+    }
+}
+
+@mixin headerfontSize($less: 0px) {
+    font-size: calc(26px - #{$less});
+
+    @media (max-width: 1299.98px) {
+        font-size: calc(24px - #{$less});
+    }
+}
+
+.connect-wallet {
+    padding-bottom: 0 !important;
+
+    &-page {
+        z-index: 11112;
+        display: flex;
+        gap: 1.32vw;
+        width: 100%;
+        background: url('../../assets/img/new-connect-wallet-bg.jpg') no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+
+        &-left {
+            background-size: cover;
+            display: flex;
+            align-items: flex-end;
+
+            img {
+                width: 34.27vw;
+            }
+        }
+
+        &-right {
+            // width: 74.6%;
+            background-size: cover;
+            margin-top: 2.60vw;
+            display: flex;
+            flex-direction: column;
+            gap: 1.30vw;
+
+            &-top {
+                display: flex;
+                gap: 1.30vw;
+
+                &-login {
+                    background: #242242;
+                    border-radius: 0.62vw;
+                    padding: 4.16vw 3.48vw;
+                    width: 23.75vw;
+                    position: relative;
+
+                    &-header {
+                        margin-bottom: 3.22vw;
+
+                        h2 {
+                            font-size: 1.25vw;
+                            font-weight: 700;
+                        }
+                    }
+
+                    &-btn {
+                        &-inner {
+                            &-name {
+                                min-width: 16.25vw;
+                                height: 1.875vw;
+                                display: flex;
+                                align-items: center;
+                                gap: 1.625vw;
+                                font-weight: 500;
+                                padding: 0.3125vw 1.1875vw;
+                                margin-bottom: 1.625vw;
+                                font-size: 0.875vw;
+
+                                span {
+                                    svg {
+                                        width: 1.56vw;
+                                        height: 1.41vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &-terms {
+                        text-decoration-line: underline;
+                        color: #FFFFFF;
+                        opacity: 0.5;
+                        bottom: 4.1875vw;
+                        left: 5vw;
+                        font-size: 0.875vw;
+                        cursor: pointer;
+                        position: absolute;
+                        bottom: 4.16vw;
+                        left: 3.48vw;
+                    }
+                }
+
+                &-wallet {
+                    background: #242242;
+                    border-radius: 0.62vw;
+                    padding: 3.64vw 3.22vw;
+                    width: 23.75vw;
+
+                    &-network {
+                        &-header {
+                            margin-bottom: 2vw;
+
+                            h2 {
+                                font-size: 1.25vw;
+                                font-weight: 700;
+                            }
+                        }
+
+                        &-subheading {
+                            font-size: 1vw;
+                            color: #EBEBEB;
+                            margin-bottom: 1vw;
+                        }
+
+                        &-btn {
+                            display: flex;
+                            gap: 1.375vw;
+                            margin-bottom: 2.5625vw;
+
+                            .connect-wallet-page-switcher {
+                                width: 180px;
+                                height: 30px;
+                                background: #2a284a;
+                                border-radius: 5px;
+                                position: relative;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                cursor: pointer;
+
+                                // overflow: hidden;
+                                &>span {
+                                    display: flex;
+                                    width: 33%;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-weight: 500;
+                                    @include headerfontSize(12px);
+                                    text-transform: uppercase;
+                                    line-height: 1;
+                                    color: #fff;
+                                    position: relative;
+                                    background: transparent;
+                                    right: inherit;
+                                    top: inherit;
+                                    @include vendor-prefix(transition, 0.3s);
+
+                                    &.ETH {
+                                        &:not(.active):hover {
+                                            background: linear-gradient(89.67deg,
+                                                    #703eff 0.27%,
+                                                    rgba(155, 127, 236, 0.99) 99.71%);
+                                            @include vendor-prefix(background-clip, text);
+                                            @include vendor-prefix(text-fill-color, transparent);
+                                        }
+                                    }
+
+                                    &.BSC {
+                                        &:not(.active):hover {
+                                            background: linear-gradient(90deg, #d6ac17 0%, #f47f2a 100%);
+                                            @include vendor-prefix(background-clip, text);
+                                            @include vendor-prefix(text-fill-color, transparent);
+                                        }
+                                    }
+
+                                    &.FTM {
+                                        &:not(.active):hover {
+                                            background: linear-gradient(90deg, #1c97dd 0%, #114da8 100%);
+                                            @include vendor-prefix(background-clip, text);
+                                            @include vendor-prefix(text-fill-color, transparent);
+                                        }
+                                    }
+
+                                    &.active {
+                                        color: #fff;
+                                    }
+                                }
+
+                                .connect-wallet-page-circle {
+                                    position: absolute;
+                                    width: 35%;
+                                    background: linear-gradient(90deg, #960bdf 2.11%, #35eafe 100%);
+                                    @include vendor-prefix(border-radius, 5px);
+                                    height: 30px;
+                                    top: 50%;
+                                    left: -2px;
+                                    // @include vendor-prefix(border-radius, 20px);
+
+                                    transition: 0.2s;
+                                    transform: translateY(-50%);
+
+                                    &.center {
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                    }
+
+                                    &.right {
+                                        left: initial;
+                                        right: -2px;
+                                        transition: 0.2s;
+                                    }
+
+                                    &.ETH {
+                                        background: #703EFF;
+                                    }
+
+                                    &.BSC {
+                                        background: #DBAF00;
+                                    }
+
+                                    &.FTM {
+                                        background: #0058DB;
+                                    }
+                                }
+                            }
+                        }
+
+                        &-metamask {
+                            margin-bottom: 1.8125vw;
+
+                            &-btn {
+                                display: flex;
+                                align-items: center;
+                                gap: 0.625vw;
+                                min-width: 12.875vw;
+                                font-size: 0.875vw;
+                                height: 1.875vw;
+                                padding: 0.43vw;
+
+                                span {
+                                    img {
+                                        height: 1.56vw;
+                                        width: 1.56vw;
+                                    }
+                                }
+                            }
+                        }
+
+                        &-suggest {
+                            color: #EBEBEB;
+                            opacity: 0.5;
+                            font-size: 0.75vw;
+                            max-width: 80%;
+                            margin-bottom: 1.5625vw;
+                        }
+
+                        &-wallet {
+                            &-btn {
+                                display: flex;
+                                align-items: center;
+                                gap: 0.625vw;
+                                min-width: 12.875vw;
+                                font-size: 0.875vw;
+                                height: 1.875vw;
+                                padding: 0.43vw;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-bottom {
+                background: #242242;
+                border-radius: 0.62vw;
+                padding: 1.71vw 3.43vw;
+                position: relative;
+
+                &-app {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &-img {
+                        position: absolute;
+                        right: 39%;
+                        bottom: 0;
+                        max-height: 9.16vw;
+                        max-width: 8.75vw;
+                    }
+
+                    &-eyewallet {
+                        h2 {
+                            font-size: 0.83vw;
+                            font-weight: 500;
+                        }
+
+                        &-button {
+                            display: flex;
+                            align-items: center;
+                            gap: 1.04vw;
+                            margin-top: 0.93vw;
+
+                            &-inner {
+                                max-width: 5.83vw;
+                            }
+                        }
+                    }
+
+                    &-right {
+                        max-width: 11.83vw;
+                        display: flex;
+                        gap: 0.52vw;
+
+                        svg {
+                            max-height: 1.5vw;
+                        }
+
+                        span {
+                            font-size: 0.62vw;
+                            font-weight: 400;
+                            opacity: 0.5;
+                            line-height: 1vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

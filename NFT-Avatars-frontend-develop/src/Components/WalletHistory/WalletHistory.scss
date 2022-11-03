@@ -1,0 +1,26 @@
+.activity-table{
+  width: 100%;
+  tr{
+    th{
+      text-align: start;
+      white-space: nowrap;
+      padding: 8px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    td{
+      // max-width: 33.33%!important;
+      white-space: nowrap;
+      padding: 8px;
+      font-size: 12px;
+      font-weight: 300;
+      color: #ffffffcc;
+      .token-value{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 60px;
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.mediaeyeconnectsocial {
+    width: 100%;
+    &-top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 10px;
+
+
+    }
+    &-input {
+        font-size: 14px;
+    }
+    &-countrycode {
+        max-width: 70px;
+    }
+
+    &-icon {
+        width: 30px;
+        display: flex;
+        align-items: center;
+        svg {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+    }
+    &-name {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    &-btn {
+        width: auto;
+        margin-left: auto;
+    }
+
+    .btn {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 140px;
+    }
+
+    &-all {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+
+        &-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 50%;
+            padding: 15px;
+
+            &-data {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 10px;
+
+                input {
+                    &.country-code {
+                        width: 20%;
+                        background: hsla(0, 0%, 100%, 0.05);
+                        height: 40px;
+                        width: 20%;
+                        border: none;
+                        color: #fff;
+                        padding: 12px;
+                        border-radius: 20px;
+                        -webkit-border-radius: 20px;
+                    }
+
+                    &.mobileno-input {
+                        width: 80%;
+                        background: hsla(0, 0%, 100%, 0.05);
+                        height: 40px;
+                        width: 82%;
+                        border: none;
+                        color: #fff;
+                        padding: 12px;
+                        border-radius: 20px;
+                        -webkit-border-radius: 20px;
+                    }
+
+                    &.insta-input {
+                        width: 50%;
+                        background: hsla(0, 0%, 100%, 0.05);
+                        height: 40px;
+                        width: 82%;
+                        border: none;
+                        color: #fff;
+                        padding: 12px;
+                        border-radius: 20px;
+                    }
+                }
+            }
+
+            span {
+                color: #a7a7a7;
+                font-size: 14px;
+                text-align: left;
+            }
+
+            &-social-label {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+        }
+    }
+}

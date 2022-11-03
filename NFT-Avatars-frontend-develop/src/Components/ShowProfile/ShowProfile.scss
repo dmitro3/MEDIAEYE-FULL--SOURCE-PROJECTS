@@ -1,0 +1,139 @@
+@import "../../assets/css/variables.scss";
+
+.mediaProfilepage {
+  &-header {
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+  }
+  &-datacontent {
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-userprofile {
+      padding: 25px 35px;
+      @media (max-width: 767.98px) {
+        width: 100%;
+        // max-height: 70px;
+        -webkit-transition: max-height 0.5s ease-out;
+        -moz-transition: max-height 0.5s ease-out;
+        transition: max-height 0.5s ease-out;
+        overflow: hidden;
+        padding: 25px 25px 25px 25px !important;
+        .mediaProfilepage-header {
+          svg {
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+          }
+        }
+        &.show {
+          max-height: 10000px;
+          transition: max-height 1s ease-in;
+          .mediaProfilepage-header {
+            svg {
+              transform: rotate(180deg);
+              -webkit-transition: all 0.5s ease-in-out;
+              -moz-transition: all 0.5s ease-in-out;
+              transition: all 0.5s ease-in-out;
+            }
+          }
+        }
+      }
+      .profileshow {
+        display: flex;
+        align-items: flex-start;
+        &-setting {
+          background-color: transparent;
+          border: none;
+          padding: 0;
+          margin: 0;
+          cursor: pointer;
+          top: 24px;
+          right: 27px;
+          line-height: normal;
+        }
+        &-userimage {
+          height: 250px;
+          width: 250px;
+          border-radius: 50%;
+          margin: 25px auto;
+          overflow: hidden;
+          @media (min-width: 768px) and (max-width: 1100.98px) {
+            width: 200px;
+            height: 200px;
+          }
+          @media (max-width: 379.98px) {
+            width: 200px;
+            height: 200px;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+          }
+        }
+      }
+    }
+    &-profiledetail {
+      &.fav {
+        padding: 36px 54px 36px 60px;
+        height: fit-content;
+        @media (max-width: 767.98px) {
+          width: 100%;
+          padding: 30px;
+        }
+        @media (min-width: 768px) and (max-width: 1100.98px) {
+          min-width: 50%;
+          padding: 30px;
+        }
+        // .creatives-wrap{
+        //     &-music-add-btn {
+        //         display: none;
+        //     }
+        // }
+        .MuiBox-root {
+          padding: 0;
+        }
+        .MuiButtonBase-root {
+          font-family: $Poppins-font;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ffffff;
+          padding: 8px 10px;
+          text-transform: none;
+          &.Mui-selected {
+            color: $pink-color;
+          }
+        }
+        .MuiTabs-indicator {
+          top: -75%;
+          background-color: #cc00ff;
+          @media (min-width: 768px) and (max-width: 1100.98px) {
+            display: none;
+          }
+        }
+        .MuiTabs-root {
+          overflow: visible !important;
+          @media (min-width: 768px) and (max-width: 1100.98px) {
+            // overflow-x: scroll !important;
+          }
+        }
+        .MuiTabs-scroller {
+          overflow: visible !important;
+        }
+
+        .MuiTabs-flexContainer {
+          @media (min-width: 768px) and (max-width: 1100.98px) {
+            // flex-wrap: nowrap;
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
+  }
+}

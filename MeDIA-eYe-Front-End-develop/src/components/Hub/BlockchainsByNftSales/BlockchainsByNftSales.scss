@@ -1,0 +1,67 @@
+@import '../../../assets/css/variables.scss';
+.blockchains-bynftsales {
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        span {
+            @include fontStyle(22px, 33px, 500);
+        }
+        .mediaeye-selectsearch.dark-style .mediaeye-selectsearch__input {
+            width: 80px;
+        }
+    }
+    &-inner {
+        margin-top: 30px;
+        height: 312px;
+        overflow-y: auto;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        thead {
+            tr {}
+            th {
+                position: sticky;
+                top: 0;
+                border: none;
+                padding: 8px 6px;
+                @include fontStyle(16px, 24px, 700);
+                text-align: left;
+                border-bottom: 1px solid rgba(144, 144, 144, 0.5);
+                background: $darktheme-bg;
+                white-space: nowrap;
+            }
+        }
+        tbody {
+            tr {
+                border-bottom: 1px solid rgba(144, 144, 144, 0.5);
+
+                td {
+                    padding: 12px 10px;
+                    @include fontStyle(16px, 24px, 500);
+                    border: none;
+                    white-space: nowrap;
+                }
+                &:hover {
+                    background: rgba(206, 0, 240, 0.3);
+                    @include vendor-prefix(border-radius, 5px);
+                }
+            }
+            .scrollit {
+                width: 300px;
+                overflow: scroll;
+            }
+        }
+        &-srno {
+            text-align: right;
+        }
+        &-network {
+            display: flex;
+            align-items: center;
+            img {
+                width: 24px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

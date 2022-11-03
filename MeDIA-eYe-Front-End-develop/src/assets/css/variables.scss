@@ -1,0 +1,109 @@
+$body-font: 'Poppins', sans-serif;
+$heading-font: 'Poppins', sans-serif;
+$button-font: 'Poppins', sans-serif; //'Furore', sans-serif;
+
+$info-color: #5648BB;
+$info-color-hover: #6151D2;
+
+$creative-color: #960bdf;
+$creative-color-hover: #750bac;
+$main-color: linear-gradient(90deg, #960bdf 0%, rgba(53, 234, 254, 0.65) 99.39%);
+$main-color-hover: linear-gradient(90deg, #700dab 0%, #237590 100%);
+$featured-color: #ff005c;
+$special-color: #6b9fff;
+$rare-color: #cd00c5;
+$superrare-color: #ffb800;
+$special-color-hover: rgba(107, 159, 255, 0.8);
+$rare-color-hover: rgba(205, 0, 197, 0.8);
+$superrare-color-hover: rgba(255, 184, 0, 0.8);
+$campaign-color: #ff31b0;
+$campaign-color-hover: rgba(220, 8, 255, 0.8);
+
+$event-color: #00b407;
+$event-color-hover: #005b04;
+
+$gaming-color: #6458d7;
+$gaming-color-hover: rgba(101, 88, 215, 0.8);
+$clarity-color: linear-gradient(90deg, #5ac6ac 0%, rgba(216, 84, 203, 0.81) 100%);
+$clarity-color-hover: linear-gradient(90deg, #5ac6ac 0%, rgba(216, 84, 203, 0.81) 100%);
+$dark-bg: #141233;
+$darktheme-bg: #2a284a;
+$lighttheme-bg: #e9f1ff;
+$link-color: rgba(255, 255, 255, 0.5);
+$link-hover: #fff;
+$disconnect-color: #241d41;
+
+$btnsingle-color: #3d3881;
+$btnsingle-color-hover: rgba(71, 64, 166, 0.95);
+$btnbundle-color: #531e7c;
+$btnbundle-color-hover: #712ba8;
+$single-color: #242242;
+$single-color-hover: rgb(71, 64, 166);
+$bundle-color: rgb(83, 30, 124);
+$bundle-color-hover: #712ba8;
+$featuredBg: #F31062;
+$extend-color: #aa0153;
+$disable-color: #646464;
+$burn-color: #ff3d00;
+$burn-color-hover: #b93106;
+$live-color: #BC0038;
+$offer-color: linear-gradient(90deg, #60cad0 0%, #5889d1 100%);
+$offer-color-hover: linear-gradient(90deg, #4a92a1 0%, #4465a2 100%);
+$eyeswap-color: linear-gradient(90deg, #009abc -2.45%, #00bc62 105.83%);
+$white-color: #fff;
+$transparent-color: rgba(255, 255, 255, 0.5);
+$scroll-color: #D9D9D9;
+$second-white: #ebebeb;
+$action-color: #9eff00;
+$rewards-color: #e5a41c;
+
+$generative-color: #DB620A;
+$generative-color-hover: rgba(219, 97, 10, 0.8);
+$jumbo-color: #005de9;
+$jumbo-color-hover: rgba(0, 93, 233, 0.8);
+
+$collection-color: #343158;
+
+$airdrop-color: #006BCE;
+$campaign-color: #BC0038;
+
+$charity-color: #FFC700;
+$charity-color-hover: #E2C700;
+
+$rank-color: linear-gradient(90deg, #cf0063 0%, #3d00bd 100%);
+$error-color: #dc3545;
+
+$default-color: #242242;
+$block-section-color: rgba(36, 34, 66, 0.5);
+
+@mixin vendor-prefix($property, $value) {
+    #{$property}: $value;
+
+    @each $prefix in('webkit', 'moz', 'ms', 'o') {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+}
+
+@mixin fontStyle($fontSize, $lineHeight, $fontWeight) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+}
+
+@mixin mediaeye-placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}

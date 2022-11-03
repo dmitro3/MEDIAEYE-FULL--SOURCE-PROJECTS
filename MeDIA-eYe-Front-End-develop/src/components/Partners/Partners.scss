@@ -1,0 +1,110 @@
+.partner_S {
+  z-index: 2;
+  position: relative;
+  .mediaeye {
+    &-layout {
+      &-container {
+        z-index: 1;
+        position: relative;
+        &-partners {
+          position: relative;
+          &::before {
+            content: '';
+            display: block;
+            width: 65%;
+            height: 100%;
+            background: rgba(98, 40, 255, 0.48);
+            filter: blur(197px);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+          }
+          &-wrapper {
+            &-title {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 2vw;
+              line-height: 141.38%;
+              text-align: center;
+              text-transform: uppercase;
+              color: #ffffff;
+              margin: 5vw 0;
+              span {
+                color: #01edff;
+              }
+              span.noneclass {
+                text-transform: none;
+                color: #ffffff;
+              }
+            }
+            &-title1 {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 1.5vw;
+              line-height: 3.375vw;
+              text-transform: uppercase;
+              color: #ffffff;
+              margin: 2.5vw 0;
+              span.lowclass {
+                text-transform: lowercase;
+              }
+              span.noneclass {
+                text-transform: none;
+              }
+              &.nomar {
+                line-height: 1;
+              }
+            }
+
+            &-outbox {
+             display: flex;
+             gap: 12px;
+             width: 100%;
+              &-part2{
+                width: 100%;
+              &-innerbox {
+                height: 48%;
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 10px;
+                padding: 2vw;
+                display: flex;
+                align-items: center;
+                gap: 50px;
+                &-gridbox {
+                  display: grid;
+                  grid-template-columns: repeat(2 , 1fr);
+                  gap: 1.25vw;
+                  a {
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    border-radius: 10px;
+                    padding: 1.625vw 2.6875vw;
+                    &:hover {
+                      background: rgb(0 0 0 / 5%);
+                    }
+                  }
+                }
+                &.box1{
+                  margin-bottom: 18px;
+                }
+              }
+            }
+            }
+            &-main {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+              gap: 1.375vw;
+              margin: 3vw 0;
+              .mediaeye-partners-card-inner {
+                height: 111px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

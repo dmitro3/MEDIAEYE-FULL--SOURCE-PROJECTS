@@ -1,0 +1,45 @@
+@import '../../assets/css/variables.scss';
+.mediaeye-popup-cohort {
+  &-message {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    color: #ebebeb;
+  }
+  &-bottom {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px 10px;
+  }
+  .approve-eye-popup {
+    &-header {
+      @include fontStyle(16px, 24px, 400);
+      p {
+        margin: 12px 0px;
+      }
+    }
+    &-crds {
+      display: flex;
+      margin-right: 24px;
+    }
+    .cohort-page-inner-main-content-section-part-first-bottom-box {
+      &-row {
+        justify-content: space-between;
+        padding: 5px 10px;
+        width: fit-content;
+        &-rate {
+          justify-content: space-between;
+          width: 100%;
+          margin-right: 18px;
+          &-img{
+            height: 30px;
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+}

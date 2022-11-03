@@ -1,0 +1,390 @@
+@import "../../assets/css/variables.scss";
+
+.mediaProfilepage {
+
+  // background-image: url('../../assets/images/profilebackground.png');
+  &-header {
+    padding: 10px 0;
+    margin-bottom: 40px;
+
+    &-inside {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      &-title {
+        font-size: 24px;
+        color: #fff;
+        line-height: 28.8px;
+        font-weight: 400;
+        margin: 0;
+
+        @media (max-width: 767.98px) {
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+
+  &-datacontent {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+
+    &-userprofile {
+      width: 400px;
+      border-radius: 24.5221px;
+      background: linear-gradient(126.6deg,
+          rgba(0, 0, 0, 0.6) 28.69%,
+          rgba(0, 0, 0, 0.6) 100%);
+      backdrop-filter: blur(140px);
+      align-self: flex-start;
+      padding-bottom: 44px;
+      position: relative;
+      padding: 35px 27px !important;
+
+      @media (max-width: 1200px) and (min-width: 768px) {
+        width: 34%;
+        min-width: 34%;
+      }
+
+      @media (max-width: 767px) {
+        width: 100%;
+        max-height: 91px;
+        -webkit-transition: max-height 0.5s ease-out;
+        -moz-transition: max-height 0.5s ease-out;
+        transition: max-height 0.5s ease-out;
+        overflow: hidden;
+
+        &.top-padding {
+          padding-top: 35px !important;
+        }
+
+        &.toggleOpen {
+          max-height: 10000px;
+          transition: max-height 1s ease-in;
+
+          .profile-toggle {
+            svg {
+              transform: rotate(180deg);
+              -webkit-transition: all 0.5s ease-in-out;
+              -moz-transition: all 0.5s ease-in-out;
+              transition: all 0.5s ease-in-out;
+            }
+          }
+        }
+      }
+
+      .profilemain {
+        &-setting {
+          cursor: pointer;
+          top: 24px;
+          right: 27px;
+          position: absolute;
+          line-height: normal;
+
+          @media (max-width: 767px) {
+            display: block;
+            margin-left: auto;
+            margin-top: 44px;
+            position: static;
+            width: 28px;
+            margin-left: auto;
+          }
+        }
+
+        &-setting-change-img {
+          display: none;
+        }
+
+        &-userimage {
+          // padding: 48px 75px;
+          height: 250px;
+          width: 250px;
+          border-radius: 50%;
+          margin: 48px auto;
+          overflow: hidden;
+
+          @media (max-width: 1200px) and (min-width: 768px) {
+            height: 190px;
+            width: 190px;
+          }
+
+          @media (max-width: 767px) {
+            margin-top: 22px;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+          }
+        }
+
+        &-userdata {
+          text-align: center;
+
+          .btn {
+            background: $pink-color;
+            color: $white-color;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 19px;
+
+            @media (max-width: 767px) {
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+
+    &-profiledetail {
+      width: 755px;
+      background: linear-gradient(126.6deg,
+          rgba(0, 0, 0, 0.6) 28.69%,
+          rgba(0, 0, 0, 0.6) 100%);
+      border-radius: 24.5221px;
+      padding: 10px 60px 40px;
+
+      @media (min-width: 768px) and (max-width: 1100.98px) {
+        min-width: 50%;
+        padding: 30px;
+      }
+
+      &.edit {
+        @media (max-width: 767px) {
+          width: 100%;
+          padding: 35px 27px;
+          max-height: 91px;
+          -webkit-transition: max-height 0.5s ease-out;
+          -moz-transition: max-height 0.5s ease-out;
+          transition: max-height 0.5s ease-out;
+          overflow: hidden;
+
+          &.toggleOpen {
+            max-height: 10000px;
+            transition: max-height 0.5s ease-in;
+
+            .profile-toggle {
+              svg {
+                transform: rotate(180deg);
+                -webkit-transition: all 0.5s ease-in-out;
+                -moz-transition: all 0.5s ease-in-out;
+                transition: all 0.5s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+
+      &-head {
+        display: flex;
+        align-items: center;
+        color: white;
+        gap: 10px;
+        margin-bottom: 15px;
+
+        @media (max-width: 1100.98px) {
+          flex-wrap: wrap;
+          gap: 0;
+        }
+
+        &-inner {
+          padding: 0;
+          list-style: none;
+
+          .css-1s2u09g-control {
+            background-color: transparent;
+            border: none;
+            color: inherit;
+          }
+
+          .css-1pahdxg-control {
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+
+            &:hover {
+              border: none;
+            }
+          }
+
+          .css-qc6sy-singleValue {
+            color: inherit;
+          }
+
+          .css-6j8wv5-input {
+            color: inherit;
+
+            input {
+              color: inherit;
+            }
+          }
+
+          .css-14el2xx-placeholder {
+            color: inherit;
+          }
+
+          .css-319lph-ValueContainer {
+            padding: 0;
+            font-family: $Poppins-font;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          .css-1okebmr-indicatorSeparator {
+            display: none;
+          }
+
+          .css-tlfecz-indicatorContainer {
+            padding: 0;
+            color: inherit;
+
+            &:hover {
+              color: inherit;
+            }
+          }
+
+          .css-1gtu0rj-indicatorContainer {
+            padding: 0;
+            color: inherit;
+
+            &:hover {
+              color: inherit;
+            }
+          }
+
+          #react-select-3-listbox {
+            background: linear-gradient(126.6deg,
+                rgba(0, 0, 0, 0.4) 28.69%,
+                rgba(0, 0, 0, 0.4) 100%);
+            backdrop-filter: blur(140px);
+            -webkit-backdrop-filter: blur(140px);
+            border-radius: 7px;
+            border: none;
+            width: fit-content;
+
+            .css-yt9ioa-option {
+              font-family: $Poppins-font;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: #8b8b8b !important;
+              cursor: pointer;
+            }
+
+            .css-1n7v3ny-option {
+              color: inherit;
+              background-color: inherit;
+              font-family: $Poppins-font;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              cursor: pointer;
+            }
+
+            .css-9gakcf-option {
+              background-color: inherit;
+              font-family: $Poppins-font;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              cursor: pointer;
+              color: inherit;
+            }
+          }
+        }
+
+        @media (min-width: 768px) and (max-width: 1100.98px) {
+          .MuiTabs-flexContainer {
+            // flex-wrap: nowrap;
+            flex-wrap: wrap;
+          }
+        }
+
+        @media (max-width: 767px) {
+          margin: 25px 0;
+        }
+
+        .creatives-wrap-music-add-btn {
+          display: none;
+        }
+
+        .MuiButtonBase-root {
+          font-family: $Poppins-font;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ffffff;
+          padding: 8px 10px;
+          text-transform: none;
+          display: flex;
+          flex-direction: row-reverse;
+          gap: 5px;
+
+          svg {
+            width: 15px;
+            height: 15px;
+          }
+
+          @media (max-width: 767px) {
+            min-width: auto;
+            padding: 10px 13px;
+            min-height: auto;
+          }
+
+          &.Mui-selected {
+            color: $dark-pink-color;
+          }
+        }
+
+        .MuiTabs-indicator {
+          display: none;
+        }
+
+        .MuiTabs-root {
+          overflow: visible !important;
+        }
+
+        .MuiTabs-scroller {
+          overflow: visible !important;
+        }
+
+        .MuiTabs-flexContainer {
+          @media (max-width: 767.98px) {
+            flex-wrap: wrap;
+          }
+        }
+      }
+
+      &-body {
+        .btn-dark {
+          background-color: $dark-pink-color;
+          font-size: 16px;
+          min-width: 107px;
+          margin-top: 40px;
+          display: block;
+
+          @media (max-width: 767px) {
+            height: 40px;
+            margin: 24px auto 0;
+          }
+        }
+
+        .MuiBox-root {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

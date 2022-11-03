@@ -1,0 +1,36 @@
+@import '../../../assets/css/variables.scss';
+
+.account-collection-page {
+  margin: 42px 0px;
+  &-headerbtn {
+    button {
+      margin-right: 12px;
+    }
+  }
+  &-filters {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0px;
+    align-items: center;
+    button.active {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      .mediaeye-searchbar {
+        input {
+          height: 38px;
+          width: 300px;
+        }
+      }
+    }
+  }
+  &-content {
+    &-empty {
+      margin: 24px 0px;
+      color: rgba(235, 235, 235, 0.5);
+      text-align: center;
+    }
+  }
+}

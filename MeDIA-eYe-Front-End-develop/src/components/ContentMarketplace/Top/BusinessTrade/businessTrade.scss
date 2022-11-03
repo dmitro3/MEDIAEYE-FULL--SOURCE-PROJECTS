@@ -1,0 +1,61 @@
+@import '../../../../assets/css/variables.scss';
+.mediaeye-businessTrade {
+    display: flex;
+    gap: 20px;
+    &-col {
+        width: auto;
+        background-color: rgba(255, 255, 255, 0.15);
+        @include vendor-prefix(border-radius,5px);
+        display: flex;
+        padding: 5px 15px;
+        margin: auto;
+        gap: 10px;
+        align-items: center;
+        min-height: 40px;
+        min-width: 27.40%;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+        &-label {
+            color: #fff;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        &-label2 {
+            color: #fff;
+            font-weight: 500;
+            font-size: 16px;
+            align-items: center;
+            display: flex;
+            gap: 10px;
+            margin: auto;
+            &-img {
+                width: 30px;
+                height: 30px;
+                @include vendor-prefix(border-radius,50px);
+                overflow: hidden;
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            &-name {
+                max-width: 100px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+        &-label3 {
+            color: #928BB0;
+            font-weight: 500;
+            font-size: 14px;
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+}

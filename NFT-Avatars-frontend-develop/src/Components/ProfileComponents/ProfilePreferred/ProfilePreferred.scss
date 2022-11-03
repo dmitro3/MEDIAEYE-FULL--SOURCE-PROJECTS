@@ -1,0 +1,64 @@
+@import "../../../assets/css/variables.scss";
+
+.communities-wrap-body-row {
+  &-link-box {
+    svg {
+      &:hover {
+        & + div {
+          display: flex;
+        }
+      }
+    }
+    position: relative;
+    &-tootltip {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      background: #282828;
+      border-radius: 5px;
+      font-size: 14px;
+      padding: 4px 9px;
+      min-width: 200px;
+      justify-content: space-between;
+      top: -42px;
+      left: calc(100% - 50px);
+      display: none;
+      &:after {
+        content: "";
+        clip-path: polygon(0 0, 50% 100%, 100% 0);
+        width: 14px;
+        height: 12px;
+        display: block;
+        position: absolute;
+        top: calc(100% - 1px);
+        background: #282828;
+        left: 30px;
+      }
+    }
+  }
+}
+
+.mediaProfilepage-datacontent-profiledetail-body {
+  .preferred-wrap {
+    .communities-wrap-body-row {
+      gap: 10px;
+      &-link-box {
+        margin-right: 0;
+      }
+      &-add-btn {
+        margin: 0;
+        &.active {
+          background: $green-bg;
+        }
+        &.share {
+          color: #655864;
+          transition: 0.3s;
+          &:hover {
+            transition: 0.3s;
+            color: $white-color;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import "../../assets/css/variables.scss";
+
+.mediaProfilepage {
+  &-datacontent {
+    &-profiledetail {
+      &-body {
+        &-avatarbox {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 50px;
+          padding-bottom: 150px;
+          @media (max-width: 1100.98px) {
+            grid-template-columns: repeat(2, 1fr);
+            padding-bottom: 0;
+          }
+          .useravatar {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 17px;
+            img {
+              width: 150px !important;
+              height: 150px !important;
+              object-fit: cover;
+              border-radius: 50%;
+              overflow: hidden;
+              @media (max-width: 439.98px) {
+                width: 100px !important;
+                height: 100px !important;
+              }
+            }
+            span {
+              font-family: $Poppins-font;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 82%;
+              text-align: center;
+              color: $gray-color;
+            }
+            &-create {
+              width: 150px;
+              height: 150px;
+              border-radius: 50%;
+              overflow: hidden;
+              background: #cc00ff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border: none;
+              cursor: pointer;
+              transition: background 400ms;
+              position: relative;
+              &:hover {
+                background: #a200ca;
+                transition: 0.3s ease-in-out;
+                svg {
+                  color: rgb(204, 204, 204);
+                  transition: 0.3s ease-in-out;
+                }
+              }
+              span.ripple {
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 600ms linear;
+                background-color: rgba(255, 255, 255, 0.7);
+              }
+
+              @keyframes ripple {
+                to {
+                  transform: scale(4);
+                  opacity: 0;
+                }
+              }
+              @media (max-width: 439.98px) {
+                width: 100px;
+                height: 100px;
+              }
+              svg {
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                @media (max-width: 439.98px) {
+                  width: 30px;
+                  height: 30px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

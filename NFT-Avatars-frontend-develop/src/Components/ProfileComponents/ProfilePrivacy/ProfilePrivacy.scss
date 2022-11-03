@@ -1,0 +1,44 @@
+@import "../../../assets/css/variables.scss";
+
+.privacy-page {
+    &-content {
+        margin-bottom: 30px;
+
+        &-head {
+            @include fontStyle(20px, 30px, 500);
+            margin-bottom: 10;
+        }
+
+        &-row {
+            width: 500px;
+            margin-bottom: 10px;
+
+            h2 {
+                @include fontStyle(16px, 24px, 400);
+
+                span {
+                    color: #FF83C6;
+                }
+            }
+        }
+    }
+
+    .show-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+
+        svg {
+            width: 15px;
+            @include vendor-prefix(transition, 0.3s);
+        }
+
+        &.less {
+            svg {
+                @include vendor-prefix(transition, 0.3s);
+                @include vendor-prefix(transform, rotate(180deg));
+            }
+        }
+    }
+}

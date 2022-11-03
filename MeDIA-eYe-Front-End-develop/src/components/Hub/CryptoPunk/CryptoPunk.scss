@@ -1,0 +1,288 @@
+@import '../../../assets/css/variables.scss';
+.crypto-punk-page {
+    &-inner {
+        &-topcards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            &-card {
+                width: fit-content;
+                background: #590E7A;
+                @include vendor-prefix(border-radius, 6px);
+                padding: 12px;
+                margin-bottom: 24px;
+                &-head {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    span {
+                        @include fontStyle(16px, 24px, 700);
+                    }
+                    svg {
+                        width: 16px;
+                        path {
+                            fill: #00A2B4;
+                        }
+                    }
+                }
+                &-subtitle {
+                    @include fontStyle(16px, 24px, 700);
+                }
+                &-amount {
+                    margin-top: 10px;
+                    @include fontStyle(24px, 24px, 500);
+                }
+                img {
+                    width: 212px;
+                }
+                &-bottom {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 10px;
+                    color: rgba(146, 139, 176, 1);
+                    &-first {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        &-livesales {
+            margin: 74px 0;
+            &-header {
+                display: flex;
+                justify-content: center;
+                gap: 24px;
+                align-items: center;
+                span {
+                    @include fontStyle(24px, 36px, 500);
+                }
+                .days-filter {
+                    width: 80px;
+                }
+            }
+            &-content {
+                margin-top: 24px;
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+
+                }
+                thead {
+                    tr {
+                        border-bottom: 1px solid rgba(144, 144, 144, 0.5);
+
+                        th {
+                            border: none;
+                            padding: 15px 10px;
+                            @include fontStyle(16px, 24px, 700);
+                            text-align: left;
+                            span {
+                                margin-left: 60px;
+                            }
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        border-bottom: 1px solid rgba(144, 144, 144, 0.5);
+                        td {
+                            padding: 12px 10px;
+                            @include fontStyle(16px, 24px, 500);
+                            border: none;
+                        }
+                        // &:hover{
+                        // background-color: rgba(255, 255, 255, 0.1);
+                        // }
+                        &:hover {
+                            background: rgba(206, 0, 240, 0.3);
+                            @include vendor-prefix(border-radius, 5px);
+                        }
+                    }
+                }
+                &-srno {
+                    text-align: right;
+                }
+                &-buyerseller {
+                    display: flex;
+                    align-items: center;
+                    svg {
+                        path {
+                            stroke: #928BB0;
+                        }
+                    }
+                }
+                &-collection {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 40px;
+                        height: 60px;
+                    }
+                    &-titles {
+                        display: grid;
+                        margin-left: 12px;
+                        &-text {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &-price {
+                    gap: 12px;
+                }
+                &-last {
+                    display: flex;
+                    align-items: center;
+                    svg {
+                        path {
+                            stroke: #928BB0;
+                        }
+                    }
+                }
+            }
+        }
+        &-mintandmarketplace,
+        &-topsellerbuyer {
+            display: flex;
+            width: 100%;
+            gap: 24px;
+            margin: 124px 0;
+            &-mp,
+            &-mint,
+            &-buyer,
+            &-seller {
+                width: 50%;
+                &-header {
+                    @include fontStyle(22px, 33px, 500);
+                }
+                &-data {
+                    height: 370px;
+                    overflow-y: auto;
+                    margin-top: 24px;
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+
+                    }
+                    thead {
+                        tr {
+                            border-bottom: 1px solid rgba(144, 144, 144, 0.5);
+
+                            th {
+                                position: sticky;
+                                top: 0;
+                                border: none;
+                                padding: 15px 10px;
+                                @include fontStyle(16px, 24px, 700);
+                                text-align: left;
+                                background: $darktheme-bg;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            border-bottom: 1px solid rgba(144, 144, 144, 0.5);
+                            td {
+                                padding: 12px 10px;
+                                @include fontStyle(16px, 24px, 500);
+                                border: none;
+                            }
+                            // &:hover{
+                            // background-color: rgba(255, 255, 255, 0.1);
+                            // }
+                            &:hover {
+                                background: rgba(206, 0, 240, 0.3);
+                                @include vendor-prefix(border-radius, 5px);
+                            }
+                        }
+                    }
+                    &-srno {
+                        text-align: right;
+                    }
+                    &-buyerseller {
+                        display: flex;
+                        align-items: center;
+                        svg {
+                            path {
+                                stroke: #928BB0;
+                            }
+                        }
+                    }
+                    &-collection {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 40px;
+                            height: 50px;
+                        }
+                        &-titles {
+                            display: grid;
+                            margin-left: 12px;
+                            &-text {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    &-minted {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 11px;
+                            height: 17px;
+                            margin-right: 4px;
+                        }
+                    }
+                    &-price {
+                        display: grid;
+                    }
+                    &-last {
+                        display: flex;
+                        align-items: center;
+                        svg {
+                            path {
+                                stroke: #928BB0;
+                            }
+                        }
+                    }
+                }
+                &-bottom {
+                    margin-top: 24px;
+                }
+            }
+            &-mint {
+                width: 50%;
+            }
+            &-buyer,
+            &-seller {
+                &-data {
+                    table {
+                        tbody {
+                            td {
+                                padding: 24px 10px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-graphs {
+            &-header {
+                @include fontStyle(24px, 36px, 500);
+                margin-bottom: 34px;
+            }
+            &-inner {
+                .mediaeye-tabss-lists button {
+                    @include fontStyle(16px, 27px, 500);
+                    padding: 10px 24px;
+                }
+                &-charts {
+                    width: 100%;
+                    height: 400px;
+                }
+            }
+        }
+    }
+}

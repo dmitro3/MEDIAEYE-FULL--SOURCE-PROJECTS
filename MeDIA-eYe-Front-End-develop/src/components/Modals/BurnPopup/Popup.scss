@@ -1,0 +1,120 @@
+/* .popup-wrapper .general_popup {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 30px;
+  overflow-x: scroll;
+}
+
+.popup-wrapper .general_popup::-webkit-scrollbar {
+  width: 0 !important;
+  opacity: 0;
+  height: 0;
+  display: none;
+}
+
+.popup-wrapper_general.popup-wrapper {
+  overflow-y: scroll;
+}
+
+.popup-wrapper_general.popup-wrapper::-webkit-scrollbar {
+  width: 0 !important;
+  opacity: 0;
+  height: 0;
+  display: none;
+}
+
+.popup-wrapper .general_popup h4 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 54px;
+  color: #313131;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.dark .popup-wrapper .general_popup h4 {
+  color: #ebebeb;
+}
+
+.popup-wrapper .general_popup button {
+  margin: 40px 0;
+}
+
+.popup-wrapper .general_popup > span {
+  font-family: Poppins;
+  font-style: normal;
+  color: #313131;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.dark .popup-wrapper .general_popup span {
+  color: #fff;
+}
+
+.check_popup_buttons {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 575.98px) {
+  .check_popup_buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .popup-wrapper .general_popup .check_popup_buttons button {
+    margin: 10px auto;
+  }
+} */
+
+@import '../../../assets/css/variables.scss';
+.burn-popup {
+  .mediaeye-popup-content {
+    max-width: 460px;
+  }
+  .collection_block_single_wrapper {
+    width: 100%;
+  }
+  &-title {
+    @include fontStyle(36px, 103.5%, 600);
+    text-align: center;
+    margin-bottom: 42px;
+  }
+  &-wrapper {
+    margin: 0px 24px;
+
+    &-burning-title {
+      text-align: center;
+      margin-top: 24px;
+      text-transform: uppercase;
+      @include fontStyle(18px, 27px, 700);
+      @media (max-width: 354.98px) {
+        @include fontStyle(14px, 27px, 700);
+      }
+    }
+    &-burn-bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 24px;
+      .mediaeyeagree {
+        .mediaeyeagree-text {
+          @include fontStyle(18px, 27px, 500);
+          @media (max-width: 354.98px) {
+            @include fontStyle(14px, 27px, 700);
+          }
+        }
+      }
+    }
+  }
+}

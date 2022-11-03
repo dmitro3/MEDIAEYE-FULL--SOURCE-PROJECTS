@@ -1,0 +1,47 @@
+@import '../../../assets/css/variables.scss';
+
+.airdrop-register-popup {
+  background: #282550;
+  &-subtitle {
+    @include fontStyle(18px, 20px, 600);
+    margin-top: 30px;
+    margin-bottom: 24px;
+  }
+  &-input {
+    margin-bottom: 30px;
+    input {
+      background: none;
+      border: 1px solid $link-hover;
+      width: 100%;
+      height: 46px;
+      @include vendor-prefix(border-radius, 12px);
+      padding: 0px 12px;
+      color: #ffffff;
+      &:hover,
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &-time {
+    width: 100%;
+    background: rgba(20, 18, 52, 0.8);
+    @include vendor-prefix(border-radius, 14px);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    height: 32px;
+    align-items: center;
+    span {
+      @include fontStyle(18px, 20px, 600);
+    }
+    margin-bottom: 42px;
+  }
+  &-terms {
+    margin-bottom: 30px;
+  }
+  &-bottom {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,173 @@
+@import '../../../assets/css/variables.scss';
+.mediaeyeproduct {
+  &-details {
+    width: 100%; 
+    &-row {
+      display: flex;
+      &-col {
+        padding: 10px 0px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+        color: #ebebeb;
+        font-size: 16px;
+
+        &:last-child {
+          text-align: right;
+          justify-content: right;
+        }
+      }
+    }
+  }
+  &-properties {
+    width: 100%;
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0px -10px;
+      &-col {
+        padding: 0px 10px;
+        width: 33.33%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        &-inner {
+          @include vendor-prefix(border-radius, 12px);
+          background: rgba(255, 255, 255, 0.05);
+          @include vendor-prefix(transition, all 0.3s);
+          padding: 10px;
+          display: block;
+          &-title {
+            color: #ffffff;
+            @include fontStyle(16px, 24px, 600);
+            word-break: break-word;
+          }
+          &-subtitle {
+            color: #ebebeb;
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 10px;
+            word-break: break-word;
+          }
+          &-des {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 5px;
+            word-break: break-word;
+          }
+          &-rarity {
+            color: $link-color;
+            font-weight: 300;
+          }
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+          }
+        }
+
+        &-action {
+          @include vendor-prefix(border-radius, 12px);
+          @include vendor-prefix(transition, all 0.3s);
+          padding: 20px;
+          display: block;
+          min-height: 100px;
+          position: relative;
+          &-title {
+            color: #ffffff;
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: bold;
+            position: absolute;
+            bottom: 20px;
+          }
+          &.rare {
+            background: $rare-color;
+            &:hover {
+              background: $rare-color-hover;
+            }
+          }
+          &.super-rare {
+            background: $superrare-color;
+            &:hover {
+              background: $superrare-color-hover;
+            }
+          }
+          &.special {
+            background: $special-color;
+            &:hover {
+              background: $special-color-hover;
+            }
+          }
+        }
+        &-empty {
+          flex: 1;
+          margin: 0px 10px;
+          border: 1px solid rgba(0, 162, 180, 0.5);
+          @include vendor-prefix(border-radius, 12px);
+          background: rgba(255, 255, 255, 0.02);
+          @include vendor-prefix(transition, all 0.3s);
+        }
+      }
+    }
+  }
+  &-levels {
+    width: 100%;
+    &-row {
+      display: flex;
+      align-items: center;
+      &-col {
+        padding: 10px 10px;
+        font-size: 16px;
+        &:nth-child(2) {
+          width: 50%;
+        }
+        &:last-child {
+          margin-left: auto;
+        }
+        &-name {
+          color: #ebebeb;
+        }
+        &-progress {
+          &-info {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 5px;
+            span {
+              color: rgba(255, 255, 255, 0.5);
+              font-size: 90%;
+            }
+            &.stats{
+              text-align: right;
+            }
+          }
+          &-line {
+            height: 10px;
+            @include vendor-prefix(border-radius, 5px);
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+            &-fill {
+              background: linear-gradient(
+                90deg,
+                #fc7c1f 2.93%,
+                #feb11d 101.46%
+              );
+              box-shadow: 0px 0px 5px #931460;
+              height: 100%;
+              width: 0;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+            }
+          }
+        }
+        &-have {
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+    
+  }
+}

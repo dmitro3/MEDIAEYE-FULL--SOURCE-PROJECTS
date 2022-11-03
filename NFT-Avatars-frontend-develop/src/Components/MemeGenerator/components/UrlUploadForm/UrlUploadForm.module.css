@@ -1,0 +1,103 @@
+/* button {
+    padding: 8px 15px;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    background: #1BBC9B;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    box-shadow: 0 4px 0 #18a689;
+  }
+  button:active {
+    margin-top: 2px;
+    box-shadow: 0 2px 0 #18a689;
+  } */
+
+.LoginContainer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.LoginForm {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  margin-top: 10px;
+  background: linear-gradient(126.6deg, #430a5f 28.69%, #1a0b17 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 12px #0000007a;
+  -webkit-animation: slide 1s;
+  -moz-animation: slide 1s;
+  animation: slide 1s;
+  display: block;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+}
+.LoginForm input {
+  width: 100%;
+  margin: 25px 0 !important;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(
+    126.6deg,
+    rgba(255, 255, 255, 0.1) 28.69%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  padding: 4px 10px;
+  outline: none;
+  color: #fff;
+}
+.LoginForm input[type="submit"] {
+  width: 30%;
+  color: #fff;
+  background: #cc00ff;
+  font-style: normal;
+  border-radius: 16px;
+  margin: 0 !important;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes slide {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}

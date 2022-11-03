@@ -1,0 +1,56 @@
+@import '../../../assets/css/variables.scss';
+
+.InputField{
+    background: #211F3D;
+    @include vendor-prefix(border-radius, 5px);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &-input{
+        position: absolute;
+        opacity: 0;
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+    }
+    &-text{
+        padding-top: 40%;
+        text-align: center;
+        &-icon{
+            svg{
+                width: 20px;
+                height: 30px;
+            }
+            }
+        &-choosetext{
+            @include fontStyle(16px, 24px, 400);
+        }
+    }
+    &-image{
+        width: 100%;
+        height: 100%;
+        img{
+            height: 100%;
+    width: 100%;
+    object-fit: contain;
+        }
+    }
+    &-refresh{
+        position: absolute;
+      top: 5%;
+      right: 10%;
+      background: rgb(36, 34, 66, 0.7);
+      @include vendor-prefix(border-radius, 5px);
+      z-index: 2;
+      padding: 10px;
+      padding-bottom: 4px;
+      input{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        opacity: 0;
+        left: 0;
+        top: 0;
+      } 
+    }
+}

@@ -1,0 +1,72 @@
+@import '../../../assets/css/variables.scss';
+
+.mint-main-popup {
+    .close {
+        text-align: right;
+        margin-top: -29px;
+        margin-right: -30px;
+    }
+    width: 600px;
+    @media(max-width: 600.98px) {
+        width: 100%;
+    }
+    &-title {
+        @include fontStyle(24px, 25px, 600);
+    }
+    &-slider {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    &-inner {
+        display: grid;
+        &-title {
+            @include fontStyle(24px, 36px, 500);
+            word-break: break-word;
+        }
+        &-subtitle {
+            margin: 20px 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            @include fontStyle(18px, 27px, 500);
+            &-1 {
+                word-break: break-word;
+                max-width: 60%;
+            }
+        }
+        &-dtitle {
+            margin-bottom: 5px;
+            @include fontStyle(18px, 27px, 500);
+        }
+        &-discription {
+            @include fontStyle(16px, 24px, 400);
+            word-break: break-word;
+            max-width: 100%;
+        }
+        &-cards {
+            margin: 20px -40px 0;
+            opacity: 0.9;
+            @include vendor-prefix(border-radius, 10px);
+            display: flex;
+            justify-content: space-evenly;
+
+            &-block {
+                display: grid;
+                margin-bottom: 24px;
+                width: 40%;
+
+
+                span {
+                    @include fontStyle(18px, 27px, 500);
+                    margin: 12px 0 15px;
+                }
+            }
+        }
+        &-bottom {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+    }
+}

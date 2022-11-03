@@ -1,0 +1,129 @@
+@import '../../../assets/css/variables.scss';
+.generative-upload-popup{
+    width: 640px;
+    &-inner{
+        &-uploads{
+            span{
+                @include fontStyle(20px, 20px, 500);
+            }
+            &-sections{
+                margin-top: 22px;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+                background: rgba(255, 255, 255, 0.05);
+                display: flex;
+                align-items: center;
+                width: 230px;
+                @include fontStyle(16px, 24px, 400);
+                @include vendor-prefix(border-radius, 5px);
+                white-space: nowrap;
+                gap: 10px;
+                input{
+                    display: none;
+                }
+            }
+        }
+        &-properties{
+            &-title{
+                 @include fontStyle(20px, 30px, 400);
+                 display: flex;
+                 align-items: center;
+                 gap: 10px;
+                 margin: 30px 0px;
+            }
+            &-content{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                span{
+                    @include fontStyle(16px, 24px, 400);
+                }
+                input{
+                    width: 45%;
+                    background: rgba(255, 255, 255, 0.05);
+                    @include vendor-prefix(border-radius, 3px);
+                    color: white;
+                    border: none;
+                    padding: 5px 15px;
+                    height: 30px;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                svg{
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+        }
+        &-slider{
+            &-card{
+                &-image{
+                    position: relative;
+                    img{
+                        width: 178px;
+                        height: 178px;
+                        @include vendor-prefix(border-radius, 10px);
+                        
+                    }
+                    &-close{
+                        position: absolute;
+                        display: none;
+                        top: 10px;
+                        right: 20px;
+                        svg{
+                            width: 8px;
+                            height: 8px;
+                            stroke: #ffffff;
+                            fill: #ffffff;
+                        }
+                    }
+                    &-edit{
+                        position: absolute;
+                        display: none;
+                        top: 50%;
+                        left: 35%;
+                        display: none;
+                        @include fontStyle(16px, 24px, 500);
+                        gap: 5px;
+                    }
+                    &:hover{
+                         img{
+                             opacity: 0.1;
+                         } 
+                         .generative-upload-popup-inner-slider-card-image-close{
+                             display: block;
+                         }
+                         .generative-upload-popup-inner-slider-card-image-edit{
+                             display: flex;
+                             align-items: center;
+                         }
+                    }
+                }
+               
+               
+                &-tag{
+                    text-align: center;
+                    margin-top: 10px;
+                }
+            }
+            &-nftcard{
+                &-inner{
+                width: 178px;
+                height: 178px;
+                @include vendor-prefix(border-radius, 10px);
+                display: flex;
+                align-items: center;
+                background: #211F3D;
+                svg{
+                    margin: auto;
+                }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,363 @@
+@import '../../../assets/css/variables.scss';
+
+.edit_avatar input {
+  display: none;
+}
+
+.edit_avatar {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  outline: none;
+  border: none;
+  background: none;
+  right: -16px;
+  bottom: -20px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.img_line input {
+  display: none;
+}
+
+.my-account-page {
+  &-header {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+
+    &-cover {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      @include vendor-prefix(transform, translateY(-50%));
+      left: 0;
+      right: 0;
+      min-height: 100%;
+    }
+
+    &-button {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: rgba(255, 255, 255, 0.53);
+      @include vendor-prefix(border-radius, 3px);
+      right: 10px;
+      top: 10px;
+
+      svg {
+        width: 10px;
+        height: 10px;
+      }
+
+      label {
+        position: absolute;
+        order: 1;
+        margin-left: -10px;
+      }
+
+      input {
+        visibility: hidden;
+      }
+
+      img {
+        margin: auto;
+      }
+
+      // &:hover{
+      // background: $link-color;
+      // }
+    }
+  }
+
+  &-inner {
+    margin-top: -64px;
+
+    &-user {
+      .second-edit {
+        cursor: pointer;
+        left: 100px;
+        top: 88px;
+
+        svg {
+          margin-top: 6px;
+          order: 2;
+        }
+
+        label {
+          position: absolute;
+          order: 1;
+          margin-left: -10px;
+        }
+      }
+
+      .edit-icon {
+        color: transparent;
+        visibility: hidden;
+      }
+
+      .userImg {
+        position: relative;
+        width: 124px;
+        height: 124px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        @include vendor-prefix(border-radius, 60px);
+      }
+
+      &-userIcon {
+        input {
+          display: none;
+          background: none;
+          border: none;
+        }
+
+        img {
+          margin-top: -38px;
+          margin-left: 92px;
+          background: rgba(255, 255, 255, 0.53);
+          backdrop-filter: blur(4px);
+          padding: 6px;
+          @include vendor-prefix(border-radius, 12px);
+        }
+
+        &:hover {
+          img {
+            background: $link-color;
+          }
+        }
+      }
+    }
+
+    &-profileHeader {
+      width: 100%;
+      margin-top: 24px;
+      display: flex;
+
+      &-left {
+        width: 50%;
+
+        &-username {
+          @include fontStyle(36px, 54px, 500);
+          color: $second-white;
+          word-break: break-word;
+          max-width: 100%;
+        }
+
+        &-details {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          margin: 16px 0;
+
+          &-card {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            .mediaeye-copy-btn {
+              &.cpd {
+                svg {
+                  opacity: 1;
+                }
+              }
+            }
+
+            &.svg-copy {
+              input {
+                cursor: pointer;
+                width: 105px;
+                @include fontStyle(16px, 24px, 400);
+                color: white;
+                background: none;
+                border: none;
+
+                &:hover,
+                &:focus {
+                  outline: none;
+                }
+              }
+
+              svg {
+                opacity: 0.5;
+                @include vendor-prefix(transition, all 0.3s);
+
+                &:hover,
+                &:focus {
+                  opacity: 1;
+                }
+              }
+            }
+
+            &.svg-small {
+              svg {
+                width: 12px;
+                margin-right: 0px;
+                padding-top: 4px;
+
+                path {
+                  stroke: #a7a7a7;
+                }
+              }
+            }
+
+            &.qrcode {
+              color: #ffffff80;
+
+              &-icon {
+                width: 20px;
+                height: 20px;
+
+                svg {
+                  width: 16px;
+                  height: 18px;
+                }
+              }
+
+              svg {
+                path {
+                  opacity: 1;
+                  fill: #fff;
+                }
+              }
+
+              &:hover,
+              &:focus {
+                color: #fff;
+              }
+            }
+
+            &.svg-id {
+              @include fontStyle(14px, 21px, 400);
+              @include vendor-prefix(transition, all 0.3s);
+
+              svg {
+                opacity: 0.5;
+                @include vendor-prefix(transition, all 0.3s);
+
+                &:hover,
+                &:focus {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+
+        &-socialmedia {
+          display: flex;
+
+          &-sites {
+            padding-right: 8px;
+            margin-left: 8px;
+            align-items: center;
+            @include vendor-prefix(transition, all 0.3s);
+
+            &:not(:last-child) {
+              border-right: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            svg {
+              opacity: 0.5;
+              @include vendor-prefix(transition, all 0.3s);
+            }
+
+            &:hover {
+              svg {
+                opacity: 1;
+              }
+            }
+          }
+
+          .globeSetup {
+            padding-top: 3px;
+          }
+
+          .instaMargin {
+            padding-top: 5px;
+          }
+
+          .telegramMargin {
+            padding-top: 8px;
+          }
+
+          .twitterMargin {
+            padding-top: 7px;
+          }
+
+          .discordMargin {
+            padding-top: 8px;
+          }
+        }
+
+        &-discription {
+          margin-top: 16px;
+          @include fontStyle(14px, 24px, 400);
+          color: rgba(146, 139, 176, 1);
+          word-break: break-word;
+        }
+
+        &-imgbottom {
+          margin-top: 30px;
+
+          &-inner {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            @include vendor-prefix(border-radius, 5px);
+            width: fit-content;
+            padding: 15px;
+          }
+        }
+      }
+
+      &-right {
+        width: 50%;
+
+        &-actionBar {
+          display: flex;
+          justify-content: space-between;
+          width: fit-content;
+          margin-left: auto;
+          align-items: center;
+
+          .mediaeye-nft-card-inner-action,
+          .mediaeye-nft-card-inner-action-header {
+            position: unset;
+          }
+        }
+
+        &-setting {
+          svg {
+            margin-top: 6px;
+            margin-left: 12px;
+
+            &:hover {
+              path {
+                &[fill] {
+                  fill: $link-color;
+                }
+
+                &[stroke] {
+                  stroke: $link-color;
+                }
+              }
+            }
+          }
+        }
+
+        &-subscription {
+          span {
+            @include fontStyle(16px, 24px, 400);
+            margin-right: 16px;
+          }
+
+          margin-top: 32px;
+          width: fit-content;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

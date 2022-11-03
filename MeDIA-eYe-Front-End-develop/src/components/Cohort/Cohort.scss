@@ -1,0 +1,508 @@
+@import '../../assets/css/variables.scss';
+
+.cohort-page-inner {
+    &-banner {
+        background: url('../../assets/img/cohort/CohortBanner.png') no-repeat;
+        background-size: cover;
+        min-height: 250px;
+        width: 100%;
+        padding: 30px 0;
+
+        &-header {
+            padding: 30px 0;
+
+            &-heading {
+                @include fontStyle(62px, 1, 700);
+            }
+        }
+    }
+
+    &-header {
+        width: 100%;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        height: 66px;
+        background: #211655;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+        z-index: 3;
+
+        & span {
+            font-weight: 500;
+            font-size: 24px;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 17px;
+            text-transform: uppercase;
+            background: #CB67FF;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        &-background {
+            position: absolute;
+            width: 544.91px;
+            height: 544.91px;
+            left: 1529.75px;
+            top: -305px;
+            background: rgba(39, 255, 125, 0.5);
+            filter: blur(250px);
+            transform: rotate(46.38deg);
+        }
+    }
+
+    &-main {
+        &-header {
+            font-size: 18px;
+            font-style: normal;
+            display: grid;
+            justify-content: flex-start;
+
+            &-logo {
+                margin-bottom: 10px;
+
+                & img {
+                    height: 57px;
+                    width: 57px;
+                    margin: 0 auto;
+                }
+            }
+
+            &-bal {
+                display: flex;
+                align-items: center;
+                @include fontStyle(18px, 27px, 400);
+
+                img {
+                    width: 30px;
+                    margin-left: 4px;
+                }
+
+                span {
+                    margin-left: 45px;
+                }
+
+                &-box {
+                    background: rgba(255, 255, 255, 0.05);
+                    backdrop-filter: blur(16px);
+                    -webkit-backdrop-filter: blur(16px);
+                    @include vendor-prefix(border-radius, 5px);
+                    padding: 2px 17px;
+                    margin-left: 39px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            // & span{
+            //     padding-left: 25px;
+            //     font-size: 18px;
+            //     color: #FFFFFF;
+            // }
+            &-balance {
+                background: #0f0d25;
+                width: 245px;
+                @include vendor-prefix(border-radius, 200px);
+                margin-top: 10px;
+                margin-bottom: 30px;
+                display: flex;
+                height: 40px;
+                align-items: center;
+
+                & span {
+                    color: #fff;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &-part {
+            display: grid;
+            margin-bottom: 15px;
+            gap: 10px;
+
+            &-first {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+
+                &-top {
+
+                    background: rgba(255, 255, 255, 0.05);
+                    @include vendor-prefix(border-radius, 5px);
+                    padding: 30px 25px;
+
+                    &-media {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                    }
+
+                    &-left {
+                        height: 100%;
+                        padding-bottom: 30px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        span {
+                            @include fontStyle(16px, 24px, 400);
+                            opacity: 0.5;
+                        }
+
+                        &-div {
+                            display: flex;
+                            @include fontStyle(18px, 27px, 400);
+
+                            &-media {
+                                width: 60%;
+                            }
+                        }
+
+                        &-prpl {
+                            @include vendor-prefix(border-radius, 5px);
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 80%;
+                            padding: 5px 15px;
+
+                            & span {
+                                display: flex;
+                                color: #fff;
+                                font-size: 18px;
+                                font-weight: 400;
+                                opacity: 1;
+                            }
+                        }
+
+                    }
+
+                    &-right {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+
+                    }
+
+                    & img {
+                        height: 30px;
+                        width: 30px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                &-bottom {
+                    font-size: 18px;
+                    display: grid;
+                    gap: 10px;
+
+                    &-wrapper {
+                        background: rgba(255, 255, 255, 0.05);
+                        @include vendor-prefix(border-radius, 5px);
+                        padding: 20px 25px;
+                    }
+
+                    &-text {
+                        span {
+                            opacity: 0.5;
+                        }
+                    }
+
+                    &-box {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 25px;
+                        margin: 20px 0 0;
+                        width: 100%;
+
+                        &-wrapper {
+                            display: flex;
+                            gap: 7px;
+                            align-items: center;
+                            width: calc(50% - 20px);
+
+                            &-token {
+                                height: 30px;
+                                width: 30px;
+                            }
+                        }
+
+                        &-row {
+                            display: flex;
+                            gap: 10px;
+                            background: rgba(255, 255, 255, 0.05);
+                            width: 100%;
+                            padding: 3px 20px;
+                            @include vendor-prefix(border-radius, 5px);
+                            align-items: center;
+                            justify-content: space-between;
+                            @include fontStyle(16px, 24px, 400);
+                        }
+
+                        &-fullRow {
+                            display: flex;
+                            gap: 10px;
+                            background: rgba(255, 255, 255, 0.05);
+                            width: 601px;
+                            padding: 9px;
+                            @include vendor-prefix(border-radius, 27px);
+                            align-items: center;
+                            justify-content: center;
+                            flex-wrap: wrap;
+
+                            &-rate {
+                                gap: 10px;
+                                align-items: center;
+                                display: flex;
+
+                                & img {
+                                    height: 30px;
+                                    width: 30px;
+                                }
+                            }
+
+                            &-reward {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-middle {
+                display: flex;
+                gap: 10px;
+
+                &-deposit {
+
+                    width: 100%;
+
+                    &-col {
+                        &-inner {
+                            display: flex;
+                            justify-content: space-between;
+                            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+                            padding-bottom: 25px;
+
+                            &-text {
+                                font-size: 18px;
+                                font-weight: 400;
+                                margin-bottom: 10px;
+                            }
+
+                            &-value {
+                                color: #fff;
+                                font-size: 18px;
+                                font-weight: 400;
+                            }
+
+                            &-head {
+                                @include fontStyle(18px, 27px, 500);
+                                margin: 25px 25px 10px;
+                            }
+
+                            &-data {
+                                background: $default-color;
+                                @include vendor-prefix(border-radius, 5px);
+                                padding: 30px 25px 40px;
+
+                                &-value {
+                                    display: flex;
+                                    gap: 10px;
+                                    align-items: center;
+
+                                    & span {
+                                        font-size: 16px;
+                                    }
+
+                                    & img {
+                                        height: 31px;
+                                        width: 31px;
+                                    }
+
+                                    & button {
+                                        height: 30px;
+                                        line-height: inherit;
+                                    }
+
+                                    &-box {
+                                        display: flex;
+                                        width: 100%;
+                                        gap: 12px;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        position: relative;
+
+                                        &-available {
+                                            position: absolute;
+                                            // right: 30px;
+                                            top: 35px;
+                                            @include fontStyle(12px, 18px, 400);
+                                            opacity: 0.5;
+                                            white-space: nowrap;
+                                        }
+                                    }
+
+                                    &-amount {
+                                        display: flex;
+                                        background: rgba(255, 255, 255, 0.05);
+                                        @include vendor-prefix(border-radius, 5px);
+                                        height: 30px;
+                                        padding: 5px 15px;
+                                        align-items: center;
+                                        position: relative;
+
+                                        & input {
+                                            border: none;
+                                            background: transparent;
+                                            color: rgba(255, 255, 255, 0.5);
+                                            font-size: 16px;
+                                            outline: none;
+                                        }
+
+                                        & span {
+                                            color: rgba(255, 255, 255, 0.5);
+                                            font-size: 14px;
+                                            white-space: nowrap;
+                                        }
+
+                                        &-available {
+                                            font-size: 12px;
+                                            color: #55e0ff;
+                                            margin-left: 95px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-withdraw {
+                    background: $default-color;
+                    backdrop-filter: blur(37px);
+                    @include vendor-prefix(border-radius, 5px);
+                    padding: 30px 50px;
+                    width: 100%;
+
+                    &-head {
+                        font-size: 18px;
+
+                        &-heading {
+                            margin-bottom: 18px;
+                        }
+                    }
+
+                    &-data {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        & span {
+                            font-size: 16px;
+                        }
+
+                        & img {
+                            height: 31px;
+                            width: 31px;
+                        }
+                    }
+                }
+            }
+
+            &-accumulated {
+                background: $default-color;
+                @include vendor-prefix(border-radius, 5px);
+                padding: 30px 25px;
+                min-height: 100px;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &-content {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 35px;
+                    width: 82%;
+
+                    &-block {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 10px;
+                        width: 100%;
+
+                        &-token {
+                            height: 30px;
+                            width: 30px;
+                        }
+
+                        &-value {
+                            display: flex;
+                            gap: 10px;
+                            background: rgba(255, 255, 255, 0.05);
+                            width: 100%;
+                            padding: 5px 15px;
+                            @include vendor-prefix(border-radius, 5px);
+                            align-items: center;
+                            justify-content: space-between;
+                            font-size: 16px;
+                            line-height: 24px;
+                            font-weight: 400;
+                        }
+                    }
+
+                    &-btn {
+                        text-align: center;
+                        filter: blur(0px);
+
+                        button {
+                            height: 30px;
+                            line-height: inherit;
+                        }
+
+                        svg {
+                            position: unset !important;
+                            width: 12px;
+                            height: 12px;
+                            animation: spin 2s linear infinite;
+
+                            @-webkit-keyframes spin {
+                                0% {
+                                    -webkit-transform: rotate(0deg);
+                                }
+
+                                100% {
+                                    -webkit-transform: rotate(360deg);
+                                }
+                            }
+
+                            @keyframes spin {
+                                0% {
+                                    transform: rotate(0deg);
+                                }
+
+                                100% {
+                                    transform: rotate(360deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

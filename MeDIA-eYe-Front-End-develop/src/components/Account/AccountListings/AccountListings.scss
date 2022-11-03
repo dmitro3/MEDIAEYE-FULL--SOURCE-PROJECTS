@@ -1,0 +1,178 @@
+@import '../../../assets/css/variables.scss';
+
+.account-listings-page {
+    margin-top: 42px;
+
+    &-headerbtns {
+        margin-right: 12px;
+    }
+
+    &-filter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+
+        &-left {
+            display: flex;
+            width: 70%;
+
+            .css-14el2xx-placeholder {
+                color: #ffffff;
+            }
+
+            .css-qc6sy-singleValue {
+                color: #ffffff;
+            }
+
+            .css-319lph-ValueContainer {
+                padding: 2px 0 2px 4px;
+                white-space: nowrap;
+            }
+
+            .css-1hb7zxy-IndicatorsContainer .css-tlfecz-indicatorContainer,
+            .css-1hb7zxy-IndicatorsContainer .css-1gtu0rj-indicatorContainer {
+                color: #ffffff;
+            }
+
+            .css-1hb7zxy-IndicatorsContainer .css-1gtu0rj-indicatorContainer {
+                transform: rotateZ(180deg);
+            }
+
+            .css-b62m3t-container {
+                width: 16%;
+                margin-right: 12px;
+
+                .css-1pahdxg-control {
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border: none;
+                    box-shadow: none;
+                }
+
+                .css-1okebmr-indicatorSeparator {
+                    display: none;
+                }
+
+                @media(max-width: '1280.98px') {
+                    width: 13.8%;
+                }
+
+                @media(max-width: '991.98px') {
+                    width: 30.8%;
+                }
+
+                @media(max-width: '512.98px') {
+                    width: 45.8%;
+                }
+            }
+
+            .css-1pahdxg-control {
+                white-space: nowrap;
+
+                .css-319lph-ValueContainer {
+                    white-space: nowrap;
+                }
+            }
+
+            .css-1s2u09g-control {
+                border: none;
+                background-color: rgba(255, 255, 255, 0.05);
+                white-space: nowrap;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.15);
+                    white-space: nowrap;
+                }
+
+                .css-14el2xx-placeholder {
+                    color: #ffffff;
+                }
+
+                .css-1okebmr-indicatorSeparator {
+                    display: none;
+                }
+
+                .css-1rhbuit-multiValue {
+                    display: none !important;
+                }
+            }
+
+            .css-26l3qy-menu {
+                background: $default-color;
+
+                .css-qvuvtt-option {
+                    white-space: nowrap;
+                }
+
+                .css-10xlmdh-option {
+                    white-space: nowrap;
+                }
+
+                .css-12j1hmm-option {
+                    white-space: nowrap;
+                }
+            }
+
+            input[type='checkbox'] {
+                -webkit-appearance: none;
+                background-color: #fafafa;
+                border: 1px solid #cacece;
+                padding: 6px;
+                @include vendor-prefix(border-radius, 3px);
+                display: inline-block;
+                position: relative;
+                margin-right: 4px;
+
+                &:checked {
+                    background-color: #e9ecee;
+                    color: #99a1a7;
+
+                    &::after {
+                        content: '\2714';
+                        font-size: 12px;
+                        position: absolute;
+                        top: 0;
+                        left: 1px;
+                        color: #5cc51c;
+                    }
+                }
+            }
+
+            .css-1hb7zxy-IndicatorsContainer .css-tlfecz-indicatorContainer:not(:last-child),
+            .css-1hb7zxy-IndicatorsContainer .css-1gtu0rj-indicatorContainer:not(:last-child) {
+                display: none !important;
+            }
+
+            button {
+                margin-right: '12px';
+            }
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+
+            .mediaeye-searchbar {
+                input {
+                    width: 300px;
+                    height: 38px;
+                }
+            }
+        }
+    }
+
+    &-cardss {
+        display: flex;
+        flex-wrap: wrap;
+
+        span {
+            width: 100%;
+            text-align: center;
+            color: rgba(235, 235, 235, 0.5);
+        }
+
+        .explore_block_wrapper {
+            margin: 24px;
+        }
+    }
+}

@@ -1,0 +1,692 @@
+@import '../../../assets/css/variables.scss';
+
+.product-page {
+    &-inner {
+        &-content {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: -15px;
+
+            &-creator {
+                display: flex;
+                justify-content: space-between;
+                @include fontStyle(18px, 27px, 400);
+
+                a {
+                    margin-left: 10px;
+                    color: #ffffff;
+                    @include fontStyle(18px, 27px, 700);
+                }
+            }
+
+            &-col {
+                width: 50%;
+                padding: 0 15px;
+            }
+
+            &-imgbox {
+                position: relative;
+
+                .slick-slide:not(.slick-active) {
+                    height: 0;
+                }
+
+                &-slide {
+                    margin: 0 auto;
+                    @include vendor-prefix(border-radius, 5px);
+                    overflow: hidden;
+                    max-height: 600px;
+                    text-align: center;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    &-arrows {
+                        position: absolute;
+                        background-color: rgba(62, 62, 62, 0.6);
+                        padding: 2px;
+                        left: 0;
+                        right: auto;
+
+                        svg {
+                            width: 24px;
+                            height: 24px;
+                        }
+
+                        &.rightone {
+                            right: 0;
+                            left: auto;
+                        }
+                    }
+
+                    img {
+                        // min-height: 600px;
+                        // max-width: none;
+                        // min-width: 100%;
+                        width: 100%;
+                        align-self: center;
+                        @include vendor-prefix(transition, all 0.4s);
+                        @include vendor-prefix(border-radius, 5px);
+                        height: auto;
+                    }
+
+                    video {
+                        min-height: 600px;
+                        width: 100%;
+                        align-self: center;
+                        @include vendor-prefix(transition, all 0.4s);
+                        @include vendor-prefix(border-radius, 5px);
+                        height: auto;
+                        background-color: $dark-bg;
+                    }
+                }
+
+                .mediaeyeempty-image {
+                    background-color: $dark-bg;
+                    min-height: 500px;
+                }
+
+                &-choose {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    text-align: left;
+                    padding: 15px 20px;
+                    cursor: pointer;
+                    right: 0;
+                    background-color: rgba(62, 62, 62, 0.6);
+
+                    &-heading {
+                        font-weight: 600;
+                        font-size: 18px;
+                        color: #fff;
+                        // background: rgba(62, 62, 62, 0.4);
+                        // @include vendor-prefix(border-radius,15px);
+                        padding: 2px 10px 2px 40px;
+                        position: relative;
+                        line-height: 27px;
+                        display: inline-block;
+
+                        svg {
+                            position: absolute;
+                            top: 50%;
+                            @include vendor-prefix(transform, translateY(-50%));
+                            left: 10px;
+                        }
+                    }
+
+                    &-des {
+                        color: #bcbcbc;
+                        font-size: 14px;
+                        padding-left: 15px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            &-informationbox {
+                width: 100%;
+                background-color: $default-color;
+                padding: 20px;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                @include vendor-prefix(border-radius, 0px 0px 5px 5px);
+
+                &-row {
+                    display: flex;
+
+                    &-left {
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        gap: 30px;
+                    }
+
+                    &-right {
+                        margin: auto 0 0 auto;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+
+            &-info {
+                color: #ebebeb;
+                width: 100%;
+                margin-bottom: 20px;
+                position: relative;
+
+                &-actions {
+                    padding: 10px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 1;
+                }
+
+                &-title {
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                    word-break: break-word;
+                }
+
+                &-product {
+                    font-size: 18px;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 300;
+                }
+
+                &-collection {
+                    font-size: 18px;
+                    display: flex;
+                    align-items: center;
+                    color: $link-color;
+                    margin-bottom: 15px;
+                    word-break: break-word;
+                }
+
+                &-liked {
+                    color: $white-color;
+                    font-size: 14px;
+                    line-height: 14px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    svg {
+                        margin-right: 5px;
+                        max-width: 24px;
+                    }
+                }
+
+                &-unlockable {
+                    color: $white-color;
+                    font-size: 14px;
+                    line-height: 14px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    svg {
+                        margin-right: 5px;
+                        max-width: 24px;
+                    }
+
+                    .mediaeyeinfo {
+                        svg {
+                            path {
+                                &[fill] {
+                                    fill: $transparent-color;
+                                }
+
+                                &[stroke] {
+                                    stroke: $transparent-color;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-charity {
+                    color: $white-color;
+                    font-size: 16px;
+                    line-height: 14px;
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        margin-right: 5px;
+                        max-width: 24px;
+                    }
+                }
+
+                &-blockchain {
+                    color: rgba(235, 235, 235, 0.5);
+                    font-size: 16px;
+                    line-height: 24px;
+                    display: flex;
+                    align-items: center;
+
+                    &-icon {
+                        margin-right: 5px;
+                        max-width: 24px;
+                    }
+                }
+
+                &-items {
+                    display: flex;
+                    margin-bottom: 15px;
+                    gap: 15px;
+                    align-items: center;
+
+                    .mediaeyecreatedby-link {
+                        white-space: nowrap;
+                        max-width: 50%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        margin-left: 0;
+                    }
+
+                    &-col {
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+
+                        &-label {
+                            margin-right: 5px;
+                            line-height: 10px;
+                            font-size: 16px;
+                        }
+
+                        &-value {
+                            font-size: 16px;
+                            line-height: 16px;
+                        }
+                    }
+                }
+            }
+
+            &-btns {
+                button {
+                    ~button {
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            &-row {
+                width: 100%;
+                margin-bottom: 30px;
+
+                &-title {
+                    color: #ebebeb;
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-bottom: 5px;
+                }
+            }
+
+            &-description {
+                color: rgba(255, 255, 255, 0.5);
+                font-size: 16px;
+                word-break: break-word;
+                margin-top: 10px;
+            }
+
+            &-createdby {
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+
+            &-creatorabout {
+                width: 100%;
+                display: flex;
+                gap: 20px;
+
+                &-headimage {
+                    width: 80px;
+
+                    img {
+                        width: 80px;
+                        height: 80px;
+                        @include vendor-prefix(border-radius, 50%);
+                    }
+                }
+
+                &-text {
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 16px;
+                    word-break: break-word;
+                    flex: 1;
+                }
+
+                &-social {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+
+                    &-btn {
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+
+                        svg {
+                            @include vendor-prefix(transition, all 0.3s);
+                            opacity: 0.5;
+                        }
+
+                        &:hover {
+                            svg {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-pricebox {
+                background: $default-color;
+                @include vendor-prefix(border-radius, 10px);
+                padding: 20px;
+                width: 100%;
+
+                &-heading {
+                    color: rgba(235, 235, 235, 0.5);
+                    font-size: 18px;
+                }
+
+                &-price {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    margin-top: 10px;
+
+                    &-col {
+                        display: flex;
+                        align-items: center;
+
+                        &-network {
+                            margin-right: 10px;
+                            max-width: 34px;
+                        }
+
+                        &-amount {
+                            font-weight: 500;
+                            font-size: 24px;
+                            color: #fff;
+                        }
+
+                        &-or {
+                            font-size: 18px;
+                            color: #fff;
+                            margin: 0 5px;
+                        }
+
+                        &-converted {
+                            font-size: 18px;
+                            color: rgba(235, 235, 235, 0.5);
+                        }
+                    }
+                }
+
+                &-buttons {
+                    gap: 20px;
+                    margin-top: 10px;
+                    display: flex;
+
+                    &-disable {
+                        opacity: 0.5;
+                        cursor: auto;
+                    }
+                }
+            }
+
+            &-averagebox {
+                background: $default-color;
+                @include vendor-prefix(border-radius, 10px);
+                padding: 20px;
+                width: 100%;
+
+                &-row {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    &-col {
+                        flex: 1;
+
+                        &-heading {
+                            color: rgba(255, 255, 255, 0.5);
+                            font-size: 18px;
+                        }
+
+                        &-value {
+                            color: #fff;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+            &-auctiontimer {
+                width: 100%;
+
+                &-heading {
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 18px;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    svg {
+                        margin-right: 5px;
+                        width: 18px;
+                        height: auto;
+                    }
+                }
+
+                &-time {
+                    width: 100%;
+                    display: flex;
+                    gap: 10px;
+
+                    > div {
+                        position: relative;
+                        background: rgba(8, 6, 41, 0.5);
+                        min-width: 50px;
+                        margin-bottom: 30px;
+                        text-align: center;
+                        line-height: 35px;
+                        color: #ebebeb;
+                        font-size: 24px;
+                        font-weight: 500;
+                        padding: 5px 0;
+                        @include vendor-prefix(border-radius, 5px);
+
+                        > span {
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            right: 0;
+                            color: rgba(255, 255, 255, 0.5);
+                            font-size: 14px;
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-tabscard {
+            width: 100%;
+
+            &-nodata {
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.5);
+                text-align: center;
+                padding-top: 30px !important;
+                padding-bottom: 30px !important;
+                background: transparent !important;
+            }
+
+            &-price {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 24px;
+                }
+            }
+
+            &-namewithicon {
+                display: flex;
+
+                svg {
+                    margin-right: 5px;
+                }
+            }
+
+            &-heading {
+                background: $default-color;
+                @include vendor-prefix(border-radius, 3px 3px 3px 3px);
+                padding: 10px 30px;
+                color: #fff;
+                display: flex;
+                font-size: 16px;
+                font-weight: 500;
+                width: 100%;
+                text-align: left;
+                position: relative;
+                align-items: center;
+                cursor: pointer;
+
+                &-icons {
+                    margin-right: 10px;
+                }
+
+                &-action {
+                    position: absolute;
+                    right: 15px;
+                    @include vendor-prefix(transition, all 0.4s);
+                }
+            }
+
+            &-body {
+                padding: 10px;
+                @include vendor-prefix(border-radius, 0px 0px 3px 3px);
+
+                &-withContent {
+                    padding: 20px;
+                }
+
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+
+                    thead {
+                        tr {
+                            border-bottom: 10px solid transparent;
+
+                            th {
+                                border: none;
+                                padding: 5px 10px;
+                                font-size: 14px;
+                                font-weight: 500;
+                                border-left: 1px solid rgba(255, 255, 255, 0.1);
+                                text-align: left;
+                                color: #ebebeb;
+
+                                &:first-child {
+                                    border-left: 0 solid #412e9a;
+                                }
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            border-bottom: 10px solid transparent;
+
+                            td {
+                                padding: 15px 10px;
+                                font-size: 14px;
+                                background: rgba(255, 255, 255, 0.02);
+                                backdrop-filter: blur(16px);
+                                border: none;
+
+                                &:first-child {
+                                    @include vendor-prefix(border-radius, 12px 0px 0px 12px);
+                                }
+
+                                &:last-child {
+                                    @include vendor-prefix(border-radius, 0px 12px 12px 0px);
+                                }
+                            }
+                        }
+                    }
+
+                    &.withscroll {
+                        thead {
+                            display: table;
+                            width: 100%;
+                            table-layout: fixed;
+                        }
+
+                        tbody {
+                            display: block;
+                            max-height: 350px;
+                            overflow-y: auto;
+                            width: 100%;
+
+                            tr {
+                                display: table;
+                                width: 100%;
+                                table-layout: fixed;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.active & {
+                &-heading {
+                    @include vendor-prefix(border-radius, 3px 3px 0px 0px);
+
+                    &-action {
+                        @include vendor-prefix(transform, rotate(-180deg));
+                    }
+                }
+            }
+
+            &-itemsimg {
+                width: 80px;
+
+                &-inner {
+                    @include vendor-prefix(border-radius, 4px);
+                }
+
+                img {
+                    width: 100%;
+                    @include vendor-prefix(border-radius, 4px);
+                }
+            }
+
+            &-itemscollection {
+                color: #c4c4c4;
+            }
+
+            &-itemstitle {
+                font-weight: bold;
+                color: #fff;
+            }
+
+            &-itemsupply {
+                width: 100px;
+                text-align: center;
+            }
+        }
+
+        &-footer {
+            width: 100%;
+
+            &-heading {
+                font-weight: 500;
+                font-size: 18px;
+                text-align: center;
+                color: #fff;
+                margin-bottom: 30px;
+            }
+
+            &-content {
+                width: 100%;
+            }
+        }
+    }
+}

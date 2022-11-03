@@ -1,0 +1,95 @@
+@import '../../assets/css/variables.scss';
+
+.watchlist-page{
+    &-inner{
+        &-list{
+        &-price{
+          display: flex;
+          align-items: center;
+          img{
+            margin-right: 5px;
+            max-width: 24px;
+          }
+        }  
+        &-collection{
+          display: flex;
+          align-items: center;
+          gap:10px;
+          &-img{
+            width: 40px;
+            height: 40px;
+            position: relative;
+            &-sticker{
+              position: absolute;
+            }
+            &-inner{
+              @include vendor-prefix(border-radius,50px);
+              overflow: hidden;
+              border: 2px solid rgba(255, 255, 255, 0.4);
+              img{
+                height: 100%;
+                width: 100%;
+              }
+            }
+          }
+        }
+        &-close{
+          cursor: pointer;
+          svg{
+              max-width: 16px;
+              height: auto;
+              width: auto;
+          }
+          &:hover{
+            svg{
+              rect{
+                &[stroke]{
+                  stroke: $link-hover;
+                }
+                &[fill]{
+                 fill: $link-hover;
+                }
+
+              }
+            }
+          }
+        }
+        &-srno{
+          padding-right:0 !important;
+          text-align: center; 
+        }  
+        table {
+          width: 100%;
+          border-collapse: collapse;
+
+          thead {
+            tr {
+              border-bottom: 1px solid rgba(144, 144, 144, 0.5);
+
+              th {
+                border: none;
+                padding: 15px 10px;
+                font-size: 14px;
+                font-weight: 500;
+                text-align: left;
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              border-bottom: 1px solid rgba(144, 144, 144, 0.5);
+              td {
+                padding: 15px 10px;
+                font-size: 14px;
+                border: none; 
+              }
+              // &:hover{
+              //   background-color: rgba(255, 255, 255, 0.1);
+              // }
+            }
+          }
+        }
+      }
+    }
+}

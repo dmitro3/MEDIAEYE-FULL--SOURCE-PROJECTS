@@ -1,0 +1,326 @@
+@import '../../assets/css/variables.scss';
+
+@mixin adjustFontSize($less: 0px) {
+    font-size: calc(30px - #{$less});
+    @media(max-width: 1399.98px) {
+        font-size: calc(28px - #{$less});
+    }
+    @media(max-width: 1299.98px) {
+        font-size: calc(24px - #{$less});
+    }
+    @media(max-width: 399.98px) {
+        font-size: calc(22px - #{$less});
+    }
+}
+
+.connect_wallet {
+    min-height: 100vh;
+    z-index: 11112;
+    display: flex;
+    width: 100%;
+    background: url('../../assets/img/connect-wallet-bg.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .goBack_button {
+        padding: 0;
+        color: #fff;
+        @include vendor-prefix(transition, 0.3s);
+        svg {
+            margin-right: 5px;
+        }
+        &:hover {
+            color: $link-hover;
+        }
+    }
+    &_left {
+        background: url('../../assets/img/connect_wallet_left.png') no-repeat center;
+        background-size: cover;
+        width: 25.4%;
+    }
+    &_right {
+        width: 74.6%;
+        background-size: cover;
+        padding: 70px 40px;
+
+        &_content {
+            max-width: 930px;
+            width: 100%;
+            margin: auto 0;
+            &_header {
+                padding: 40px 0;
+            }
+            &_inner {
+                display: flex;
+            }
+            &_colbox {
+                width: 50%;
+                border: 1px solid #646464;
+                background: rgba(20, 18, 51, 0.1);
+                box-sizing: border-box;
+                @include vendor-prefix(border-radius, 12px);
+                backdrop-filter: blur(20px);
+                margin: 0 20px;
+                display: flex;
+                flex-direction: column;
+                padding: 40px;
+                min-height: 430px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                h2 {
+                    font-weight: bold;
+                    @include adjustFontSize();
+                    line-height: 45px;
+                    display: flex;
+                    align-items: center;
+                    color: #fff;
+                    margin: 20px 0;
+                    width: 100%;
+                    span {
+                        color: #55e0ff;
+                    }
+                }
+                &.signincol {
+                    h2 {
+                        margin-bottom: 0;
+                        text-transform: uppercase;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                }
+                .connect_wallet_social {
+                    margin-top: 10px;
+                    &_btn {
+                        border: 0;
+                        padding: 0;
+                        width: auto;
+                        margin-top: 20px;
+                        background: rgba(100, 100, 100, 0.3);
+                        border: 1px solid rgba(100, 100, 100, 0.3);
+                        box-sizing: border-box;
+                        @include vendor-prefix(border-radius, 20px);
+                        color: #fff;
+                        font-weight: 500;
+                        height: 40px;
+                        display: block;
+                        width: 100%;
+                        position: relative;
+                        max-width: 300px;
+                        overflow: hidden;
+                        @include vendor-prefix(transition, all 0.3s);
+                        span {
+                            width: 40px;
+                            height: 100%;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            bottom: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        svg {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                        &:hover,
+                        &:focus {
+                            background-color: $link-color;
+                            span {
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+                .connect_wallet_terms {
+                    color: #fff;
+                    font-size: 14px;
+                    bottom: 40px;
+                    position: absolute;
+                    &_link {
+                        color: #27f2ff;
+                        cursor: pointer;
+                        &:hover {
+                            color: $link-hover;
+                        }
+                    }
+                }
+                .connect_wallet_label {
+                    font-size: 16px;
+                    color: #ebebeb;
+                    line-height: 24px;
+                }
+                .connect_wallet_networks {
+                    margin: 20px 0 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    max-width: 325px;
+                    width: 100%;
+                    &_btn {
+                        max-width: 90px;
+                        background: rgba(100, 100, 100, 0.3);
+                        border: 1px solid rgba(100, 100, 100, 0.3);
+                        box-sizing: border-box;
+                        @include vendor-prefix(border-radius, 20px);
+                        color: #fff;
+                        font-weight: 500;
+                        font-size: 14px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        padding: 0;
+                        overflow: hidden;
+                        @include vendor-prefix(transition, all 0.3s);
+                        span {
+                            width: 35px;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 5px;
+                            @include vendor-prefix(transition, all 0.3s);
+                        }
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                        &:hover,
+                        &:focus,
+                        &.active {
+                            &[network='ETH'] {
+                                background: linear-gradient(89.67deg, #703eff 0.27%, rgba(155, 127, 236, 0.99) 99.71%);
+                                background-color: rgba(155, 127, 236, 0.7);
+                            }
+                            &[network='BSC'] {
+                                background: linear-gradient(90deg, #d6ac17 0%, #f47f2a 100%);
+                                border-color: rgba(214, 173, 23, 0.7);
+                            }
+                            &[network='FTM'] {
+                                background: linear-gradient(90deg, #1c97dd 0%, #114da8 100%);
+                                border-color: rgba(28, 150, 221, 0.7);
+                            }
+
+                            span {
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+                .connect_wallet_walletss {
+                    max-width: 325px;
+                    width: 100%;
+                    margin: 0;
+                    &_btn {
+                        background: rgba(100, 100, 100, 0.3);
+                        border: 1px solid rgba(100, 100, 100, 0.3);
+                        box-sizing: border-box;
+                        @include vendor-prefix(border-radius, 20px);
+                        color: #fff;
+                        font-weight: 500;
+                        font-size: 14px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        padding: 0;
+                        overflow: hidden;
+                        @include vendor-prefix(transition, all 0.3s);
+                        position: relative;
+                        justify-content: center;
+                        max-width: 230px;
+                        span {
+                            width: 45px;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            @include vendor-prefix(transition, all 0.3s);
+                        }
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                        &:not([disabled]):hover,
+                        &:not([disabled]):focus {
+                            background-color: #f1853b;
+                            span {
+                                background-color: #fff;
+                            }
+                        }
+                        &[disabled] {
+                            opacity: 0.3;
+                            cursor: not-allowed;
+                        }
+                    }
+                }
+                .connect_wallet_info {
+                    display: flex;
+                    margin: 20px 0;
+                    &_icon {
+                        width: 22px;
+                        height: 22px;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                        margin-right: 10px;
+                    }
+                    &_text {
+                        font-size: 11px;
+                        margin: auto 0;
+                        color: #ebebeb;
+                        line-height: 15px;
+                        letter-spacing: 0.88px;
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width: 991.98px) {
+        &_left {
+            display: none;
+        }
+        &_right {
+            width: 100%;
+            &_content {
+                &_header {
+                    padding: 20px 0;
+                }
+                &_inner {
+                    flex-direction: column;
+                }
+                &_colbox {
+                    width: 100%;
+                    margin: 0 0 30px;
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+    @media(max-width: 767.98px) {
+        &_right {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            &_content {
+                &_colbox {
+                    width: 100%;
+                    margin: 0 0 30px;
+                    max-width: 400px;
+                    padding: 30px;
+                    h2 {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}

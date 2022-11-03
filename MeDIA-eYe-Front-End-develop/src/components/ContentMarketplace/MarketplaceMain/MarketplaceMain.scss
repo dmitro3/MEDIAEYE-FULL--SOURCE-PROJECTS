@@ -1,0 +1,15 @@
+.nft-marketplace {
+  &-page {
+    background: url('../../../assets/img/nftMarketplace-shadow.png') no-repeat
+      top right;
+      &-loader{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+  }
+  &-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,60 @@
+.connecting-accounts {
+  position: relative;
+  .choose-file-modal {
+    top: -50px;
+  }
+}
+.content {
+  max-width: 60%;
+  margin: 0 auto;
+  width: 100%;
+  @media (max-width: 540px) {
+    max-width: 100%;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    -moz-box-direction: normal;
+    -webkit-box-direction: normal;
+    .special-label {
+      display: none;
+    }
+
+    input {
+      font-family: "PoppinsRegular", sans-serif;
+      border-radius: 5px;
+      border: none;
+      background: linear-gradient(
+        126.6deg,
+        rgba(255, 255, 255, 0.1) 28.69%,
+        rgba(255, 255, 255, 0.1) 100%
+      );
+      width: 100%;
+      margin-bottom: 20px;
+      resize: none;
+      padding: 4px 10px;
+      outline: none;
+      color: #8b8b8b;
+    }
+    .button-box {
+      button {
+        background: linear-gradient(
+          126.6deg,
+          rgba(255, 255, 255, 0.1) 28.69%,
+          rgba(255, 255, 255, 0.1) 100%
+        );
+        -webkit-backdrop-filter: blur(140px);
+        backdrop-filter: blur(140px);
+        border-radius: 5px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 4px 16px;
+        cursor: pointer;
+        color: #fff;
+        transition: 0.3s;
+        margin-bottom: 26px;
+      }
+    }
+  }
+}

@@ -1,0 +1,1601 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_admins",
+        "type": "address[]"
+      },
+      {
+        "internalType": "address payable",
+        "name": "_feeWallet",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_operator",
+        "type": "address"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_paymentMethods",
+        "type": "address[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "airdropPricePerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeCuratedAirdropsV2.TokenAmounts[]",
+        "name": "_initialTokenAmounts",
+        "type": "tuple[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "airdropPricePerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeCuratedAirdropsV2.TokenAmounts",
+        "name": "_baseUSDTokenAmounts",
+        "type": "tuple"
+      },
+      {
+        "internalType": "address",
+        "name": "_priceFeedAggregator",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "_invertedAggregator",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256[]",
+        "name": "tokenId",
+        "type": "uint256[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256[]",
+        "name": "num",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "Airdrop1155Transfer",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "Airdrop721Transfer",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "airdropId",
+        "type": "uint256"
+      }
+    ],
+    "name": "AirdropEnded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "num",
+        "type": "uint256"
+      }
+    ],
+    "name": "AirdropTransfer",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "newFeeWallet",
+        "type": "address"
+      }
+    ],
+    "name": "FeeWalletChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "paymentMethod",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "airdropPricePerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct MediaEyeCuratedAirdropsV2.TokenAmounts",
+        "name": "tokenAmounts",
+        "type": "tuple"
+      }
+    ],
+    "name": "PaymentAdded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "paymentMethod",
+        "type": "address"
+      }
+    ],
+    "name": "PaymentRemoved",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "previousAdminRole",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "newAdminRole",
+        "type": "bytes32"
+      }
+    ],
+    "name": "RoleAdminChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleGranted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleRevoked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "airdropId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "enum MediaEyeCuratedAirdropsV2.AirdropType",
+            "name": "airdropType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bool",
+            "name": "promoCode",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "contractAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "tokenIds",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "maxTokenAmounts",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "bool",
+            "name": "featured",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "data",
+            "type": "string"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct MediaEyeCuratedAirdropsV2.AirdropInfo",
+        "name": "airdropInfo",
+        "type": "tuple"
+      }
+    ],
+    "name": "StartAirdrop",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "paymentMethod",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "airdropPricePerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct MediaEyeCuratedAirdropsV2.TokenAmounts",
+        "name": "tokenAmounts",
+        "type": "tuple"
+      }
+    ],
+    "name": "TokenAmountsChanged",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "DEFAULT_ADMIN_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "DOMAIN_SEPARATOR",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "ROLE_ADMIN",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "airdropPricePerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeCuratedAirdropsV2.TokenAmounts",
+        "name": "_newTokenAmount",
+        "type": "tuple"
+      },
+      {
+        "internalType": "address",
+        "name": "_paymentMethod",
+        "type": "address"
+      }
+    ],
+    "name": "addPaymentMethod",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "airdrops",
+    "outputs": [
+      {
+        "internalType": "enum MediaEyeCuratedAirdropsV2.AirdropType",
+        "name": "airdropType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "bool",
+        "name": "promoCode",
+        "type": "bool"
+      },
+      {
+        "internalType": "address",
+        "name": "contractAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "merkleRoot",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "startTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "endTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "featured",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "rooted",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "finished",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "baseUSDTokenAmounts",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "airdropPricePerDay",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "chainlinkFeed",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "stableCoin",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenDecimals",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "checkAirdropFinished",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_who",
+        "type": "address"
+      }
+    ],
+    "name": "checkCollected",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32[]",
+        "name": "_proof",
+        "type": "bytes32[]"
+      },
+      {
+        "internalType": "address",
+        "name": "_who",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "_promoCode",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_tokenIds",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_amounts",
+        "type": "uint256[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "isValid",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "airdropId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "merkleRoot",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint8",
+            "name": "v",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "r",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "internalType": "struct MediaEyeCuratedAirdropsV2.RootSignature",
+        "name": "_root",
+        "type": "tuple"
+      }
+    ],
+    "name": "claimERC1155Tokens",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32[]",
+        "name": "_proof",
+        "type": "bytes32[]"
+      },
+      {
+        "internalType": "address",
+        "name": "_who",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "_promoCode",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "isValid",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "airdropId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "merkleRoot",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint8",
+            "name": "v",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "r",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "internalType": "struct MediaEyeCuratedAirdropsV2.RootSignature",
+        "name": "_root",
+        "type": "tuple"
+      }
+    ],
+    "name": "claimERC20Tokens",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32[]",
+        "name": "_proof",
+        "type": "bytes32[]"
+      },
+      {
+        "internalType": "address",
+        "name": "_who",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "_promoCode",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_tokenId",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "isValid",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "airdropId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "merkleRoot",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint8",
+            "name": "v",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "r",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "internalType": "struct MediaEyeCuratedAirdropsV2.RootSignature",
+        "name": "_root",
+        "type": "tuple"
+      }
+    ],
+    "name": "claimERC721Tokens",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum MediaEyeCuratedAirdropsV2.AirdropType",
+        "name": "_type",
+        "type": "uint8"
+      },
+      {
+        "internalType": "address",
+        "name": "_token",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "contractTokenBalance",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "contractTokenBalanceById",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "contractTokenIdsById",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_baseAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_baseDecimals",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_queryDecimals",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "_invertedAggregator",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_convertToNative",
+        "type": "bool"
+      }
+    ],
+    "name": "convertPrice",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "endAirdrop",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "feeWallet",
+    "outputs": [
+      {
+        "internalType": "address payable",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getNumPaymentMethods",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getRoleAdmin",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getRoundData",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "grantRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "hasRole",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "invertedAggregator",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_paymentMethod",
+        "type": "address"
+      }
+    ],
+    "name": "isPaymentMethod",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "nextAirdropId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "name": "onERC1155BatchReceived",
+    "outputs": [
+      {
+        "internalType": "bytes4",
+        "name": "",
+        "type": "bytes4"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "name": "onERC1155Received",
+    "outputs": [
+      {
+        "internalType": "bytes4",
+        "name": "",
+        "type": "bytes4"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "name": "onERC721Received",
+    "outputs": [
+      {
+        "internalType": "bytes4",
+        "name": "",
+        "type": "bytes4"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "operator",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "paymentMethodAmounts",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "airdropPricePerDay",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "chainlinkFeed",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "stableCoin",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenDecimals",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_paymentMethod",
+        "type": "address"
+      }
+    ],
+    "name": "removePaymentMethod",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "renounceRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "revokeRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_typeHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "setAirdropHash",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "airdropPricePerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeCuratedAirdropsV2.TokenAmounts",
+        "name": "_baseUSDTokenAmounts",
+        "type": "tuple"
+      }
+    ],
+    "name": "setBaseUSDTokenAmounts",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "setOperatorAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_aggregator",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "_inverted",
+        "type": "bool"
+      }
+    ],
+    "name": "setPriceFeedAggregator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "_merkleRoot",
+        "type": "bytes32"
+      }
+    ],
+    "name": "setRoot",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum MediaEyeCuratedAirdropsV2.AirdropType",
+        "name": "_airdropType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "bool",
+        "name": "_promoCode",
+        "type": "bool"
+      },
+      {
+        "internalType": "address",
+        "name": "_contractAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "_merkleRoot",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_startTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_numDays",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_tokenIds",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_maxTokenAmounts",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "address",
+        "name": "_paymentMethod",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "_feature",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "_data",
+        "type": "string"
+      }
+    ],
+    "name": "startAirdrop",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "interfaceId",
+        "type": "bytes4"
+      }
+    ],
+    "name": "supportsInterface",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address payable",
+        "name": "_newFeeWallet",
+        "type": "address"
+      }
+    ],
+    "name": "updateFeeWallet",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "airdropPricePerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeCuratedAirdropsV2.TokenAmounts[]",
+        "name": "_newTokenAmounts",
+        "type": "tuple[]"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_paymentMethods",
+        "type": "address[]"
+      }
+    ],
+    "name": "updateMultipleTokenAmounts",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

@@ -1,0 +1,211 @@
+@import '../../../../assets/css/variables.scss';
+
+.listing-stages{
+    &-inner{
+        width: 760px;
+        margin: auto;
+    &-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span{
+            @include fontStyle(24px, 36px, 600);
+        }
+        .mediaeyeform-label{
+            width: fit-content;
+        }
+    }
+    &-basics{
+        margin-top: 44px;
+        &-row{
+            display: flex;
+            gap: 20px;
+        }
+        .mediaeyeform-group{
+            &.shortone{
+                width: 49%;
+            }
+        }
+    }
+    &-maxnft{
+        margin-top: 100px;
+       &-row{
+           display: flex;
+           gap: 20px;
+       }
+    }
+    &-whitelist{
+        margin-top: 100px;
+        display: grid;
+        &-title{
+            @include fontStyle(16px, 24px, 400);
+        }
+    }
+    &-address{
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        &-title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include fontStyle(16px, 24px, 400);
+        }
+        &-left{
+            width: 50%;
+        }
+        &-right{
+            width: 50%;
+            &-content{
+                .mediaeyeform-group-input{
+                    display: flex;
+                    gap: 15px;
+                }
+            }
+        }
+    }
+    &-nftpass{
+        margin-bottom: 100px;
+        &-title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 50%;
+            @include fontStyle(16px, 17px, 400);
+        }
+        &-content{
+            display: flex;
+            gap: 20px;
+        }
+    }
+    &-publicsale{
+        &-content{
+            &-row{
+                display: flex;
+                gap: 20px;
+                .mediaeyeform-group-input-image{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    cursor: pointer;
+                    width: 40px;
+                    height: 40px;
+                }
+                .mediaeyeform-input{
+                    &.withimage{
+                        padding-left: 40px;
+                    }
+                }
+                .mediaeyeform-group-input{
+                    &.double{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        .mediaeye-selectsearch{
+                            width: 240%;
+                        }
+                    }
+                }
+            }
+        }
+        &-price{
+            width: 100%;
+            background: rgba(36, 34, 66, 0.5);
+            @include vendor-prefix(border-radius, 5px);
+            padding: 20px;
+            &-sale{
+                &-title{
+                    .mediaeyeform-label{
+                        width: fit-content;
+                    }
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                span{
+                    @include fontStyle(16px, 24px, 400);
+                }
+            }
+            }
+        }
+    }
+    &-stageduration{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        &-content{
+            .mediaeyeform-group{
+                &.shortone{
+                    width: 49%;
+                }
+            }
+            &-row{
+                display: flex;
+                gap: 20px;
+                .mediaeye-datepicker{
+                    text-align: center;
+                }
+                .react-datepicker-popper{
+                    position: relative !important;
+                    transform: translate3d(0px, 0px, 0px) !important;
+                }
+            }
+
+        }
+        &-bottom{
+            &-block{
+                background: #242242;
+                @include vendor-prefix(border-radius, 5px);
+                padding: 10px;
+                &-top{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &-left{
+                        padding: 10px;
+                    }
+                    &-right{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        &-box{
+                            padding-right: 10px;
+                            display: flex;
+                            gap: 10px;
+                            align-items: center;
+                            span{
+                                padding: 8px 15px;
+                                background: rgba(255, 255, 255, 0.05);
+                                @include vendor-prefix(border-radius, 3px);
+                            }
+                        }
+                    }
+                }
+                &-middle{
+                    padding-left: 10px;
+                }
+                &-last{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0px 10px;
+                    padding-bottom: 10px;
+                    &-right{
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        .token-row{
+                            display: flex;
+                            align-items: center;
+                            gap: 6px;
+                            img{
+                                width: 25px;
+                                height: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
+}
+}

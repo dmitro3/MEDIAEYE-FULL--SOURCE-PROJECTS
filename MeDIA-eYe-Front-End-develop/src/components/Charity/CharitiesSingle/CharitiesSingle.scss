@@ -1,0 +1,236 @@
+@import '../../../assets/css/variables.scss';
+
+.mediaeye-charitysingle {
+    &-profileBanner {
+        max-width: 1580px;
+        width: 95vw;
+        height: 222px;
+        background: url("../../../assets/img/Charity/CharityProfileBanner.png");
+        background-position: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @include vendor-prefix(border-radius, 5px);
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media(max-width: 991.98px) {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        &-details {
+            font-weight: 500;
+            font-size: 16px;
+            margin: 0;
+        }
+    }
+
+    &-inner {
+        &-flexout {
+            margin-bottom: 26px;
+            display: flex;
+            gap: 30px;
+            margin-top: -20px;
+
+            &-rightprofile {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 77%;
+                margin-top: 30px;
+
+                &-firstrow {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+
+                    h2 {
+                        font-weight: 600;
+                        font-size: 36px;
+                    }
+                }
+
+                &-secondrow {
+                    display: flex;
+                    align-items: flex-start;
+
+                    &.mgap {
+                        align-items: flex-end;
+                    }
+
+                    &-col {
+                        display: flex;
+                        flex-direction: column;
+                        height: 50px;
+                        align-items: flex-start;
+                        gap: 0;
+                        padding: 2px 40px 2px 15px;
+                        border-left: 1px solid rgba(255, 255, 255, 0.5);
+                        color: rgba(255, 255, 255, 0.5);
+                        font-weight: 500;
+                        font-size: 16px;
+
+                        span {
+                            margin-left: 0;
+                            color: #ffffff;
+                        }
+
+                        .check {
+                            height: 10px;
+                            width: 20px;
+                            object-fit: cover;
+                            margin-top: 8px;
+                        }
+
+                        &.nodol {
+                            border: 0;
+                            padding: 0 0 0 20px;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 15px;
+                            height: 40px;
+
+                            span {
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-desc {
+            h6 {
+                width: 100%;
+            }
+        }
+
+        &-crypto {
+            background: #24224280;
+            @include vendor-prefix(border-radius, 5px);
+            padding: 8px 20px;
+            max-height: 40px;
+            @include vendor-prefix(transition, all 0.5s);
+            overflow: hidden;
+
+            &.open {
+                max-height: 5000px;
+                @include vendor-prefix(transition, all 0.5s);
+            }
+
+            &-head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                cursor: pointer;
+
+                h4 {
+                    font-weight: 400 !important;
+                    font-size: 16px !important;
+                    margin: 0 !important;
+                }
+            }
+
+            &-wrapper {
+                overflow: hidden;
+                padding-bottom: 12px
+            }
+
+            &-box {
+                @include vendor-prefix(transform, translateY(-150%));
+                @include vendor-prefix(transition, all 0.5s);
+                opacity: 0;
+
+                &.open {
+                    @include vendor-prefix(transform, none);
+                    @include vendor-prefix(transition, all 0.5s);
+                    opacity: 1;
+                }
+            }
+
+            &-cont {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0;
+                gap: 10px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: #ffffff;
+                min-width: 140px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            &-showmore {
+                display: flex;
+                align-items: center;
+                color: #ffffff;
+                opacity: 0.5;
+
+                &:hover {
+                    color: #ffffff;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &-popover {
+        &-inner {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+    }
+
+
+
+    &-payment {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+
+        span {
+            font-size: 16px;
+            color: #55e0ff;
+        }
+
+        &-cont {
+            background: rgba(255, 255, 255, 0.2);
+            @include vendor-prefix(border-radius, 50%);
+            padding: 5px;
+
+            img {
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+
+    .CharityAvatar {
+        width: 250px;
+        height: 250px;
+        background: #ffffff;
+        @include vendor-prefix(border-radius, 5px);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

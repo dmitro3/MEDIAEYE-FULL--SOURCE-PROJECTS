@@ -1,0 +1,77 @@
+@import '../../../assets/css/variables.scss';
+.mediaeye-popup{
+    &-airdrop-token-page{
+        &-header{
+            font-weight: 500;
+            font-size: 24px;
+        }
+        &-inner {
+            margin-top: 30px;
+           &-header{
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            &-title{
+                border-left: 1px solid rgba(255, 255, 255, 0.3019607843);
+                padding: 0 15px;
+                line-height: 30px;
+                font-weight: 500;
+                &.token-name{
+                    width: 35%;
+                }
+                &.token-address{
+                    width: 30%;
+                }
+                &.token-value{
+                    width: 35%;
+                }
+            }
+           }
+           &-body{
+            max-height: 190px;
+            min-height: 50px;
+            overflow-y: auto;
+            padding-right: 28px;
+            &-wrap{
+                display: flex;
+                align-items: center;
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(16px);
+                height: 40px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                &:hover {
+                    background: rgba(255, 255, 255, 0.15);
+                    backdrop-filter: blur(16px);
+                    .select-btn{
+                        display: block !important;
+                        height: 25px;
+                        width: 100%;
+                    }
+                    .token-value-num{
+                        display: none;
+                    }
+                }
+                &-content{
+                    &.token-name{
+                        width: 37%;
+                        padding: 0 15px;
+                    }
+                    &.token-address{
+                        width: 32%;
+                        padding: 0 15px;
+                    }
+                    &.token-value{
+                        width: 31%;
+                        padding: 0 15px;
+                        .select-btn{
+                            display: none;
+                        }
+                    }
+                }
+               }
+           }
+           
+        }
+    }
+}

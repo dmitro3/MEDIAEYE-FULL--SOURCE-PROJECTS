@@ -1,0 +1,54 @@
+@import '../../assets/css/variables.scss';
+
+.eyeswap-home {
+    text-align: center;
+    // width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-banner {
+        width: 100%;
+        background-size: cover;
+
+        &-img {
+            width: 100%;
+        }
+    }
+
+    &-content {
+        margin: 0px 300px;
+    }
+
+    &-footer {
+        width: 80.66vw;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+
+        &-img {
+            width: 100%;
+        }
+
+        &-appstore {
+            position: absolute;
+            left: 4.16vw;
+            bottom: 2.08vw;
+            width: 8.69vw;
+        }
+
+        &-googleplay {
+            position: absolute;
+            left: 13.75vw;
+            bottom: 2.08vw;
+            width: 8.69vw;
+        }
+
+        &-scanner {
+            position: absolute;
+            right: 19.15vw;
+            bottom: 2.572917vw;
+            height: 7.01vw;
+            width: 7.01vw;
+        }
+    }
+}

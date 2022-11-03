@@ -1,0 +1,195 @@
+.mediaeye {
+    &-sitemap {
+        background: url("../../assets/img/Sitemap/background.png") no-repeat;
+        background-position: top;
+        background-size: cover;
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+    &-MapBlock {
+        &-backBox {
+            background: url("../../assets/img/Sitemap/eyeBack.png") no-repeat;
+            width: 890px;
+            height: 890px;
+            position: absolute;
+            left: 50%;
+            top: -60px;
+            transform: translateX(-50%);
+            &-button {
+                width: 180px;
+                height: 180px;
+                background: transparent;
+                border-radius: 50%;
+                margin-top: -72px;
+                cursor: pointer;
+            }
+        }
+        &-header {
+            font-weight: 700;
+            font-size: 36px;
+            text-align: center;
+            text-transform: uppercase;
+            padding-top: 130px;
+        }
+        &-content {
+            margin-top: 120px;
+            position: relative;
+            &-row1 {
+                display: flex;
+                justify-content: space-between;
+                &.sec {
+                    margin-top: 60px;
+                }
+            }
+            &-row {
+                display: flex;
+                justify-content: space-between;
+                gap: 15px;
+                width: 41%;
+                &.flexBox {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                &.center {
+                    display: flex;
+                    justify-content: center;
+                    width: fit-content;
+                    margin-top: 80px;
+                }
+                .btn-wrapper{
+                    width: 10vw;
+                    height: 40px;
+                    border-radius: 5px;
+                    background: linear-gradient(90deg, #ffffff69 42%, #960BDF 100%);
+                    box-shadow: -2px 0 5px rgb(255 255 255 / 32%);
+                    padding: 1px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    @media (min-width: 1400px) {
+                        width: 160px;
+                    }
+                    &.green {
+                        width: 9.375vw;
+                        background: linear-gradient(90deg, #ffffff69 42%, #00808E 100%);
+                        @media (min-width: 1400px) {
+                            width: 150px;
+                        }
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            left: -10px;
+                            top: 20px;
+                            width: 10px;
+                            height: 1px;
+                            background: #DBAAF4;
+                        }
+                    }
+                    .btn {
+                        &-sitemap {
+                            border-radius: 5px;
+                            background: #960BDF;
+                            width: 100%;
+                            height: 100%;
+                            font-weight: 700;
+                            font-size: 14px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            padding: 0 4px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            transition: all ease-in 0.2s;
+                            color: #fff;
+                            &:hover {
+                                background: #870ac9;                                
+                            }
+                            &.green {
+                                background: #00808E;
+                                font-weight: 500;
+                                font-size: 11px;
+                                &:hover {
+                                    background: #00707c;
+                                    transform: scale(1.1);
+                                    transition: all ease-in 0.2s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-column {
+                width: fit-content;
+                &.Martop {
+                    margin-top: 60px;
+                }
+                &-content {
+                    display: grid;
+                    gap: 10px;
+                    padding: 20px 0 0 10px !important;
+                    position: relative;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: -3px;
+                        width: 1px;
+                        height: calc(100% - 16px);
+                        border-left: 1px solid #DBAAF4;
+                    }
+                }
+            }
+        }
+    }
+    &-MapBox {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 25px;
+        row-gap: 50px;
+        &-content {
+            background: #28255050;
+            border-radius: 5px;
+            overflow: hidden;
+            cursor: pointer;
+            &:hover {
+                background: rgb(40 37 80 / 70%);
+            }
+            &-head {
+                padding: 12px 20px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+                width: 100%;
+                h2 {
+                    text-transform: capitalize;
+                }
+                &.first {
+                    background: url("../../assets/img/Sitemap/creatorsHead.png") no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+                &.sec {
+                    background: url("../../assets/img/Sitemap/collectionsHead.png") no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+                &.third {
+                    background: url("../../assets/img/Sitemap/AirdropsHead.png") no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+                &.fourth {
+                    background: url("../../assets/img/Sitemap/EventsHead.png") no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+            &-block {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                padding: 35px 20px;
+            }
+        }
+    }
+}

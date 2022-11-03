@@ -1,0 +1,85 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                String       @id @default(auto()) @map("_id") @db.ObjectId
+  wallet            String[]
+  username          String?
+  email             String       @unique
+  bio               String?
+  socials           Json[]
+  creative          Json[]
+  symbols           String[]
+  activities        String[]
+  avatars           Avatar[]
+  status            String?
+  follower          User[]   @relation("UserFollows", fields: [followerIDs], references: [id])
+  followerIDs       String[] @db.ObjectId
+  following         User[]   @relation("UserFollows", fields: [followingIDs], references: [id])
+  followingIDs      String[] @db.ObjectId
+  communities       Json[]
+  referrals         String[]
+  preferredBrands   String[]
+  PreferredServices String[]
+  urls              String[]
+  updatedAt         DateTime     @default(now())
+  Otp               Otp[]
+  Collection        Collection[]
+  NFT               NFT[]
+  avatar            String?
+  relationship      String?
+  privacy           Json[]
+}
+
+model Collection {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  type      String
+  chain     String
+  symbol    String
+  royalties Int
+  desc      String
+  User      User?    @relation(fields: [userId], references: [id])
+  userId    String?
+  image     String
+  mint      Boolean?
+  NFT       NFT[]
+  baseUri   String?
+}
+
+model NFT {
+  id           String     @id @default(auto()) @map("_id") @db.ObjectId
+  address      String
+  collection   Collection @relation(fields: [collectionId], references: [id])
+  user         User       @relation(fields: [userId], references: [id])
+  collectionId String
+  userId       String
+}
+
+model Avatar {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  uri      String
+  filename String
+  traits   Json
+  User     User?   @relation(fields: [userId], references: [id])
+  userId   String?
+}
+
+model Otp {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  token     String
+  user      User?    @relation(fields: [userId], references: [id])
+  expiry    Int
+  isVerfied Boolean?
+  updatedAt DateTime @default(now())
+  userId    String?
+}

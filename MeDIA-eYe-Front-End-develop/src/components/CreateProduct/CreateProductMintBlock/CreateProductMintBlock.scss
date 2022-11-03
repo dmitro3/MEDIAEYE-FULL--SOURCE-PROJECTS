@@ -1,0 +1,80 @@
+@import '../../../assets/css/variables.scss';
+.create_mint_block {
+    margin: 10px 15px;
+    width: 200px;
+    position: relative;
+    &_img {
+        border: 1px solid #7e7e7e;
+        @include vendor-prefix(border-radius, 10px);
+        height: 180px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        position: relative;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid transparent;
+            cursor: pointer;
+            justify-content: center;
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    &_info {
+        button {
+            display: block;
+            border: none;
+            background: transparent;
+            outline: none;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 21px;
+            color: $link-color;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        h6 {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            display: block;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 100%;
+            overflow: hidden;
+            text-align: center;
+            margin: 5px auto 0;
+        }
+    }
+
+    &_close {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        cursor: pointer;
+        &:hover {
+            svg {
+                path {
+                    &[stroe] {
+                        stroke: $link-hover;
+                    }
+                }
+            }
+        }
+    }
+    &_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

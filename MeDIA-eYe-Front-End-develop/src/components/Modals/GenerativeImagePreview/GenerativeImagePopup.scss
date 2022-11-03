@@ -1,0 +1,83 @@
+@import '../../../assets/css/variables.scss';
+    .generative-preview-popup{
+    width: 1100px;
+    &-inner{
+        &-content{
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            align-items: center;
+            &-left{
+                width: fit-content;
+                img{
+                    max-width: 400px;
+                    height: 400px;
+                }
+            }
+            &-right{
+                padding: 10px;
+                &-name{
+                    @include fontStyle(20px, 20px, 600);
+                    margin: 10px 0px;
+                }
+                &-properties{
+                    margin-top: 42px;
+                    background: rgba(255, 255, 255, 0.05);
+                    @include vendor-prefix(border-radius, 3px);
+                    padding: 20px;
+                    width: 100%;
+                    &-title{
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        @include fontStyle(16px, 24px, 400);
+                        svg{
+                            width: 16px;
+                            height: 12px;
+                        }
+                    }
+                    &-inner{
+                        width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    margin-top: 20px;
+                    &-card{
+                        width: 170px;
+                        background: rgba(255, 255, 255, 0.05);
+                        display: grid;
+                        padding: 6px 15px;
+                        @include vendor-prefix(border-radius, 12px);
+                        &-name{
+                            @include fontStyle(16px, 24px, 600);
+                        }
+                        &-collection{
+                            @include fontStyle(14px, 21px, 500);
+                        }
+                        &-traits{
+                            padding: 10px 0px;
+                            @include fontStyle(14px, 21px, 300);
+                        }
+                    }
+                    }
+                }
+            }
+        }
+        &-bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            &-left{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                .btn-transperant{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}

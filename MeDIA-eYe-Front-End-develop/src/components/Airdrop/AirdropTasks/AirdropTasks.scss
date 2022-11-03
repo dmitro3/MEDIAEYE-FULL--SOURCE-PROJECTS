@@ -1,0 +1,519 @@
+@import '../../../assets/css/variables.scss';
+
+.mediaeyesocialtask {
+  &-airsocial {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+
+    &-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 27%;
+
+      &-row {
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.02);
+        padding: 20px;
+        border-radius: 12px;
+        flex-direction: column;
+        gap: 20px;
+
+        &-title {
+          font-weight: 500;
+          font-size: 16px;
+          padding-bottom: 10px;
+        }
+
+        &-btnWrapper {
+          width: 100%;
+          position: relative;
+        }
+
+        &-btn {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          padding: 8px 15px;
+          border-radius: 12px;
+          font-family: $button-font;
+          font-weight: 400;
+          text-align: center;
+          text-decoration: none;
+          vertical-align: middle;
+          cursor: pointer;
+          font-size: 18px;
+          position: relative;
+          background: rgba(255, 255, 255, 0.05);
+
+          &.twitter {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(29, 161, 242, 0.5);
+            }
+          }
+
+          &.telegram {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(38, 158, 218, 0.5);
+            }
+          }
+
+          &.insta {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: linear-gradient(92.64deg, rgba(70, 99, 183, 0.5) 0%, rgba(158, 48, 188, 0.5) 21.2%, rgba(231, 73, 94, 0.5) 55.71%, rgba(247, 208, 77, 0.5) 94.65%);
+            }
+          }
+
+          &.linkedin {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(10, 102, 194, 0.5);
+            }
+          }
+
+          &.snapchat {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(238, 226, 24, 0.5);
+            }
+          }
+
+          &.discord {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(88, 101, 242, 0.5);
+            }
+          }
+
+          &.reddit {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(255, 69, 0, 0.5);
+            }
+          }
+
+          &.tumbler {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(53, 70, 92, 0.5);
+            }
+          }
+
+          &.medium {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(0, 0, 0, 0.5);
+            }
+          }
+
+          &.mailchimp {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(255, 184, 0, 0.5);
+            }
+          }
+
+          &.hubspot {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(255, 91, 53, 0.5);
+            }
+          }
+
+          &.sendgrid {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(51, 104, 250, 0.5);
+            }
+          }
+
+          &.coinmarketcap {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: #0D0D0D
+            }
+          }
+
+          &.coingecko {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(136, 160, 223, 0.5)
+            }
+          }
+
+          &.eventbrite {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(255, 140, 118, 0.5);
+            }
+          }
+
+          &.twitch {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(145, 71, 255, 0.5);
+            }
+          }
+
+          &.spotify {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(46, 189, 89, 0.5);
+            }
+          }
+
+          &.tiktok {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: linear-gradient(90deg, #FF165D 0%, #3EC1D3 100%);
+            }
+          }
+
+          &.youtube {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(255, 0, 0, 0.5);
+            }
+          }
+
+          &.vimeo {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(0, 168, 232, 0.5);
+            }
+          }
+
+          &.flicker {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: rgba(255, 0, 132, 0.5);
+            }
+          }
+
+          &.soundcloud {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: #FF6A22;
+            }
+          }
+
+          &.clubhouse {
+            background: rgba(255, 255, 255, 0.05);
+
+            &:hover {
+              background: #AFAD9C;
+            }
+          }
+        }
+
+        .social-media-dropdown {
+          display: grid;
+          background: #1b1845;
+          border-radius: 5px;
+          overflow: hidden;
+          position: absolute;
+          top: 100%;
+          width: 100%;
+          margin-top: 5px;
+          left: 0;
+          z-index: 1;
+
+          &-value {
+            padding: 8px 15px;
+            cursor: pointer;
+
+            &:hover {
+              background-color: hsla(0, 0%, 100%, .05);
+            }
+          }
+        }
+      }
+    }
+
+    &-socialmedia {
+      display: flex;
+      gap: 15px;
+      align-items: flex-end;
+      width: 84%;
+      padding-bottom: 25px;
+
+      &-boxLeft {
+        width: 100%;
+        display: flex;
+        gap: 15px;
+        align-items: flex-end;
+
+        .mediaeyeform-group-input {
+          display: flex;
+          gap: 10px;
+        }
+
+        .mediaeyeform-group {
+          margin-bottom: 0;
+          position: relative;
+        }
+
+        .mediaeyeform-input-round {
+          padding-right: 45px;
+        }
+
+        .mediaeyeform-group-input-error-message {
+          position: absolute;
+        }
+
+        .twitter {
+          background: rgba(29, 161, 242, 0.5);
+        }
+
+        .telegram {
+          background: rgba(38, 158, 218, 0.5);
+        }
+
+        .insta {
+          background: linear-gradient(92.64deg, rgba(70, 99, 183, 0.5) 0%, rgba(158, 48, 188, 0.5) 21.2%, rgba(231, 73, 94, 0.5) 55.71%, rgba(247, 208, 77, 0.5) 94.65%);
+        }
+
+        .linkedin {
+          background: rgba(10, 102, 194, 0.5);
+        }
+
+        .snapchat {
+          background: rgba(238, 226, 24, 0.5);
+        }
+
+        .discord {
+          background: rgba(88, 101, 242, 0.5);
+        }
+
+        .reddit {
+          background: rgba(255, 69, 0, 0.5);
+        }
+
+        .tumbler {
+          background: rgba(53, 70, 92, 0.5);
+        }
+
+        .medium {
+          background: rgba(0, 0, 0, 0.5);
+        }
+
+        .mailchimp {
+          background: rgba(255, 184, 0, 0.5);
+        }
+
+        .hubspot {
+          background: rgba(255, 91, 53, 0.5);
+        }
+
+        .sendgrid {
+          background: rgba(51, 104, 250, 0.5);
+        }
+
+        .coinmarketcap {
+          background: #0D0D0D;
+          min-width: 152px;
+        }
+
+        .coingecko {
+          background: rgba(136, 160, 223, 0.5)
+        }
+
+        .eventbrite {
+          background: rgba(255, 140, 118, 0.5);
+        }
+
+        .twitch {
+          background: rgba(145, 71, 255, 0.5);
+        }
+
+        .spotify {
+          background: rgba(46, 189, 89, 0.5);
+        }
+
+        .tiktok {
+          background: linear-gradient(90deg, #FF165D 0%, #3EC1D3 100%);
+        }
+
+        .youtube {
+          background: rgba(255, 0, 0, 0.5);
+        }
+
+        .vimeo {
+          background: rgba(0, 168, 232, 0.5);
+        }
+
+        .flicker {
+          background: rgba(255, 0, 132, 0.5);
+        }
+
+        .soundcloud {
+          background: #FF6A22;
+        }
+
+        .clubhouse {
+          background: #AFAD9C;
+        }
+      }
+
+      &-boxright {
+        height: 40px;
+        width: 40px;
+        min-width: auto;
+        display: flex;
+        justify-content: center;
+
+        &-icon {
+          top: 8px;
+          padding-right: 15px;
+        }
+      }
+
+      &-boxadd {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+.twitter {
+
+  background: rgba(29, 161, 242, 0.5);
+}
+
+.telegram {
+
+  background: rgba(38, 158, 218, 0.5);
+}
+
+.insta {
+
+  background: linear-gradient(92.64deg, rgba(70, 99, 183, 0.5) 0%, rgba(158, 48, 188, 0.5) 21.2%, rgba(231, 73, 94, 0.5) 55.71%, rgba(247, 208, 77, 0.5) 94.65%);
+}
+
+.linkedin {
+
+  background: rgba(10, 102, 194, 0.5);
+}
+
+.snapchat {
+
+  background: rgba(238, 226, 24, 0.5);
+}
+
+.discord {
+
+  background: rgba(88, 101, 242, 0.5);
+}
+
+.reddit {
+
+  background: rgba(255, 69, 0, 0.5);
+}
+
+.tumbler {
+
+  background: rgba(53, 70, 92, 0.5);
+}
+
+.medium {
+
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.mailchimp {
+
+  background: rgba(255, 184, 0, 0.5);
+}
+
+.hubspot {
+
+  background: rgba(255, 91, 53, 0.5);
+}
+
+.sendgrid {
+
+  background: rgba(51, 104, 250, 0.5);
+}
+
+.coinmarketcap {
+
+  background: #0D0D0D
+}
+
+.coingecko {
+
+  background: rgba(136, 160, 223, 0.5)
+}
+
+.eventbrite {
+
+  background: rgba(255, 140, 118, 0.5);
+}
+
+.twitch {
+
+  background: rgba(145, 71, 255, 0.5);
+}
+
+.spotify {
+
+  background: rgba(46, 189, 89, 0.5);
+}
+
+.tiktok {
+
+  background: linear-gradient(90deg, #FF165D 0%, #3EC1D3 100%);
+}
+
+.youtube {
+
+  background: rgba(255, 0, 0, 0.5);
+}
+
+.vimeo {
+
+  background: rgba(0, 168, 232, 0.5);
+}
+
+.flicker {
+
+  background: rgba(255, 0, 132, 0.5);
+}
+
+.soundcloud {
+
+  background: #FF6A22;
+}
+
+.clubhouse {
+
+  background: #AFAD9C;
+}

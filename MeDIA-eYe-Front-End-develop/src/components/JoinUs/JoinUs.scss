@@ -1,0 +1,132 @@
+.join_us {
+    margin-top: 100px;
+    padding-bottom: 128px;
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 454px;
+        max-height: 454px;
+        background: #6228ff;
+        filter: blur(307px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+}
+.no-webp.main_join_us {
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+.webp.main_join_us {
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5vw;
+    button.btn-main {
+        padding: 0 1.5vw;
+    }
+}
+
+.join_us_title {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0 15px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5vw;
+    line-height: 141.38%;
+    text-align: center;
+    text-transform: uppercase;
+    span {
+        color: #27f2ff;
+        font-size: 2.5vw;
+        span {
+            text-transform: lowercase;
+        }
+    }
+}
+.join_us_para {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5vw;
+    line-height: 103.5%;
+    text-align: center;
+    text-transform: capitalize;
+}
+.join_us_video_box {
+    max-width: 85vw;
+    width: 100%;
+    height: 27.25vw;
+    position: relative;
+    margin: 0 auto;
+    video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    video::-webkit-media-controls-start-playback-button {
+        display: none;
+    }
+
+    .play-button-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        pointer-events: none;
+        #circle-play-b {
+            pointer-events: auto;
+
+            svg {
+                width: 6.25vw;
+                height: 6.25vw;
+                cursor: pointer;
+                opacity: 0.9;
+            }
+        }
+    }
+}
+.join_us_video_square_xl {
+    max-width: 168px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.join_us_video_square_sm {
+    max-width: 99px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.join_us_video {
+    width: 100%;
+    height: 100%;
+    border-radius: 38px;
+    overflow: hidden;
+    transition: border 0.4s ease;
+    cursor: pointer;
+    z-index: 9999;
+}

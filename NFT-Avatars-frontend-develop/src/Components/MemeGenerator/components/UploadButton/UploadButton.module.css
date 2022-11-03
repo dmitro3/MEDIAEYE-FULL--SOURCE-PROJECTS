@@ -1,0 +1,19 @@
+.container {
+  width: 50%;
+  margin: 30px auto;
+}
+.group {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+@media (max-width: 767.98px) {
+  .container {
+    width: 100%;
+  }
+  .group {
+    flex-direction: column;
+  }
+}

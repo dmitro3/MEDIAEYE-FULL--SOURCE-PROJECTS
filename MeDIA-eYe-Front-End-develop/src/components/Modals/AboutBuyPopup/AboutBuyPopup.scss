@@ -1,0 +1,66 @@
+@import '../../../assets/css/variables.scss';
+
+.about-buy-popup {
+  width: 500px;
+  &-title {
+    text-align: center;
+    @include fontStyle(24px, 25px, 600);
+  }
+  &-card {
+    width: 400px;
+    display: grid;
+    justify-content: center;
+    padding: 10px 0px;
+    margin: 30px 0px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    @include vendor-prefix(border-radius, 12px);
+    text-align: centers;
+    &-head {
+      @include fontStyle(16px, 17px, 400);
+      text-align: center;
+      margin: 10px 0px;
+    }
+    &-price {
+      text-align: center;
+      @include fontStyle(34px, 36px, 500);
+      margin: 14px;
+    }
+    &-timings {
+      display: flex;
+      justify-content: space-between;
+      @include fontStyle(16px, 24px, 400);
+      padding: 2px 16px;
+      padding-bottom: 8px;
+      color: rgba(255, 255, 255, 0.5);
+      .txt-green {
+        color: #bfff57;
+      }
+    }
+  }
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    div {
+      width: 192px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+      @include vendor-prefix(border-radius, 25px);
+      align-items: center;
+      cursor: pointer;
+      img {
+        padding: 8px 30px;
+        padding-bottom: 8px;
+      }
+      &:hover {
+        background: rgba(20, 18, 51, 0.5);
+      }
+    }
+    .pancakeswap {
+      img {
+        margin-top: 2px;
+      }
+    }
+  }
+}

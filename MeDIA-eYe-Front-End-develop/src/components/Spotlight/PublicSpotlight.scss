@@ -1,0 +1,31 @@
+@import '../../assets/css/variables.scss';
+
+.public-spotlight {
+
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin-top: 20px;
+  }
+
+  &-header {
+    margin-bottom: 42px;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-headbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 42px 0px;
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+  }
+}

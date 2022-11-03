@@ -1,0 +1,36 @@
+@import '../../../assets/css/variables.scss';
+
+.airdrop-social-email-popup {
+  width: 40%;
+  &-main-content {
+    text-align: center;
+    &-head {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+    &-input {
+      margin-bottom: 30px;
+      &-email {
+        width: 70%;
+        height: 40px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.05);
+        border: none;
+        color: #ffffff;
+        padding: 12px 20px;
+        @include vendor-prefix(border-radius, 20px);
+        -moz-appearance: textfield;
+        &:hover {
+          border: 1px solid #55e0ff;
+        }
+        &:focus {
+          border: 1px solid #55e0ff;
+        }
+        &:focus-visible {
+          border: 1px solid #55e0ff;
+          outline: none;
+        }
+      }
+    }
+  }
+}

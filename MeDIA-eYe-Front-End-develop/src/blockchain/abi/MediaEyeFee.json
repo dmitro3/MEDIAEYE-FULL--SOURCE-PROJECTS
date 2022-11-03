@@ -1,0 +1,1881 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "_ambCheck",
+        "type": "bool"
+      },
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_admins",
+        "type": "address[]"
+      },
+      {
+        "internalType": "address",
+        "name": "_operator",
+        "type": "address"
+      },
+      {
+        "internalType": "address payable",
+        "name": "_feeWallet",
+        "type": "address"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_paymentMethods",
+        "type": "address[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "uploadOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadThreeAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadFourAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "featureAmountPerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOne90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwo90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeFee.TokenAmounts[]",
+        "name": "_initialTokenAmounts",
+        "type": "tuple[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "uploadOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadThreeAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadFourAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "featureAmountPerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOne90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwo90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeFee.TokenAmounts",
+        "name": "_baseUSDTokenAmounts",
+        "type": "tuple"
+      },
+      {
+        "internalType": "address",
+        "name": "_priceFeedAggregator",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "_invertedAggregator",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address[]",
+        "name": "tokenAddresses",
+        "type": "address[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256[]",
+        "name": "tokenIds",
+        "type": "uint256[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "startTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "numDays",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "featureType",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "contractAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "listingId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "auctionId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "featuredBy",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "price",
+            "type": "uint256"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct MediaEyeFee.Featured",
+        "name": "featured",
+        "type": "tuple"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "startTime",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "endTime",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "purchaser",
+        "type": "address"
+      }
+    ],
+    "name": "FeaturePaid",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "newFeeWallet",
+        "type": "address"
+      }
+    ],
+    "name": "FeeWalletChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "paymentMethod",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "uploadOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadThreeAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadFourAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "featureAmountPerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOne90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwo90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct MediaEyeFee.TokenAmounts",
+        "name": "tokenAmounts",
+        "type": "tuple"
+      }
+    ],
+    "name": "PaymentAdded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "paymentMethod",
+        "type": "address"
+      }
+    ],
+    "name": "PaymentRemoved",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "previousAdminRole",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "newAdminRole",
+        "type": "bytes32"
+      }
+    ],
+    "name": "RoleAdminChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleGranted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleRevoked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "enum MediaEyeOrders.SubscriptionTier",
+            "name": "subscriptionTier",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endTime",
+            "type": "uint256"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct MediaEyeOrders.UserSubscription",
+        "name": "userSubscription",
+        "type": "tuple"
+      }
+    ],
+    "name": "SubscriptionByAdmin",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "enum MediaEyeOrders.SubscriptionTier",
+            "name": "subscriptionTier",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endTime",
+            "type": "uint256"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct MediaEyeOrders.UserSubscription",
+        "name": "userSubscription",
+        "type": "tuple"
+      }
+    ],
+    "name": "SubscriptionByBridge",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "enum MediaEyeOrders.SubscriptionTier",
+            "name": "subscriptionTier",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endTime",
+            "type": "uint256"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct MediaEyeOrders.UserSubscription",
+        "name": "userSubscription",
+        "type": "tuple"
+      }
+    ],
+    "name": "SubscriptionPaid",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "paymentMethod",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "uploadOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadThreeAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadFourAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "featureAmountPerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOne90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwo90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct MediaEyeFee.TokenAmounts",
+        "name": "tokenAmounts",
+        "type": "tuple"
+      }
+    ],
+    "name": "TokenAmountsChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "uploadId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum MediaEyeFee.UploadTier",
+        "name": "uploadTier",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "userAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "price",
+        "type": "uint256"
+      }
+    ],
+    "name": "UploadPaid",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "DEFAULT_ADMIN_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "DOMAIN_SEPARATOR",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "ROLE_ADMIN",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "ROLE_CALLER",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "uploadOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadThreeAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadFourAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "featureAmountPerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOne90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwo90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeFee.TokenAmounts",
+        "name": "_newTokenAmount",
+        "type": "tuple"
+      },
+      {
+        "internalType": "address",
+        "name": "_paymentMethod",
+        "type": "address"
+      }
+    ],
+    "name": "addPaymentMethod",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "ambCheck",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "baseUSDTokenAmounts",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "uploadOneAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "uploadTwoAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "uploadThreeAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "uploadFourAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "featureAmountPerDay",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "subscribeOneAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "subscribeTwoAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "subscribeOne90Amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "subscribeTwo90Amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "chainlinkFeed",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "stableCoin",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenDecimals",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "checkUserSubscription",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "enum MediaEyeOrders.SubscriptionTier",
+            "name": "subscriptionTier",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endTime",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeOrders.UserSubscription",
+        "name": "_userSubscription",
+        "type": "tuple"
+      },
+      {
+        "internalType": "uint8",
+        "name": "v",
+        "type": "uint8"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "r",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "s",
+        "type": "bytes32"
+      }
+    ],
+    "name": "checkUserSubscriptionBySig",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_baseAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_baseDecimals",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_queryDecimals",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "_invertedAggregator",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_convertToNative",
+        "type": "bool"
+      }
+    ],
+    "name": "convertPrice",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "feeWallet",
+    "outputs": [
+      {
+        "internalType": "address payable",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getNumPaymentMethods",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getRoleAdmin",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getRoundData",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+      }
+    ],
+    "name": "getUserSubscription",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "enum MediaEyeOrders.SubscriptionTier",
+            "name": "subscriptionTier",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endTime",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeOrders.UserSubscription",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "grantRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "hasRole",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "invertedAggregator",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_paymentMethod",
+        "type": "address"
+      }
+    ],
+    "name": "isPaymentMethod",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "mediator",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "operator",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_paymentMethod",
+        "type": "address"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_tokenAddresses",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_tokenIds",
+        "type": "uint256[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "startTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "numDays",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "featureType",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "contractAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "listingId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "auctionId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "featuredBy",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "price",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeFee.Featured",
+        "name": "_featured",
+        "type": "tuple"
+      }
+    ],
+    "name": "payFeatureFee",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_paymentMethod",
+        "type": "address"
+      },
+      {
+        "internalType": "enum MediaEyeFee.SubscriptionDuration",
+        "name": "_duration",
+        "type": "uint8"
+      }
+    ],
+    "name": "paySubscriptionLevelOneFee",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_paymentMethod",
+        "type": "address"
+      },
+      {
+        "internalType": "enum MediaEyeFee.SubscriptionDuration",
+        "name": "_duration",
+        "type": "uint8"
+      }
+    ],
+    "name": "paySubscriptionLevelTwoFee",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_paymentMethod",
+        "type": "address"
+      },
+      {
+        "internalType": "enum MediaEyeFee.UploadTier",
+        "name": "_uploadTier",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_uploadId",
+        "type": "uint256"
+      }
+    ],
+    "name": "payUploadFee",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "tokenAddress",
+        "type": "address"
+      }
+    ],
+    "name": "paymentMethodAmounts",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "uploadOneAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "uploadTwoAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "uploadThreeAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "uploadFourAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "featureAmountPerDay",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "subscribeOneAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "subscribeTwoAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "subscribeOne90Amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "subscribeTwo90Amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "chainlinkFeed",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "stableCoin",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenDecimals",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_paymentMethod",
+        "type": "address"
+      }
+    ],
+    "name": "removePaymentMethod",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "renounceRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "revokeRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "_ambBool",
+        "type": "bool"
+      }
+    ],
+    "name": "setAmb",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "uploadOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadThreeAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadFourAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "featureAmountPerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOne90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwo90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeFee.TokenAmounts",
+        "name": "_baseUSDTokenAmounts",
+        "type": "tuple"
+      }
+    ],
+    "name": "setBaseUSDTokenAmounts",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_mediator",
+        "type": "address"
+      }
+    ],
+    "name": "setMediator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "setOperatorAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_aggregator",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "_inverted",
+        "type": "bool"
+      }
+    ],
+    "name": "setPriceFeedAggregator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_typeHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "setSubscriptionHash",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "startTimestamp",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "endTimestamp",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tier",
+        "type": "uint256"
+      }
+    ],
+    "name": "subscribeByAdmin",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "startTimestamp",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "endTimestamp",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "tier",
+        "type": "bool"
+      }
+    ],
+    "name": "subscribeByBridge",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "subscriptions",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "userAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "enum MediaEyeOrders.SubscriptionTier",
+        "name": "subscriptionTier",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "startTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "endTime",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "interfaceId",
+        "type": "bytes4"
+      }
+    ],
+    "name": "supportsInterface",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address payable",
+        "name": "_newFeeWallet",
+        "type": "address"
+      }
+    ],
+    "name": "updateFeeWallet",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "uploadOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadThreeAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadFourAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "featureAmountPerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOne90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwo90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeFee.TokenAmounts[]",
+        "name": "_newTokenAmounts",
+        "type": "tuple[]"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_paymentMethods",
+        "type": "address[]"
+      }
+    ],
+    "name": "updateMultipleTokenAmounts",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "uploadOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadThreeAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uploadFourAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "featureAmountPerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOneAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwoAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeOne90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subscribeTwo90Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chainlinkFeed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "stableCoin",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeFee.TokenAmounts",
+        "name": "_newTokenAmount",
+        "type": "tuple"
+      },
+      {
+        "internalType": "address",
+        "name": "_paymentMethod",
+        "type": "address"
+      }
+    ],
+    "name": "updateSingleTokenAmount",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

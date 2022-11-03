@@ -1,0 +1,43 @@
+.mediaeye {
+  &-layout {
+    &-container {
+      &-community {
+        &-title {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 2vw;
+          text-align: center;
+          text-transform: uppercase;
+          color: #f5f5f5;
+          margin-bottom: 4.625vw;
+          span {
+            color: #56d1ff;
+          }
+        }
+        &-flexbox {
+          display: flex;
+          justify-content: center;
+          gap: 5.8125vw;
+          a {
+            background: rgba(100, 100, 100, 0.3);
+            border: 1px solid rgba(100, 100, 100, 0.3);
+            border-radius: 7.40625vw;
+            height: 5.365625vw;
+            width: 5.438125vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+              fill: #fff;
+              transition: all ease-in-out 0.5s;
+            }
+            &:hover svg {
+              fill: #32c7ed;
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}

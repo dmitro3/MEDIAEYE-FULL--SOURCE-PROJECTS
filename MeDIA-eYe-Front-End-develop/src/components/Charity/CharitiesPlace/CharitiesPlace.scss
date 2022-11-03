@@ -1,0 +1,327 @@
+@import '../../../assets/css/variables.scss';
+
+.mediaeye {
+    &-charity {
+        position: relative;
+        z-index: 1;
+
+        &-filters {
+            width: 100%;
+            display: flex;
+            gap: 10px;
+
+            &-col {
+                padding: 0;
+            }
+
+            &-list {
+                width: 20%;
+
+                &[size="4"] {
+                    width: 25%;
+                }
+
+                &-icon {
+                    min-width: 25px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            &-minters {
+
+                background: rgba(255, 255, 255, 0.05);
+                @include vendor-prefix(border-radius, 5px);
+
+                &-section {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 300px;
+                    padding: 8px;
+
+                    &-block {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                }
+            }
+
+            &-search {
+                width: 70%;
+
+                &[size="4"] {
+                    width: 45%;
+                }
+
+                &[size="3"] {
+                    width: 70%;
+                }
+            }
+
+            &-sort {
+                width: 20%;
+            }
+
+            &-action {
+                background-color: rgba(255, 255, 255, 0.05);
+                padding: 10px;
+                line-height: 40px;
+                @include vendor-prefix(border-radius, 5px);
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                height: 40px;
+                line-height: 40px;
+                cursor: pointer;
+
+                &-reset {
+                    position: relative;
+                    margin: 0 0 0 auto;
+                    color: $transparent-color;
+                    cursor: pointer;
+                    padding: 0 5px;
+                }
+            }
+
+            &-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 20px;
+
+                &-btn {
+                    background-color: rgba(255, 255, 255, 0.05);
+                    padding: 0 30px 0 10px;
+                    line-height: 40px;
+                    @include vendor-prefix(border-radius, 4px);
+                    position: relative;
+                    font-size: 16px;
+
+                    &-remove {
+                        color: #fff;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        width: 25px;
+                        justify-content: center;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+
+                        svg {
+                            width: 15px;
+                            height: auto;
+                        }
+                    }
+                }
+
+                &-clear {
+                    font-size: 16px;
+                    line-height: 40px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-wrapper {
+            width: 100%;
+            display: flex;
+            position: relative;
+
+            &-content {
+                width: 100%;
+                min-height: 500px;
+
+                &-inner {
+                    overflow-x: hidden !important;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+            }
+
+            &.withfilter & {
+                &-content {
+                    width: 80%;
+                    margin-left: auto;
+
+                    &-collection {
+                        width: 75%;
+                    }
+                }
+            }
+        }
+
+        &-sidebar {
+            width: 20%;
+            max-height: 100%;
+            position: relative;
+
+            &-collection {
+                width: 25%;
+            }
+
+            &-inner {
+                overflow-y: auto;
+                max-height: 100%;
+                position: absolute;
+                padding-right: 10px;
+                right: 20px;
+                left: 0;
+            }
+
+            &-col {
+                width: 100%;
+                border-bottom: 2px solid rgba(217, 217, 217, 0.2);
+                margin-bottom: 15px;
+                padding-bottom: 10px;
+
+                &-heading {
+                    font-size: 16px;
+                    color: #fff;
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    svg {
+                        position: relative;
+                        margin-left: auto;
+                        width: 10px;
+                    }
+
+                    &.active {
+                        svg {
+                            @include vendor-prefix(transform, rotate(-180deg));
+                        }
+                    }
+                }
+
+                &-headingsub {
+                    font-size: 12px;
+                    color: #fff;
+                    margin-bottom: 10px;
+                }
+
+                &-row {
+                    width: 100%;
+                    display: flex;
+                    gap: 10px;
+                    padding: 8px 0;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &-icon {
+                        width: auto;
+                        height: 25px;
+
+                        svg {
+                            max-width: 30px;
+                        }
+                    }
+
+                    &-name {
+                        font-size: 14px;
+                        color: $transparent-color;
+                        flex: 1;
+                    }
+
+                    &.active &,
+                    &:hover & {
+                        &-name {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                &-price {
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+
+                    &-col {
+                        color: $transparent-color;
+                    }
+
+                    &-input {
+                        padding: 5px;
+                        line-height: 30px;
+                        height: 36px;
+                        line-height: 35px;
+                        text-align: center;
+                        @include vendor-prefix(border-radius, 5px);
+                    }
+
+                    .mediaeye-selectsearch__value {
+                        &::after {
+                            right: 10px;
+                        }
+                    }
+                }
+
+                button {
+                    font-family: $body-font;
+                }
+            }
+        }
+
+
+        &-SideGrad {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 652px;
+            object-fit: cover;
+            filter: blur(110px);
+            z-index: -1;
+        }
+
+        &-banner {
+            width: 100%;
+            margin-bottom: 42px;
+
+            &-img {
+                width: 100%;
+            }
+        }
+
+        &-button {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+            .btn {
+                min-width: 160px;
+                background: #E2C700;
+                color: #2B294B;
+            }
+        }
+
+        &-tabpart {
+            display: flex;
+            margin-bottom: 42px;
+        }
+
+        &-filter {
+            margin-bottom: 40px;
+
+            &-box {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 30px;
+
+                &-options {
+                    display: flex;
+                    grid-gap: 20px;
+                    gap: 20px;
+                }
+            }
+
+            .mediaeye-searchbar {
+                margin: 0 0 0 auto;
+                // width: 300px;
+            }
+        }
+    }
+}

@@ -1,0 +1,358 @@
+@import '../../../assets/css/variables.scss';
+
+.mediaeye-charity {
+    &-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+        justify-content: center;
+        padding-top: 6px;
+
+        .mediaeye-charity-card {
+            width: 33.33%;
+            margin-bottom: 30px;
+
+            &:nth-child(3n + 2) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &[size="4"] {
+            .mediaeye-charity-card {
+                width: 25%;
+            }
+        }
+
+        .swiper-slide {
+            &-next {
+                .mediaeye-charity-card {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+            &:not(&-next, &-active) {
+                .mediaeye-charity-card {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    &-slide {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+
+        .mediaeye-charity-card {
+            width: 100%;
+            margin-top: 5px;
+        }
+    }
+
+    &-card {
+        position: relative;
+        padding: 0 10px;
+        max-width: 400px;
+
+        &-inner {
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+            color: #fff;
+            display: block;
+            @include vendor-prefix(transition, transform 0.25s ease-in-out 0.05s);
+
+            &-imgbox {
+                position: relative;
+                width: 100%;
+
+                &-slide {
+                    overflow: hidden;
+                    @include vendor-prefix(border-radius, 10px 10px 0px 0px);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #fff;
+                    height: 200px;
+                    width: 100%;
+
+                    img {
+                        // min-height: 100%;
+                        // width: 100%;
+                        max-width: 100%;
+                        align-self: center;
+                        @include vendor-prefix(transition, transform 0.15s ease-in-out 0.03s);
+                        @include vendor-prefix(border-radius, 5px);
+                    }
+
+                    video {
+                        object-fit: contain;
+                        aspect-ratio: 1 / 1;
+                        width: 100%;
+                        max-height: 100%;
+                        @include vendor-prefix(transition, transform 0.15s ease-in-out 0.03s);
+                    }
+                }
+
+                .mediaeyeempty-image {
+                    background: rgba(20, 70, 99, 0.35);
+                }
+            }
+
+            &-action {
+                padding: 0;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+
+                &-header {
+                    background: $default-color;
+                    @include vendor-prefix(border-radius, 5px 0px 5px 0px);
+                    display: flex;
+                    align-items: center;
+
+                    &-btn {
+                        padding: 0 10px;
+                        border-right: 1px solid rgba(255, 255, 255, 0.1);
+                        height: 35px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        @include vendor-prefix(transition, all 0.3s);
+
+                        svg {
+                            path {
+                                @include vendor-prefix(transition, all 0.3s);
+
+                                &[stroke] {
+                                    stroke: $transparent-color;
+                                }
+
+                                &[fill] {
+                                    fill: $transparent-color;
+                                }
+                            }
+                        }
+
+                        &:hover,
+                        &.active {
+                            color: $white-color;
+
+                            svg path {
+                                &[stroke] {
+                                    stroke: $white-color;
+                                }
+
+                                &[fill] {
+                                    fill: $white-color;
+                                }
+
+                            }
+                        }
+
+                        &:last-child {
+                            border-right: 0 solid;
+                        }
+                    }
+                }
+
+                &-body {
+                    background: $default-color;
+                    @include vendor-prefix(border-radius, 0px 5px 5px 0px);
+                    padding: 10px;
+                    position: absolute;
+                    top: 100%;
+                    min-width: 120px;
+                    margin-top: -5px;
+
+                    &-group {
+                        &:not(:last-child) {
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        }
+                    }
+
+                    &-row {
+                        font-size: 12px !important;
+                        font-weight: 500 !important;
+                        color: $link-color !important;
+                        padding: 5px !important;
+                        display: flex;
+                        align-items: center;
+                        min-width: 100%;
+                        white-space: nowrap;
+
+                        &:not(:last-child) {
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+                        }
+
+                        &-icon {
+                            align-items: normal;
+                            display: flex;
+                            width: 30px;
+                            margin-right: 10px;
+
+                            svg {
+                                max-width: 100%;
+
+                                path {
+                                    @include vendor-prefix(transition, all 0.3s);
+
+                                    &[stroke] {
+                                        stroke: $link-color;
+                                    }
+
+                                    &[fill] {
+                                        fill: $link-color;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.owner {
+                            color: #9b9b9b;
+                        }
+
+                        &:hover,
+                        &.active {
+                            color: $link-hover !important;
+                        }
+
+                        &:hover &,
+                        &.active & {
+                            &-icon {
+                                svg {
+                                    @include vendor-prefix(transition, all 0.3s);
+
+                                    path {
+                                        &[fill] {
+                                            fill: $link-hover;
+                                        }
+
+                                        &[stroke] {
+                                            stroke: $link-hover;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-content {
+                @include vendor-prefix(border-radius, 0px 0px 10px 10px);
+                @include vendor-prefix(transition, all 0.3s);
+                padding: 65px 25px 20px;
+                position: relative;
+                margin-top: -53px;
+                overflow: hidden;
+
+                &::before {
+                    content: '';
+                    background: $charity-color;
+                    position: absolute;
+                    top: 28px;
+                    right: 0;
+                    height: 53px;
+                    width: 100%;
+                    @include vendor-prefix(transform, skewY(-8deg));
+                }
+
+                &::after {
+                    content: '';
+                    background: $default-color;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    top: 28px;
+                    left: 0;
+                    width: 100%;
+                    bottom: -30px;
+                    @include vendor-prefix(transform, skewY(8deg));
+                }
+
+
+                &-inner {
+                    min-height: 100%;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &.no-height {
+                    min-height: auto;
+                }
+
+                &-title {
+                    color: #ffffff;
+                    font-size: 16px;
+                    line-height: 30px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                &-des {
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 14px;
+                    margin-top: 20px;
+                    height: 85px;
+                    overflow: hidden;
+                }
+
+                &-bottom {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 20px;
+
+                    &-colLeft {
+                        display: flex;
+                        align-items: center;
+
+                        &-item {
+                            img {
+                                max-height: 30px;
+                            }
+
+                            &:not(:last-child) {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+
+                    &-colRight {
+                        margin-right: 0;
+                        margin-left: auto;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+            }
+
+            &:hover,
+            &:focus {
+                @include vendor-prefix(transform, translateY(-5px));
+            }
+
+            &:hover & {
+                &-imgbox {
+                    &-slide {
+
+                        img,
+                        video {
+                            @include vendor-prefix(transform, scale(1.05));
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,326 @@
+@import '../../../assets/css/variables.scss';
+
+.mediaeye-CampaignSingle {
+    &-profileBanner {
+        width: 100%;
+        height: 240px;
+        @include vendor-prefix(border-radius, 5px);
+        position: relative;
+        overflow: hidden;
+
+        .mediaeyeempty-image {
+            background: $dark-bg;
+        }
+
+        &-img {
+            width: 100%;
+            min-height: 100%;
+            position: absolute;
+            top: 50%;
+            @include vendor-prefix(transform, translateY(-50%));
+        }
+
+        &-tag {
+            font-weight: 400;
+            font-size: 20px;
+            font-family: $button-font;
+            z-index: 1;
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            transform: rotate(165deg);
+            background: $live-color;
+            position: absolute;
+            left: 25%;
+            top: 95%;
+        }
+
+        &-details {
+            font-weight: 500;
+            font-size: 16px;
+            margin: 0;
+        }
+    }
+
+    .campaignprofileAvatar {
+        height: 140px;
+        width: 140px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        @include vendor-prefix(border-radius, 50%);
+        overflow: hidden;
+
+        &-img {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        .mediaeyeempty-image {
+            background: $dark-bg;
+        }
+    }
+
+    &-socialbtn {
+        border-style: none;
+        min-width: 210px;
+        height: 38px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        font-family: $body-font;
+
+        svg {
+            margin-right: 20px;
+        }
+
+        &:hover,
+        &.active {
+            background: rgba(255, 255, 255, 0.15);
+        }
+    }
+
+    &-inner {
+        &-flexout {
+            margin-top: -47px;
+
+            &-actions {
+                position: absolute;
+                right: 0;
+                top: 70px;
+            }
+
+            &-bottomprofile {
+                &-row {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    h2 {
+                        font-weight: 500;
+                        font-size: 36px;
+                        color: #ebebeb;
+                    }
+
+                    h4 {
+                        font-weight: 400;
+                        font-size: 14px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        padding-right: 30px;
+
+                        svg {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    .b-r {
+                        border-right: 1px solid rgba(255, 255, 255, 0.5);
+                    }
+
+                    &-social {
+                        &-btn {
+                            border-right: 1px solid rgba(255, 255, 255, 0.1);
+                            padding-right: 10px;
+                            padding-top: 5px;
+                            cursor: pointer;
+
+                            &:last-child {
+                                border: 0;
+                                padding-right: 0;
+                            }
+
+                            svg {
+                                width: 20px;
+                                height: 20px;
+                                opacity: 0.5;
+
+                                @include vendor-prefix(transition, (all 0.5s));
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+
+                    &-inner {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    &-status {
+                        padding: 0 15px;
+                        line-height: 30px;
+                        color: #fff;
+                        font-size: 14px;
+                        text-align: center;
+                        @include vendor-prefix(border-radius, 50px);
+                        font-family: $button-font;
+
+                        &[type='live'] {
+                            background: $live-color;
+                        }
+
+                        &[type='expired'] {
+                            background: $disable-color;
+                        }
+                    }
+
+                    &-dateRange {
+                        font-weight: 400;
+                        font-size: 18px;
+                    }
+
+                    &-statBtn {
+                        background: rgba(255, 255, 255, 0.1);
+                    }
+                }
+            }
+
+            .CampaignAvatar {
+                width: 140px;
+                height: 140px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 1.5px solid #c4c4c4;
+            }
+        }
+
+        &-desc {
+            width: 60%;
+        }
+
+        &-header {
+            display: flex;
+            align-items: center;
+            padding: 30px 0;
+
+            &-heading {
+                font-weight: 500;
+                font-size: 20px;
+            }
+
+            svg {
+                @include vendor-prefix(transition, all 0.5s);
+            }
+
+            &.open {
+                svg {
+                    transform: rotate(180deg);
+                    @include vendor-prefix(transition, all 0.5s);
+                }
+            }
+        }
+
+        &-timer {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 23px;
+            min-width: 250px;
+
+            &-col {
+                font-weight: 400;
+                font-size: 16px;
+            }
+        }
+
+        &-SocialContent {
+            display: grid;
+            gap: 20px;
+            @include vendor-prefix(transform, translateY(-150%));
+            @include vendor-prefix(transition, all 0.5s);
+
+            &.open {
+                @include vendor-prefix(transform, none);
+                @include vendor-prefix(transition, all 0.5s);
+            }
+        }
+
+        &-card {
+            background: $default-color;
+            padding: 30px;
+            @include vendor-prefix(border-radius, 14px);
+            max-height: 130px;
+            @include vendor-prefix(transition, all 0.5s);
+
+            &.open {
+                max-height: 2000px;
+                @include vendor-prefix(transition, all 0.5s);
+            }
+
+            &-wrapper {
+                overflow: hidden;
+            }
+
+            &-head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h2 {
+                    font-weight: 500;
+                    font-size: 18px;
+                    color: #e5e7ea;
+                }
+            }
+
+            &-subhead {
+                font-weight: 400;
+                font-size: 16px;
+            }
+
+            &-content {
+                overflow: hidden;
+
+                &-wrapper {
+                    @include vendor-prefix(transform, translateY(-150%));
+                    @include vendor-prefix(transition, all 0.5s);
+
+                    &.open {
+                        @include vendor-prefix(transform, none);
+                        @include vendor-prefix(transition, all 0.5s);
+                    }
+                }
+            }
+        }
+
+        &-checkSection {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+            &-address {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                button {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    &-section {
+        max-height: 90px;
+        @include vendor-prefix(transition, all 0.5s);
+        overflow: hidden;
+
+        &.open {
+            max-height: 10000px;
+            @include vendor-prefix(transition, all 0.5s);
+        }
+    }
+
+    .disFlex {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}

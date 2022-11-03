@@ -1,0 +1,68 @@
+.main_subscribe_popup {
+  font-family: 'Poppins', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 40px;
+
+  h2,
+  button {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+
+    color: #ebebeb;
+  }
+
+  h2 {
+  }
+  button {
+    margin: 0 !important;
+    cursor: pointer;
+    margin-top: 10px !important;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  button span {
+    background: linear-gradient(180deg, #9117e1 0%, #3fd4fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.main_subscribe_wallet {
+  margin-top: 50px;
+  background: linear-gradient(90deg, #960bdf 2.11%, #35eafe 100%);
+  border-radius: 20.5px;
+  padding: 2px;
+}
+.main_subscribe_wallet_wrapper {
+  display: flex;
+  min-width: 178px;
+  height: 37px;
+  background: #19143e;
+  border-radius: 20.5px;
+  overflow: hidden;
+}
+.main_subscribe_wallet_item {
+  flex: 0 0 33.333333%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ffffff;
+  border-radius: 20.5px;
+  user-select: none;
+
+  &.active {
+    background: linear-gradient(90deg, #960bdf 2.11%, #35eafe 100%);
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../../assets/css/variables.scss";
+
+.mediaProfilepage-datacontent-profiledetail-body {
+  .css-19kzrtu {
+    padding: 0;
+  }
+
+  &-form {
+    width: 100%;
+
+    @media (max-width: 767px) {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    input,
+    textarea,
+    .input-div {
+      font-family: $Poppins-font;
+      border-radius: 5px;
+      border: none;
+      background: linear-gradient(126.6deg,
+          rgba(255, 255, 255, 0.1) 28.69%,
+          rgba(255, 255, 255, 0.1) 100%);
+      width: 100%;
+      margin-bottom: 20px;
+      resize: none;
+      padding: 4px 10px;
+      outline: none;
+      color: #8b8b8b;
+      max-width: calc(50% - 20px);
+      height: 35px;
+    }
+
+    textarea {
+      min-height: 155px;
+      margin-bottom: 0;
+    }
+
+    .input-div {
+      svg {
+        opacity: 0.5;
+      }
+
+      .btn-square {
+        min-width: 0;
+        height: 25px;
+        line-height: 25px;
+        font-size: 14px;
+      }
+    }
+
+    .mediaeyeAvatar-select {
+      max-width: calc(50% - 20px);
+    }
+  }
+}

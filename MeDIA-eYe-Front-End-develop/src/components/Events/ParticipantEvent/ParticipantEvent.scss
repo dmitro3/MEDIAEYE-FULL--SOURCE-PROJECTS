@@ -1,0 +1,356 @@
+@import '../../../assets/css/variables.scss';
+
+.mediaeye-layout-container {
+    &-eventhead {
+        display: flex;
+        gap: 2.25vw;
+        margin-top: -1.85vw;
+        align-items: flex-end;
+        margin-bottom: 30px;
+
+        &-profileAvatar {
+            width: 250px;
+            height: 250px;
+        }
+
+        &-detail {
+            width: 100%;
+
+            &-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                margin-bottom: 15px;
+
+                &-name {
+                    display: flex;
+                    align-items: center;
+                    @include fontStyle(36px, 38px, 600);
+                    gap: 20px;
+
+                    &-live {
+                        background-color: #ee132b;
+                        color: #fff;
+                        @include vendor-prefix(border-radius, 15px);
+                        padding: 4px 8px;
+                        margin: 0;
+                        font-size: 14px;
+                        font-family: $button-font;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            &-data {
+                width: 42%;
+
+                &-date {
+                    margin-bottom: 20px;
+
+                    &-show {
+                        font-size: 16px;
+                    }
+                }
+
+                &-support {
+                    display: flex;
+                    align-items: center;
+                    gap: 2vw;
+                    margin-bottom: 20px;
+
+                    div {
+                        display: flex;
+                        gap: 0.5vw;
+                        align-items: center;
+
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                &-social {
+
+                    // margin-bottom: 20px;
+                    &-connect {
+                        display: flex;
+                        align-items: center;
+                        background: rgba(255, 255, 255, 0.0196078431);
+                        border: 1px solid rgba(100, 100, 100, 0.1882352941);
+                        @include vendor-prefix(border-radius, 23px);
+                        padding: 7px 12px;
+
+                        &:hover {
+                            color: $link-hover;
+
+                            svg {
+                                path {
+                                    fill: $link-hover;
+                                }
+                            }
+                        }
+
+                        &-accountimg {
+                            svg {
+                                width: 20px;
+                                height: 16px;
+                                margin-top: 5px;
+                            }
+                        }
+
+                        &-name {
+                            margin: 0;
+                            font-weight: 400;
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                &-choose {
+                    margin-bottom: 20px;
+
+                    &-inside {
+                        display: flex;
+                        align-items: center;
+                        gap: 2vw;
+                        padding-left: 15px;
+
+                        &-btn {
+                            width: 100px;
+                            height: 38.55px;
+                            border-radius: 20px;
+                            font-size: 14px;
+                        }
+
+                        .crypto {
+                            background: linear-gradient(90deg, rgba(96, 202, 208, 1) 35%, rgba(88, 137, 209, 1) 100%);
+                        }
+
+                        .media {
+                            background: linear-gradient(90deg, rgba(225, 80, 167, 1) 35%, rgba(229, 118, 118, 1) 100%);
+                        }
+
+                        .sports {
+                            background: linear-gradient(90deg, rgba(212, 124, 97, 1) 35%, rgba(118, 211, 95, 1) 100%);
+                        }
+                    }
+                }
+
+                &-connect {
+                    .account_links {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        a {
+                            padding-right: 4px;
+
+                            svg {
+                                width: 27px;
+                                height: 27px;
+                                // padding-bottom: 4px;
+                                padding-right: 4px;
+                                border-right: 1px solid #ffffff10;
+                            }
+
+                            &:hover {
+                                color: $link-hover;
+
+                                svg {
+                                    path {
+                                        fill: $link-hover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-eventhead-social {
+        margin-bottom: 30px;
+    }
+
+    &-eventbody {
+        &-description {
+            width: 85%;
+            margin-bottom: 30px;
+
+            &-title {
+                margin-bottom: 10px;
+                display: block;
+                font-size: 20px;
+            }
+
+            &-info {
+                font-size: 16px;
+                color: #ffffff50;
+                font-weight: 400;
+                margin: 0.85vw 0;
+            }
+        }
+
+        &-media {
+            width: 80%;
+            margin-bottom: 30px;
+
+            &-title {
+                margin-bottom: 10px;
+                display: block;
+                font-size: 20px;
+            }
+        }
+
+        &-collection {
+            width: 80%;
+            margin-bottom: 30px;
+
+            &-title {
+                margin-bottom: 10px;
+                display: block;
+                font-size: 20px;
+            }
+        }
+
+        &-eventsocial {
+            margin-bottom: 30px;
+
+            &-box {
+                margin: 20px auto 0;
+                display: grid;
+                grid-gap: 1.625vw;
+                gap: 1.625vw;
+
+                &-inside {
+                    background: $default-color;
+                    border-radius: 1.12vw;
+                    -webkit-backdrop-filter: blur(37px);
+                    backdrop-filter: blur(37px);
+                    padding: 25px 45px;
+
+                    &:last-child {
+                        margin-bottom: 30px;
+                    }
+
+                    &-header {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        cursor: pointer;
+
+                        &-left {
+                            &-title {
+                                margin: 0 0 10px;
+                                font-size: 18px;
+                                font-weight: 400;
+                            }
+
+                            &-date {
+                                margin: 0 0 10px;
+                                font-size: 16px;
+                                font-weight: 400;
+                            }
+                        }
+
+                        &-right {
+                            &-settime {
+                                display: flex;
+                                align-items: center;
+                                gap: 1.85vw;
+
+                                &-time {
+                                    background-color: #ffffff05;
+                                    @include vendor-prefix(border-radius, 14px);
+                                    padding: 4px 36px;
+                                    margin: 0;
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                }
+
+                                &-arrowset {
+                                    margin-left: 20px;
+
+                                    svg {
+                                        transition: transform 0.5s ease;
+                                    }
+
+                                    &.active {
+                                        svg {
+                                            transform: rotate(180deg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &-body {
+                        &-description {
+                            font-size: 16px;
+                            color: #ffffff50;
+                            font-weight: 300;
+                            margin-bottom: 20px;
+                        }
+
+                        &-conective {
+                            background: rgba(255, 255, 255, 0.0196078431);
+                            border: 1px solid rgba(100, 100, 100, 0.1882352941);
+                            @include vendor-prefix(border-radius, 23px);
+                            -webkit-border-radius: 23px;
+                            -moz-border-radius: 23px;
+                            -ms-border-radius: 23px;
+                            -o-border-radius: 23px;
+                            padding: 7px 12px;
+                            width: 30%;
+
+                            &-inside {
+                                display: flex;
+                                align-items: center;
+
+                                &:hover {
+                                    color: $link-hover;
+
+                                    svg {
+                                        path {
+                                            fill: $link-hover;
+                                        }
+                                    }
+                                }
+
+                                &-accountimg {
+                                    svg {
+                                        width: 20px;
+                                        height: 20px;
+                                        margin-top: 5px;
+                                    }
+                                }
+
+                                &-name {
+                                    font-weight: 300;
+                                    font-size: 18px;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-joinbox {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+
+        &-airdrop {
+            &-title {
+                margin-bottom: 30px;
+                display: block;
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+    }
+}

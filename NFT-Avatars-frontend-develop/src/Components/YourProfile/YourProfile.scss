@@ -1,0 +1,107 @@
+@import "../../assets/css/variables.scss";
+// @import "../../assets/css/button.scss";
+
+.your-profile-wrap {
+  width: 300px;
+  padding: 15px 28px 22px;
+  background: linear-gradient(
+    126.6deg,
+    rgba(0, 0, 0, 0.6) 28.69%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  backdrop-filter: blur(140px);
+  border-radius: 5px;
+  color: $white-color;
+  &-head {
+    text-align: right;
+    &-a {
+      display: inline-block;
+      line-height: 0;
+      margin-right: -14px;
+    }
+  }
+  &-body {
+    &-profile {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 48px;
+      &-img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      &-name {
+        &-h3 {
+          font-weight: 400;
+          font-size: 16px;
+          color: $white-color;
+          margin-bottom: 6px;
+        }
+        &-status {
+          font-weight: 400;
+          font-size: 10px;
+          text-transform: capitalize;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          &-online {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #4cff2f;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    &-ul {
+      list-style: none;
+      &-li {
+        margin-bottom: 16px;
+        @media (max-width: 767px) {
+          margin-bottom: 45px;
+        }
+        a {
+          color: $gray-color;
+          font-weight: 400;
+          font-size: 16px;
+          span {
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+    &-btn {
+      &.btn {
+        font-size: 16px;
+        padding: 10px 40px;
+        margin-bottom: 35px;
+        margin-top: 25px;
+      }
+    }
+  }
+  &-footer {
+    &-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      font-weight: 400;
+      font-size: 16px;
+      color: $gray-color;
+      text-transform: capitalize;
+      padding: 0;
+      @media (max-width: 767px) {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+}

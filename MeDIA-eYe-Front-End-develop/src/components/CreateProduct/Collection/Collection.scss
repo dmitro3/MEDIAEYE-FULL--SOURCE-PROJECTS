@@ -1,0 +1,430 @@
+@import '../../../assets/css/variables.scss';
+
+.create-collection-page {
+    &-inner {
+        &-content {
+            width: 100%;
+            &-row {
+                width: 100%;
+                display: flex;
+                margin-bottom: 30px;
+                &-card {
+                    background: $block-section-color;
+                    padding: 30px;
+                    @include vendor-prefix(border-radius, 12px);
+                    width: 100%;
+                    &-header {
+                        width: 100%;
+                        margin-bottom: 30px;
+                        &-heading {
+                            color: #fff;
+                            font-size: 20px;
+                            font-weight: 500;
+                        }
+                    }
+                    &-body {
+                        width: auto;
+                        &.top {
+                            width: 50%;
+                            margin-top: 18px;
+                        }
+                    }
+                }
+
+                &-networks & {
+                    &-token {
+                        margin-top: 40px;
+                    }
+                }
+
+                &-metadata & {
+                    &-card {
+                        min-width: 100%;
+                        &-body {
+                            display: flex;
+                            margin: 0 -15px;
+                            &-colleft {
+                                width: 35%;
+                                padding: 0 15px;
+                            }
+                            &-colright {
+                                width: 65%;
+                                padding: 0 15px;
+                            }
+                        }
+                    }
+                }
+
+                &-appearance & {
+                    &-card {
+                        min-width: 100%;
+                        &-body {
+                            display: flex;
+                            margin: 0 -15px;
+                            &-colleft {
+                                width: 15%;
+                                padding: 0 15px;
+                            }
+                            &-colmiddle {
+                                width: 20%;
+                                padding: 0 15px;
+                            }
+                            &-colright {
+                                width: 65%;
+                                padding: 0 15px;
+                            }
+                        }
+                    }
+                    &-uploadBox {
+                        &-content {
+                            width: 100%;
+                            min-height: 170px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                aspect-ratio: 1 / 1;
+                                object-fit: cover;
+                            }
+                            &-inputfile {
+                                display: none;
+                            }
+                            &-action {
+                                position: absolute;
+                                right: 5px;
+                                top: 5px;
+                                text-align: center;
+                                svg {
+                                    width: 15px;
+                                    height: auto;
+                                }
+                            }
+                        }
+                        &-logo {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            overflow: hidden;
+                            width: 70px;
+                            height: 70px;
+                            cursor: pointer;
+                            position: relative;
+                            &-inner {
+                                width: 100%;
+                                height: 100%;
+                                @include vendor-prefix(border-radius, 50px);
+                                overflow: hidden;
+                                background-color: rgba(255, 255, 255, 0.05);
+                                @include vendor-prefix(transition, background-color 0.15s ease-in-out 0.05s);
+                                &:hover {
+                                    background-color: rgba(255, 255, 255, 0.15);
+                                }
+                            }
+                            &-action {
+                                bottom: 5px;
+                                right: 0;
+                                top: auto;
+                            }
+                        }
+                        &-display {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            overflow: hidden;
+                            width: 100%;
+                            height: 85px;
+                            max-width: 140px;
+                            @include vendor-prefix(border-radius, 5px);
+                            overflow: hidden;
+                            cursor: pointer;
+                            position: relative;
+                            &-inner {
+                                width: 100%;
+                                height: 100%;
+                                @include vendor-prefix(border-radius, 5px);
+                                overflow: hidden;
+                                background-color: rgba(255, 255, 255, 0.05);
+                                @include vendor-prefix(transition, background-color 0.15s ease-in-out 0.05s);
+                                &:hover {
+                                    background-color: rgba(255, 255, 255, 0.15);
+                                }
+                            }
+                        }
+                        &-banner {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            overflow: hidden;
+                            width: 100%;
+                            height: 120px;
+                            @include vendor-prefix(border-radius, 5px);
+                            overflow: hidden;
+                            cursor: pointer;
+                            position: relative;
+                            &-inner {
+                                width: 100%;
+                                height: 100%;
+                                @include vendor-prefix(border-radius, 5px);
+                                overflow: hidden;
+                                background-color: rgba(255, 255, 255, 0.05);
+                                @include vendor-prefix(transition, background-color 0.15s ease-in-out 0.05s);
+                                &:hover {
+                                    background-color: rgba(255, 255, 255, 0.15);
+                                }
+                            }
+                        }
+                        &-bottom {
+                            width: 100%;
+                            color: #a7a7a7;
+                            text-align: center;
+                        }
+                    }
+                }
+                &-social & {
+                    &-card {
+                        min-width: 50%;
+                        max-width: 800px;
+                    }
+                }
+                &-setting & {
+                    &-card {
+                        min-width: 100%;
+                    }
+                }
+            }
+
+            &-box-5 {
+                &-setting {
+                    display: block;
+                    align-items: center;
+
+                    &-simple {
+                        display: flex;
+                        gap: 15px;
+                        align-items: center;
+                        margin-bottom: 15px;
+
+                        .avail-text {
+                            font-size: 14;
+                            color: #a7a7a7;
+                        }
+                        .level {
+                            padding: 2px 20px;
+                            @include vendor-prefix(border-radius, 20px);
+                            &[level='0'] {
+                                background: $gaming-color;
+                            }
+
+                            &[level='1'] {
+                                background: $info-color;
+                            }
+
+                            &[level='2'] {
+                                background: $creative-color;
+                            }
+                        }
+
+                        label {
+                            font-size: 16px;
+                            color: #ebebeb;
+                        }
+
+                        span {
+                            margin-bottom: 0;
+                            font-size: 14px;
+                        }
+                    }
+
+                    &-lvl-2 {
+                        background: #960bdf;
+                        font-size: calc(26px - 12px);
+                        color: #ffffff;
+                        padding: 0 10px;
+                        @include vendor-prefix(border-radius, 20px);
+                        margin-right: 0;
+                        line-height: 22px;
+                    }
+
+                    &-para {
+                        font-size: 14px;
+                        color: #a7a7a7;
+                        margin-bottom: 25px;
+                        line-height: 22px;
+                    }
+
+                    &-grid {
+                        display: grid;
+                        grid-template-columns: auto 1fr;
+                        gap: 50px;
+
+                        &-flex {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 75px;
+                            align-items: flex-start;
+                            max-width: 300px;
+                        }
+
+                        label {
+                            display: block;
+                            margin-bottom: 20px;
+                            font-size: 16px;
+                        }
+
+                        &-box {
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+
+                            &-inner {
+                                display: flex;
+                                justify-content: space-between;
+                                gap: 20px;
+                                padding: 4px 40px 4px 2px;
+                                align-items: center;
+                                background-color: #ffffff15;
+                                font-weight: 200;
+                                width: fit-content;
+                                justify-content: flex-start;
+                                @include vendor-prefix(border-radius, 20px);
+
+                                img {
+                                    height: 30px;
+                                    width: 30px;
+                                }
+                            }
+
+                            &-bg {
+                                background-color: #ffffff30;
+                                padding: 6px 15px;
+                                width: fit-content;
+                                @include vendor-prefix(border-radius, 20px);
+                                font-weight: 200;
+                            }
+                        }
+
+                        &-address {
+                            margin-top: 18px;
+                            width: 100%;
+
+                            &-search_select {
+                                min-width: 100%;
+                                max-width: 300px;
+
+                                .css-1pndypt-Input {
+                                    color: #ffffff !important;
+                                }
+
+                                .css-319lph-ValueContainer {
+                                    padding: 2px 0;
+                                }
+
+                                .css-26l3qy-menu {
+                                    background: #ffffff05;
+                                    border: 1px solid #64646430;
+
+                                    img {
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+                                }
+                            }
+
+                            div[class*='-control'] {
+                                @include vendor-prefix(border-radius, 20px);
+                                max-width: 100%;
+                                background: #ffffff05;
+                                border: 1px solid #64646430;
+                                white-space: nowrap;
+                                padding: 7px 12px;
+                                font-size: 15px;
+                                color: #ebebeb;
+                                outline: none;
+
+                                &::-webkit-outer-spin-button {
+                                    -webkit-appearance: none;
+                                    margin: 0;
+                                }
+
+                                &::-webkit-inner-spin-button {
+                                    -webkit-appearance: none;
+                                    margin: 0;
+                                }
+
+                                &::placeholder {
+                                    color: #ffffff50;
+                                }
+
+                                &:hover {
+                                    border: 1px solid #55e0ff;
+                                }
+
+                                &:focus {
+                                    border: 1px solid #55e0ff;
+                                }
+                            }
+                        }
+
+                        &-five {
+                            display: grid;
+                            grid-template-columns: repeat(5, 1fr);
+                            gap: 15px;
+
+                            &-inner {
+                                position: relative;
+                                padding: 5px 10px 0;
+                                text-align: center;
+
+                                span {
+                                    font-size: 20px !important;
+                                    color: #fff !important;
+                                    display: inline !important;
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    cursor: pointer;
+                                }
+
+                                p {
+                                    color: #55e0ff;
+                                    font-size: 12px;
+                                    margin-top: 7px;
+                                }
+
+                                &-image {
+                                    width: 90px;
+                                    height: 90px;
+                                    object-fit: cover;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+
+                        &-active_minters {
+                            overflow-x: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-feature-box {
+            margin-top: 20px;
+            width: 50%;
+            .mediaeyeFeatureNft-header-title {
+                @include fontStyle(16px, 17px, 500);
+            }
+        }
+
+        &-btn {
+            text-align: center;
+            margin-top: 80px;
+
+            button {
+                padding: 0 30px;
+            }
+        }
+    }
+}

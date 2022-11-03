@@ -1,0 +1,236 @@
+@import '../../../assets/css/variables.scss';
+
+@mixin fontStyle($fontSize, $lineHeight, $fontWeight) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+}
+.feature-nft-page {
+    padding-top: 95px;
+    background-position: right top;
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    @media(max-width: 520.98px) {
+        background-size: 500px;
+    }
+
+    &-inner {
+        &-heading {
+            @include fontStyle(48px, 103.5%, 700);
+            color: #ffffff;
+            margin-right: 92px;
+            text-align: right;
+            @media(max-width: 912.98px) {
+                margin-right: 24px;
+            }
+            @media(max-width: 912.98px) {
+                text-align: center;
+                margin-right: 0;
+                @include fontStyle(36px, 103.5%, 700);
+            }
+        }
+
+        &-slider {
+            // justify-content: space-between;
+            cursor: pointer;
+            .nft-responsive {
+                display: none;
+            }
+
+            @media(max-width: 912.98px) {
+                .nft-responsive {
+                    display: block;
+                }
+            }
+            &-faturelist {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                &-arrowleft {
+                    position: absolute;
+                    left: 12%;
+                    z-index: 99;
+                    transition: transform 100ms ease-in-out;
+                    &:hover {
+                        transform: scale(1.5);
+                    }
+                }
+                &-arrowright {
+                    position: absolute;
+                    right: 12%;
+                    transition: transform 100ms ease-in-out;
+                    &:hover {
+                        transform: scale(1.5);
+                    }
+                }
+
+                span {
+                    @include fontStyle(16px, 24px, 400);
+                    color: #ffffff;
+                    cursor: pointer;
+                }
+                img {
+                    width: 950px;
+                }
+                svg {
+                    margin-top: 8%;
+                    width: 9px;
+                    height: 14px;
+                }
+                @media(max-width: 1280.98px) {
+                    img {
+                        width: 750px;
+                    }
+                }
+                @media(max-width: 1024.98px) {
+                    img {
+                        width: 550px;
+                    }
+                    span {
+                        @include fontStyle(14px, 24px, 400);
+                    }
+                }
+                @media(max-width: 912.98px) {
+                    align-items: center;
+                    .nft-responsive {
+                        display: block;
+                    }
+                    .nft-fullscreen {
+                        display: none;
+                    }
+                    span {
+                        margin-top: 2%;
+                    }
+                    svg {
+                        margin-top: 2.5%;
+                    }
+                }
+            }
+        }
+
+        &-maintab {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+
+        &-searchFilter {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-top: 20px;
+
+            .mediaeye-searchbar {
+                margin-left: 100px;
+                input {
+                    width: 250px;
+                    height: 38px;
+                }
+            }
+            @media(max-width: 768px) {
+                display: inline;
+                text-align: right;
+                margin-top: 34px;
+                .mediaeye-searchbar {
+                    margin-left: 0;
+                }
+            }
+        }
+        &-featuredCards {
+            margin-bottom: 50px;
+
+            .featuredCards-Title {
+                margin: 20px 0 42px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @include fontStyle(24px, 36px, 500);
+                &-inner {
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+                    button {
+                        background: $default-color;
+                        @include fontStyle(14px, 24px, 500);
+                        padding: 10px 24px;
+                        @include vendor-prefix(border-radius, 5px);
+                    }
+                    .mediaeye-searchbar {
+                        input {
+                            height: 40px;
+                            @include fontStyle(14px, 24px, 500);
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+            .featuredCards-notAvailable {
+                display: grid;
+                text-align: center;
+                color: rgba(235, 235, 235, 0.5);
+                span {
+                    margin-bottom: 24px;
+                }
+                button {
+                    max-width: fit-content;
+                    margin: 24px auto auto;
+                }
+            }
+            .featuredCards-noData-txt {
+                display: grid;
+                margin: 74px 0;
+                span {
+                    text-align: center;
+                    @include fontStyle(24px, 36px, 500);
+                    color: rgba(235, 235, 235, 0.5);
+                }
+            }
+            @media(max-width: 540.98px) {
+                .featuredCards-noData-txt {
+                    span {
+                        @include fontStyle(16px, 36px, 500);
+                    }
+                }
+            }
+        }
+    }
+    &-bottom {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 124px;
+        background: #1d1a41;
+        align-items: center;
+        bottom: 0;
+
+        button {
+            width: 300px;
+            height: 70px;
+            @include vendor-prefix(border-radius, 35px);
+            @include fontStyle(24px, 28px, 400);
+            margin-left: 20px;
+        }
+
+        @media(max-width: 540.98px) {
+            button {
+                width: 180px;
+            }
+        }
+        @media(max-width: 393.98px) {
+            button {
+                width: 158px;
+                @include fontStyle(18px, 28px, 400);
+            }
+        }
+        @media(max-width: 320.98px) {
+            button {
+                width: 120px;
+            }
+        }
+
+        .buttonList {
+            width: 340px;
+        }
+    }
+}

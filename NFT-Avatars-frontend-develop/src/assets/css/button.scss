@@ -1,0 +1,109 @@
+@import "variables.scss";
+
+.btn {
+  border-radius: 40px;
+  min-width: 150px;
+  padding: 0 32px;
+  font-family: $button-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  @media(max-width:768px){
+    font-size: 12px;
+  }
+
+  &-main {
+    background: $button-background;
+    color: $button-color;
+
+    &:hover,
+    &:focus,
+    &.active {
+      background: $button-background-hover;
+      transition: 0.2s;
+    }
+  }
+
+  &-transperant {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  &-grey {
+    background-color: #8D8C8C;
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: #fff;
+      background-color: #8D8C8C;
+    }
+  }
+
+  &-dark {
+    background-color: $dark-pink-color;
+    color: $white-color;
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: $dark-pink-hover;
+      transition: 0.2s;
+    }
+  }
+
+  &-info {
+    background-color: $info-color;
+    color: $white-color;
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: $info-color-hover;
+      transition: 0.2s;
+    }
+  }
+
+  &-square {
+    @include vendor-prefix(border-radius, 5px);
+  }
+}
+
+.bttn {
+  min-width: 180px;
+  height: 60px;
+  border-radius: 30px;
+  padding: 8px 25px;
+  font-family: $button-font;
+  font-weight: 400;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ebebeb;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  &.active {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}

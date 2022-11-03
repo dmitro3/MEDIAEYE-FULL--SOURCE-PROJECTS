@@ -1,0 +1,43 @@
+@import '../../assets/css/variables.scss';
+
+.campaign-page {
+    &-banner {
+        background-size: cover;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+
+    &-inner {
+        &-tab {
+            margin: 42px 0 20px;
+        }
+
+        &-bar {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .mediaeye-searchbar {
+                input {
+                    width: 370px;
+                    height: 45px;
+                }
+            }
+        }
+
+        &-content {
+            margin: 42px 0;
+
+            &-header {
+                @include fontStyle(24px, 36px, 500);
+            }
+
+            &-cards {
+                margin: 30px 0;
+            }
+        }
+    }
+}

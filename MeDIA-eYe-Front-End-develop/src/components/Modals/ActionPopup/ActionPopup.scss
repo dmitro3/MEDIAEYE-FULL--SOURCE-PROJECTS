@@ -1,0 +1,45 @@
+@import '../../../assets/css/variables.scss';
+
+.action-popup{
+    width: fit-content;
+    padding: 50px;
+    &-inner{
+        text-align: center;
+        &-title{
+            @include fontStyle(20px, 30px, 400);
+        }
+        &-content{
+            @include fontStyle(16px, 24px, 400);
+            margin: 50px 0px;
+        }
+        &-bottom{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+        }
+    }
+    &-regenrate{
+        text-align: center;
+        &-title{
+            @include fontStyle(20px, 30px, 400);
+        }
+        &-subtitle{
+            @include fontStyle(16px, 24px, 400);
+            margin: 30px 0px;
+        }
+        &-buttonsection{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            .btn-square{
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+        }
+        &-note{
+            @include fontStyle(14px, 21px, 400);
+        }
+    }
+}

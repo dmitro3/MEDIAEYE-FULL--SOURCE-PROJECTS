@@ -1,0 +1,114 @@
+@import "../../../assets/css/variables.scss";
+
+.mediaeye-OnRamper-Widget {
+    width: 440px;
+    height: 640px;
+    .isolate-inheritance {
+        overflow: hidden;
+        filter: opacity(1) !important;
+        border: 1px solid #797979;
+        border-radius: 12px;
+        --text-dark-color: #e2e2e2;
+        --background-color: $darktheme-bg;
+        --text-light-color: #c2c2c2;
+        scrollbar-color: #928BB0 transparent !important;
+        scrollbar-width: thin;
+        &._41wK5{
+            ::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.1) !important;
+                border-radius: 2px !important;
+                border-left: 3px solid $darktheme-bg;
+                border-right: 3px solid $darktheme-bg;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #928BB0 !important;
+                border-radius: 6px !important;
+            }
+        }
+        .D8aDp {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+        ._562Oa {
+            > div[itemProp="text"] {
+                color: #fff;
+            }
+        }
+        .w3QHg{
+            &:hover {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 8px;
+            }
+        }
+        .JFAs6 {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: none;
+        }
+        .X0jJn{
+            &.ec8oU {
+                color: #e2e2e2;
+            }
+        }
+        .mZ-b8 {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            color: #fff;
+            .Gg1I3 {
+                color: #e2e2e2;
+            }
+        }
+        .Ii9oB {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            color: #e2e2e2;
+        }
+        ._02V\+X {
+            margin: 20px 0;
+            padding: 15px;
+        }
+        input {
+            background: transparent !important;
+        }
+        .umxp7 {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+        ._4d\+fv {
+            background: $darktheme-bg;
+            .jxbsk {
+                background: rgba(255, 255, 255, 0.02);
+                border-top: 1px solid #797979;
+                border-radius: 12px;
+                ._9mdHL{
+                    margin: 0 18px;
+                    padding-right: 10px;
+                    li {
+                        background: rgba(255, 255, 255, 0.1);
+                        border-radius: 8px;
+                        margin-bottom: 18px;
+                        padding: 23px 45px;
+                    }
+                }
+            }
+        }
+        .niPSh {
+            color: #e2e2e2;
+        }
+        .TJjQe {
+            background-color: transparent;
+            a {
+                span {
+                    opacity: 0.3;
+                }
+                img {
+                    opacity: 1 !important;
+                }
+            }
+        }
+        ._2MOSN {
+            background: #00A2B4;
+            border-radius: 8px;
+        }
+    }
+}

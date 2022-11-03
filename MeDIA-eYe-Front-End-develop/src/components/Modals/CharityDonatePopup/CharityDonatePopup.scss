@@ -1,0 +1,248 @@
+@import '../../../assets/css/variables.scss';
+
+.charity-donate-popup {
+  // overflow-x: scroll;
+  width: 700px;
+  @include vendor-prefix(transition, 0.5s);
+
+  @media (max-width: 786.98px) {
+    width: 100%;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+
+    span {
+      @include fontStyle(24px, 36px, 500);
+      margin-left: 24px;
+    }
+  }
+
+  &-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 52px;
+
+    &-tab {
+      width: 216px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      @include vendor-prefix(border-radius, 5px);
+      margin: 0 8px;
+      text-align: center;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .active {
+      background: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  &-inner {
+    // background: rgba(15, 13, 37, 0.6);
+    margin: 24px -45px -45px;
+    padding: 50px;
+    @include vendor-prefix(transition, 0.5s);
+
+    &-inputtitle {
+      @include fontStyle(16px, 24px, 500);
+      width: 100%;
+      display: flex;
+      margin-bottom: 18px;
+
+      &-one {
+        width: 200px;
+      }
+
+      &-two {
+        width: 68%;
+        padding-left: 10px;
+      }
+
+      @media (max-width: 786.98px) {
+        &-one {
+          width: 40%;
+        }
+
+        &-two {
+          width: 68%;
+          padding-left: 20px;
+        }
+      }
+
+      @media (max-width: 520.98px) {
+        @include fontStyle(14px, 24px, 500);
+
+        &-two {
+          padding-left: 8px;
+        }
+      }
+
+      @media (max-width: 420.98px) {
+        @include fontStyle(12px, 24px, 500);
+      }
+    }
+
+    &-input {
+      .mediaeye-popup-product-page-tokenlistwithprice-token {
+        width: 200px;
+
+        @media (max-width: 786.98px) {
+          width: 40%;
+        }
+      }
+
+      .mediaeye-popup-product-page-tokenlistwithprice-token-body {
+        max-height: 250px;
+        background: $darktheme-bg;
+        overflow-y: scroll;
+        border: none;
+        width: 100%;
+      }
+
+      .mediaeye-popup-product-page-tokenlistwithprice-token-header {
+        background: rgba(255, 255, 255, 0.15);
+        border: none;
+        justify-content: space-between;
+
+        &-inner {
+          display: flex;
+          align-items: center;
+
+          .activenetwork {
+            text-transform: capitalize;
+            font-size: 11px;
+          }
+        }
+      }
+
+      .mediaeye-popup-product-page-tokenlistwithprice-token-body-row {
+        background: rgba(255, 255, 255, 0.05);
+        border-bottom: none;
+        white-space: normal;
+      }
+
+      .mediaeye-popup-product-page-tokenlistwithprice-token-body-row:not(:last-child) {
+        border-bottom: none;
+      }
+
+      .mediaeye-popup-product-page-tokenlistwithprice-price {
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      .mediaeye-popup-product-page-tokenlistwithprice-price-input {
+        padding-right: 50px;
+      }
+
+      .mediaeye-popup-product-page-tokenlistwithprice-price-addon {
+        color: #ffffff;
+        margin-right: 52px;
+
+        svg {
+          margin-right: 12px;
+
+          path {
+            stroke-opacity: 100%;
+          }
+        }
+      }
+    }
+
+    &-inputbottom {
+      color: #bdbcc7;
+      display: flex;
+      justify-content: right;
+      margin: 0;
+
+      span {
+        margin-top: 0 !important;
+      }
+    }
+
+    &-eyeswaps {
+      width: 70%;
+      margin: 30px auto 0;
+      background-color: $darktheme-bg;
+      border-radius: 12px;
+      padding: 18px 25px;
+      max-height: 70px;
+      @include vendor-prefix(transition, 0.5s);
+
+      &.open {
+        max-height: 5000px;
+        @include vendor-prefix(transition, 0.5s);
+
+        svg {
+          @include vendor-prefix(transform, rotate(180deg));
+          @include vendor-prefix(transition, 0.5s);
+        }
+      }
+
+      .eyeswap {
+        margin: 0;
+
+        &-header {
+          display: none;
+          padding: 0 15px;
+          cursor: pointer;
+
+          &.nodis {
+            display: flex;
+          }
+        }
+
+        &-headercontent {
+          flex-direction: column;
+          gap: 25px;
+
+          &-sidearrow {
+            transform: rotate(90deg);
+          }
+
+          &-section {
+            width: 100%;
+          }
+        }
+
+        &-body {
+          @include vendor-prefix(transform, translateY(-150%));
+          @include vendor-prefix(transition, 0.5s);
+          overflow: hidden;
+
+          &.open {
+            @include vendor-prefix(transform, none);
+            @include vendor-prefix(transition, 0.5s);
+          }
+
+          &-wrapper {
+            overflow: hidden;
+          }
+        }
+      }
+    }
+
+    &-bottomtag {
+      margin-top: 35px;
+      text-align: center;
+      @include fontStyle(18px, 27px, 500);
+
+      .big-font {
+        @include fontStyle(24px, 36px, 500);
+        line-break: anywhere;
+      }
+    }
+
+    &-bottombutton {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+  }
+}

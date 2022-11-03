@@ -1,0 +1,46 @@
+@import '../../assets/css/variables.scss';
+
+.mediaeye-popup-general {
+  &-title {
+    width: 100%;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 103.5%;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ebebeb;
+  }
+  &-message {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    color: #ebebeb;
+  }
+  &-submessage {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ebebeb;
+  }
+  &-copytext {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+  }
+
+  &-bottom {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px 10px;
+  }
+}

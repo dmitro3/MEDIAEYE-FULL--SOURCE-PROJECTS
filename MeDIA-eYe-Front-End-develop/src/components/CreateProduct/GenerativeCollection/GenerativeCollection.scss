@@ -1,0 +1,501 @@
+@import '../../../assets/css/variables.scss';
+
+.create-generative-collection-page {
+    &-content {
+        width: 100%;
+
+        &-row {
+            width: 100%;
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+
+            &-card {
+                background: $default-color;
+                padding: 30px;
+                @include vendor-prefix(border-radius, 12px);
+                width: 100%;
+
+                &-container {
+                    width: 100%;
+                }
+
+                &-header {
+                    width: 100%;
+                    margin-bottom: 15px;
+
+                    &-heading {
+                        color: #fff;
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                }
+
+                &-body {
+                    width: auto;
+                }
+            }
+
+            &-networks & {
+                &-card {
+                    min-width: 50%;
+                }
+
+                &-token {
+                    margin-top: 40px;
+                }
+            }
+
+            &-metadata & {
+                &-card {
+                    min-width: 100%;
+
+                    &-body {
+                        display: flex;
+                        margin: 0 -15px;
+
+                        &-colleft {
+                            width: 40%;
+                            padding: 0 15px;
+
+                            &-row2 {
+                                display: flex;
+                                align-items: baseline;
+                                gap: 12px;
+
+                                // @media (max-width: 1400px) {
+                                // display: grid;
+                                // }
+                            }
+
+                            .mediaeyeform-group-input-addon {
+                                padding-left: 0;
+                            }
+
+                            .mediaeyeform-group-input-addon-small {
+                                padding-left: 12px;
+                            }
+                        }
+
+                        &-colright {
+                            width: 60%;
+                            padding: 0 15px;
+                        }
+                    }
+                }
+            }
+
+            &-metadata {
+                &-row {
+                    gap: 10px;
+                    display: flex;
+
+                    &-col {
+                        width: 50%;
+                    }
+                }
+            }
+
+            &-appearance & {
+                &-card {
+                    min-width: 100%;
+
+                    &-body {
+                        display: flex;
+                        margin: 0 -15px;
+
+                        &-colleft {
+                            width: 15%;
+                            padding: 0 15px;
+                        }
+
+                        &-colmiddle {
+                            width: 20%;
+                            padding: 0 15px;
+                        }
+
+                        &-colright {
+                            width: 65%;
+                            padding: 0 15px;
+                        }
+                    }
+                }
+
+                &-uploadBox {
+                    &-content {
+                        width: 100%;
+                        min-height: 170px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            aspect-ratio: 1 / 1;
+                            object-fit: cover;
+                            position: relative;
+                        }
+
+                        &-inputfile {
+                            display: none;
+                        }
+
+                        &-action {
+                            position: absolute;
+                            right: 5px;
+                            top: 5px;
+                            text-align: center;
+
+                            svg {
+                                width: 15px;
+                                height: auto;
+                            }
+                        }
+                    }
+
+                    &-logo {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        width: 70px;
+                        height: 70px;
+                        cursor: pointer;
+                        position: relative;
+
+                        &-inner {
+                            width: 100%;
+                            height: 100%;
+                            @include vendor-prefix(border-radius, 50px);
+                            overflow: hidden;
+                            background-color: rgba(255, 255, 255, 0.05);
+                            @include vendor-prefix(transition, background-color 0.15s ease-in-out 0.05s);
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.15);
+                            }
+                        }
+
+                        &-action {
+                            bottom: 5px;
+                            right: 0;
+                            top: auto;
+                        }
+                    }
+
+                    &-display {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 85px;
+                        max-width: 140px;
+                        @include vendor-prefix(border-radius, 5px);
+                        overflow: hidden;
+                        cursor: pointer;
+                        position: relative;
+
+                        &-inner {
+                            width: 100%;
+                            height: 100%;
+                            @include vendor-prefix(border-radius, 5px);
+                            overflow: hidden;
+                            background-color: rgba(255, 255, 255, 0.05);
+                            @include vendor-prefix(transition, background-color 0.15s ease-in-out 0.05s);
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.15);
+                            }
+
+                        }
+                    }
+
+                    &-banner {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 120px;
+                        @include vendor-prefix(border-radius, 5px);
+                        overflow: hidden;
+                        cursor: pointer;
+                        position: relative;
+
+                        &-inner {
+                            width: 100%;
+                            height: 100%;
+                            @include vendor-prefix(border-radius, 5px);
+                            overflow: hidden;
+                            background-color: rgba(255, 255, 255, 0.05);
+                            @include vendor-prefix(transition, background-color 0.15s ease-in-out 0.05s);
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.15);
+                            }
+                        }
+                    }
+
+                    &-bottom {
+                        width: 100%;
+                        color: #a7a7a7;
+                        text-align: center;
+                    }
+                }
+            }
+
+            &-options & {
+                &-card {
+                    min-width: 50%;
+
+                    &-body {
+                        display: flex;
+                        flex-wrap: wrap;
+                        // margin: 0 -15px;
+                        &-inner {
+                            width: 100%;
+                        }
+                        &-colleft {
+                            width: 50%;
+                            padding: 0 15px;
+                        }
+
+                        &-colright {
+                            width: 50%;
+                            padding: 0 15px;
+                        }
+
+                        &-colFull {
+                            width: 80%;
+                            padding: 0 15px;
+                        }
+                    }
+                }
+            }
+
+            &-charity {
+                .create-generative-collection-page-content-row-card-header-heading {
+                    align-items: center;
+                }
+
+                .create-generative-collection-page-content-row-card {
+                    width: 750px;
+                }
+
+                width: 750px;
+
+                &-inner {
+                    display: flex;
+                    gap: 20px;
+                    // justify-content: space-between;
+                    align-items: center;
+
+                    &-left {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        @include fontStyle(16px, 17px, 500);
+
+                        svg {
+                            path {
+                                fill: #00a2b4;
+                            }
+                        }
+                    }
+
+                    &-right {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .mediaeyeform-input {
+                            width: 70px;
+                        }
+
+                        .mediaeye-searchbar {
+                            input {
+                                width: 180px;
+                                height: 40px;
+
+                                &::placeholder {
+                                    color: #00a2b4;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-pricing {
+                &-paymentmethod {
+                    width: 100%;
+                    margin-bottom: 30px;
+                    &-select {
+                        width: auto;
+                        display: inline-block;
+                        min-width: 50%;
+                        margin: 10px 0 15px;
+                        padding-right: 10px;
+                    }
+                }
+
+                .mediaeye-selectsearch {
+                    min-width: 220px;
+                }
+            }
+
+            &-uploadcontent & {
+                &-card {
+                    min-width: 50%;
+                }
+            }
+
+            &-uploadcontent {
+                width: 100%;
+
+                &-row {
+                    width: 100%;
+
+                    // &:not(:last-child) {
+                    // margin-bottom: 15px;
+                    // }
+
+                    &-properties {
+                        margin-top: 12px;
+
+                        .mint-addons-row {
+
+
+                            .mint-addons-row-box-header {
+                                margin-bottom: 20px;
+                            }
+
+                            .mint-addons-row-box-line {
+                                display: none;
+                            }
+
+                            .mint-addons-row-col:nth-of-type(2) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &-innerpart {
+                    display: flex;
+                    align-items: center;
+
+                    &-btn {
+                        display: flex;
+                        align-items: center;
+                        color: #fff;
+                        font-size: 16px;
+                        cursor: pointer;
+
+                        &-input {
+                            display: none;
+                        }
+
+                        svg {
+                            margin-right: 10px;
+                        }
+                        .mediaeyeform-group-input-error-message {
+                            margin-left: 20px;
+                            margin-top: 0;
+                        }
+
+                        &-filename {
+                            display: flex;
+                            align-items: center;
+
+                            span {
+                                margin-right: 24px;
+                            }
+                        }
+                    }
+
+                    &-close {
+                        margin-top: 4px;
+                        margin-left: 20px;
+                        cursor: pointer;
+
+                        svg {
+                            width: 14px;
+                            height: 14px;
+                            fill: #fff;
+                            stroke: #fff;
+
+                            rect {
+                                fill: #fff;
+                            }
+                        }
+                    }
+                }
+
+                &-list {
+                    display: flex;
+                    font-size: 14px;
+                    font-weight: 300;
+                    gap: 10px;
+                    padding: 10px 0;
+
+                    &-icon {
+                        cursor: pointer;
+                    }
+
+                    &-action {
+                        width: 9px;
+
+                        svg {
+                            width: 100%;
+                            height: auto;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                &-download {
+                    text-decoration: underline;
+                    font-size: 16px;
+                    color: #fff;
+                    cursor: pointer;
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                    &:hover {
+                        color: $link-hover;
+                    }
+
+                    span {
+                        margin: 12px 0;
+                    }
+                }
+            }
+
+            &-checkoutsection {
+                width: 54%;
+                background: rgba(0, 162, 180, 0.1);
+                @include vendor-prefix(border-radius, 10px);
+                padding: 30px 42px;
+                margin-bottom: 24px;
+
+                &-token {
+                    &-heading {
+                        @include fontStyle(20px, 20px, 500);
+                        margin-bottom: 20px;
+                    }
+                }
+
+                &-row {
+                    padding: 10px 0;
+                    max-width: 550px;
+                }
+            }
+
+            &-social & {
+                &-card {
+                    min-width: 50%;
+                    max-width: 800px;
+                }
+            }
+        }
+    }
+}

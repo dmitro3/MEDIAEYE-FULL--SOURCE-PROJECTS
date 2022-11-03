@@ -1,0 +1,88 @@
+@import '../../../assets/css/variables.scss';
+.profile-page {
+  &-payment {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 50px;
+    margin-bottom: 110px;
+    @media (max-width: 767.98px) {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    &-content {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-bottom: 25px;
+      @media (max-width: 767.98px) {
+        width: 100%;
+        display: block;
+      }
+      &-col {
+        width: 45%;
+        position: relative;
+        @media (max-width: 767.98px) {
+          width: 100%;
+        }
+        &-btn {
+          background: rgba(100, 100, 100, 0.3);
+          border: 1px solid rgba(100, 100, 100, 0.3);
+          @include vendor-prefix(border-radius, 20px);
+          height: 41px;
+          width: 100%;
+          color: #ffffff;
+          font-size: 14px;
+          font-weight: 500;
+          @include vendor-prefix(transition, all 0.3s);
+
+          @media (max-width: 767.98px) {
+            margin-bottom: 20px;
+          }
+          &-icon {
+            width: 25px;
+            height: 25px;
+            margin-top: -5px;
+            position: absolute;
+            @include vendor-prefix(border-radius, 50px);
+            @include vendor-prefix(transition, all 0.3s);
+          }
+          &[disabled] {
+            opacity: 0.5;
+            cursor: auto;
+          }
+          &.hovcom {
+            &:hover {
+              + .profile-page-payment-content-col-commingBtn {
+                display: block;
+              }
+            }
+          }
+        }
+        &-commingBtn {
+          display: none;
+          text-align: right;
+          margin-top: 10px;
+          font-weight: 500;
+          color: #ffffff;
+          font-size: 18px;
+          background: rgba(20, 18, 51, 0.8);
+          @include vendor-prefix(border-radius, 8px);
+          padding: 5px 30px;
+          position: absolute;
+          top: 100%;
+          margin-top: -8px;
+          right: -8px;
+          @media (max-width: 767.98px) {
+            margin-top: -36px;
+            right: -36px;
+          }
+        }
+      }
+    }
+  }
+}

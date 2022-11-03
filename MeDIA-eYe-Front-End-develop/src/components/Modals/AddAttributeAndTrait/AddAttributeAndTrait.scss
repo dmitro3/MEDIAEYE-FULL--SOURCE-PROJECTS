@@ -1,0 +1,89 @@
+@import '../../../assets/css/variables.scss';
+
+.attribute-trait-popup{
+    width: 800px;
+    .mediaeye-popup-content-inner{
+        padding: 0px;
+    }
+    &-inner{
+    background: url('../../../assets/img/generativeCollection/Ellipse\ 362.png') no-repeat center;
+    padding: 40px;
+        &-content{
+            &-title{
+                text-align: center;
+                @include fontStyle(20px, 30px, 400);
+                margin-bottom: 135px;
+            }
+        }
+        &-afterupload{
+            &-inner{
+                &-title{
+                    @include fontStyle(20px, 30px, 400);
+                }
+                &-finaluploaded{
+                    &-image{
+                        width: 100%;
+                        img{
+                            margin: auto;
+                        }
+                    }
+                    &-bottom{
+                        width: 100%;
+                        padding: 24px 112px;
+                        background: #242242;
+                        @include vendor-prefix(border-radius, 5px);
+                        &-top{
+                            text-align: center;
+                            @include fontStyle(20px, 30px, 500);
+                        }
+                        &-data{
+                            text-align: center;
+                            @include fontStyle(16px, 17px, 400);
+                        }
+                    }
+                }
+                &-datalist{
+                    margin-top: 50px;
+                    &-head{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        @include fontStyle(16px, 24px, 500);
+                        margin-bottom: 12px;
+                    }
+                    &-data{
+                        &-cards{
+                            margin: 0px 5px;
+                            &-top{
+                                position: relative;
+                                img{
+                                    width: 180px;
+                                    height: 180px;
+                                    @include vendor-prefix(border-radius, 5px);
+                                }
+                                span{
+                                    position: absolute;
+                                    padding: 2px 12px;
+                                    @include fontStyle(12px, 18px, 400);
+                                    background: $gaming-color;
+                                    top: 10px;
+                                    left: 10px;
+                                }
+                            }
+                            &-bottom{
+                                @include fontStyle(12px, 18px, 400);
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+                &-bottom{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}

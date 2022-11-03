@@ -1,0 +1,798 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_admins",
+        "type": "address[]"
+      },
+      {
+        "internalType": "address",
+        "name": "_ERC721Implementation",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_ERC1155Implementation",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_feeContract",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address[]",
+        "name": "minters",
+        "type": "address[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "tokenData",
+        "type": "string"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "amounts",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "bytes",
+            "name": "data",
+            "type": "bytes"
+          },
+          {
+            "internalType": "string[]",
+            "name": "tokenDatum",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "metadataURIs",
+            "type": "string[]"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct Collection.ERC1155Mints",
+        "name": "mints",
+        "type": "tuple"
+      }
+    ],
+    "name": "ERC1155CollectionDeployed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "symbol",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address[]",
+        "name": "minters",
+        "type": "address[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "tokenData",
+        "type": "string"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "string[]",
+            "name": "tokenDatum",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "metadataURIs",
+            "type": "string[]"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct Collection.ERC721Mints",
+        "name": "mints",
+        "type": "tuple"
+      }
+    ],
+    "name": "ERC721CollectionDeployed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "previousAdminRole",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "newAdminRole",
+        "type": "bytes32"
+      }
+    ],
+    "name": "RoleAdminChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleGranted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleRevoked",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "DEFAULT_ADMIN_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "ROLE_ADMIN",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_minters",
+        "type": "address[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "amounts",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "bytes",
+            "name": "data",
+            "type": "bytes"
+          },
+          {
+            "internalType": "string[]",
+            "name": "tokenDatum",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "metadataURIs",
+            "type": "string[]"
+          }
+        ],
+        "internalType": "struct Collection.ERC1155Mints",
+        "name": "_mints",
+        "type": "tuple"
+      },
+      {
+        "internalType": "string",
+        "name": "_tokenData",
+        "type": "string"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "isValid",
+            "type": "bool"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "userAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "enum MediaEyeOrders.SubscriptionTier",
+                "name": "subscriptionTier",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint256",
+                "name": "startTime",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "endTime",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct MediaEyeOrders.UserSubscription",
+            "name": "userSubscription",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint8",
+            "name": "v",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "r",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "internalType": "struct MediaEyeOrders.SubscriptionSignature",
+        "name": "_subscriptionSignature",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "feature",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "paymentMethod",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "numDays",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "tokenAddresses",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "tokenIds",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "price",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeOrders.Feature",
+        "name": "_featureCollection",
+        "type": "tuple"
+      }
+    ],
+    "name": "createERC1155Collection",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "clone",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_minters",
+        "type": "address[]"
+      },
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_symbol",
+        "type": "string"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "string[]",
+            "name": "tokenDatum",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "metadataURIs",
+            "type": "string[]"
+          }
+        ],
+        "internalType": "struct Collection.ERC721Mints",
+        "name": "_mints",
+        "type": "tuple"
+      },
+      {
+        "internalType": "string",
+        "name": "_tokenData",
+        "type": "string"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "isValid",
+            "type": "bool"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "userAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "enum MediaEyeOrders.SubscriptionTier",
+                "name": "subscriptionTier",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint256",
+                "name": "startTime",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "endTime",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct MediaEyeOrders.UserSubscription",
+            "name": "userSubscription",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint8",
+            "name": "v",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "r",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "internalType": "struct MediaEyeOrders.SubscriptionSignature",
+        "name": "_subscriptionSignature",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "feature",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "paymentMethod",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "numDays",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "tokenAddresses",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "tokenIds",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "price",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeOrders.Feature",
+        "name": "_featureCollection",
+        "type": "tuple"
+      }
+    ],
+    "name": "createERC721Collection",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "clone",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "erc1155Implementation",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "erc721Implementation",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "feeContract",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getRoleAdmin",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "grantRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "hasRole",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "renounceRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "revokeRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "subscriptionCheckActive",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "interfaceId",
+        "type": "bytes4"
+      }
+    ],
+    "name": "supportsInterface",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_newERC1155Implementation",
+        "type": "address"
+      }
+    ],
+    "name": "updateERC1155Implementation",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_newERC721Implementation",
+        "type": "address"
+      }
+    ],
+    "name": "updateERC721Implementation",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_newFeeContract",
+        "type": "address"
+      }
+    ],
+    "name": "updateFeeContract",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "_check",
+        "type": "bool"
+      }
+    ],
+    "name": "updateSubscriptionCheck",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

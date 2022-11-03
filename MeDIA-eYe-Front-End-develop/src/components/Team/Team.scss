@@ -1,0 +1,56 @@
+@import '../../assets/css/variables.scss';
+
+.mediaeye {
+    &-layout {
+        &-container {
+            &-teambox {
+
+                &-wrapper {
+                    &-inner {
+                        position: relative;
+                        padding: 0 2.5px;
+                        margin: 0 5px;
+                        overflow: hidden;
+
+
+                        img {
+                            &.team_member {
+                                width: 200px;
+                                height: 280px;
+                                object-fit: cover;
+                                @include vendor-prefix(border-radius, 8px);
+                            }
+                        }
+
+                        &-bottom {
+                            position: absolute;
+                            top: 80px;
+                            background: linear-gradient(180deg, rgba(23, 19, 58, 0) 0%, $default-color 100%);
+                            @include vendor-prefix(border-radius, 8px);
+                            width: 200px;
+                            height: 200px;
+                            padding: 13px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+
+                            h6 {
+                                font-weight: 400;
+                                font-size: 14px;
+                                margin: 0;
+                            }
+
+                            p {
+
+                                font-weight: 400;
+                                font-size: 8.72236px;
+                                opacity: 0.5;
+                                width: 70%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

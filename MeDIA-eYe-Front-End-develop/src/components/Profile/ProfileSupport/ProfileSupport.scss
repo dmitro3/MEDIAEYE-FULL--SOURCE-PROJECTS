@@ -1,0 +1,19 @@
+.profile_support_page {
+  &.profile-page-content-main-innerpart{
+    padding-bottom: 0px;
+  }
+  padding-top: 0px;
+  position: relative;
+  &-requiredWarning {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    opacity: 0.5;
+  }
+  iframe {
+    display: block !important;
+    border: 0;
+    height: 45rem;
+    width: 100%;
+  }
+}

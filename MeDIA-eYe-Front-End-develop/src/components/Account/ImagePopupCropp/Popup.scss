@@ -1,0 +1,58 @@
+.image_popup_cropp {
+  overflow-y: scroll;
+}
+
+.image_popup_cropp::-webkit-scrollbar {
+  width: 0 !important;
+  opacity: 0;
+  height: 0;
+  display: none;
+}
+
+.image_popup_field {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_popup_cropp .download_button {
+  outline: none;
+  border: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 297px;
+  height: 40px;
+  color: #fff;
+  background: url('../../../assets/img/cohort_btn_bg.png') no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  position: relative;
+  margin: 30px auto;
+}
+.image_popup_cropp .download_button:hover {
+  background: url('../../../assets/img/cohort_btn_bg_hover.png') no-repeat
+    center;
+  background-size: contain;
+  color: #313131;
+}
+
+.dark .image_popup_cropp .download_button:hover {
+  background: url('../../../assets/img/cohort_btn_bg_hover.png') no-repeat
+    center;
+  background-size: contain;
+  color: #fff;
+}
+
+@media (max-width: 575.98px) {
+  .image_popup_cropp .download_button {
+    width: 250px;
+  }
+}

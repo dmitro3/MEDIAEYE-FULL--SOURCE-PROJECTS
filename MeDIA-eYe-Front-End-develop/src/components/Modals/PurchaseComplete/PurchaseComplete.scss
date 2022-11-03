@@ -1,0 +1,19 @@
+@import '../../../assets/css/variables.scss';
+
+.purchase-popup{
+   &-content{
+       &-header{
+           @include fontStyle(34px, 38px, 600);
+       }
+       &-middle{
+           display: flex;
+           justify-content: center;
+           margin: 42px auto;
+           width: 440px;
+           height: 440px;
+       }
+       &-bottom{
+          font-size: 18px;
+       }
+   }
+}

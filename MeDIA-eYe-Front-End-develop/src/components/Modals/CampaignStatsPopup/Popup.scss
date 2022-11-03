@@ -1,0 +1,23 @@
+@import '../../../assets/css/variables.scss';
+
+.mediaeye {
+    &-campaignStats {
+        &-body {
+            max-height: calc(100vh - 310px);
+            overflow-y: auto;
+
+            &-wrapper {
+                h5 {
+                    font-weight: 500;
+                    font-size: 20px;
+                }
+
+                &-innerbox {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 25px;
+                }
+            }
+        }
+    }
+}

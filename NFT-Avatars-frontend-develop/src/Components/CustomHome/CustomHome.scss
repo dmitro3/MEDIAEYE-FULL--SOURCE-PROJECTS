@@ -1,0 +1,114 @@
+@import "../../assets/css/variables.scss";
+
+.mediaeyeAvatar {
+  &-home {
+    &-custBox {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px; 
+      @media (max-width: 767.98px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      &-left {
+        width: 45%;
+        padding: 50px 0;
+        @media (max-width: 767.98px) {
+          width: 90vw;
+          padding: 0;
+        }
+        h1 {
+          font-family: $heading-font;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 64px;
+          line-height: 77px;
+          text-transform: uppercase;
+          color: #cc00ff;
+          margin: 20px 0;
+          @media (max-width: 767.98px) {
+            font-size: 32px;
+            line-height: 38px;
+            margin: 0;
+            text-align: center;
+          }
+        }
+        h4 {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 29px;
+          color: $white-color;
+          margin-bottom: 70px;
+          @media (max-width: 767.98px) {
+            font-size: 24px;
+            line-height: 29px;
+            margin-top: 10px;
+            margin-bottom: 45px;
+            text-align: center;
+          }
+        }
+
+        &-wrapBox {
+          display: flex;
+          column-gap: 40px;
+          justify-content: center;
+          margin-bottom: 20px;
+          @media (max-width: 767.98px) {
+            column-gap: 20px;
+          }
+          @media (max-width: 419.98px) {
+            display: none;
+          }
+          &.wrapbox {
+            display: none;
+            @media (max-width: 419.98px) {
+              display: flex;
+              flex-wrap: wrap;
+              row-gap: 15px;
+              column-gap: 20px;
+            }
+          }
+          &.wb3 {
+            justify-content: flex-start;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+          h6 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $white-color;
+            margin: 0;
+            @media (max-width: 767.98px) {
+              font-size: 14px;
+              line-height: 17px;
+            }
+          }
+        }
+      }
+      &-right {
+        display: flex;
+        align-items: flex-end;
+        &-imgav {
+          transform: translateX(-35%);
+          z-index: 1;
+          width: 45%;
+          @media (max-width: 767.98px) {
+            width: 40%;
+          }
+        }
+        &-imgbb {
+          z-index: 9;
+          width: 75%;
+          @media (max-width: 767.98px) {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}

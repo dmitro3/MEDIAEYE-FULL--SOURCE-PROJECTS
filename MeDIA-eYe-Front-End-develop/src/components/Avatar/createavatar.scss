@@ -1,0 +1,28 @@
+@import '../../assets/css/variables.scss';
+
+@mixin fontStyle($fontSize, $lineHeight, $fontWeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+}
+
+.mediaeye {
+  &-layout {
+    &-container {
+      .avatar-page-content-main {
+        height: 100%;
+        width: 85%;
+        margin: 0 auto;
+
+        &-iframe {
+          width: 1080px;
+          height: 800px;
+          margin: 0;
+          padding: 20px;
+          font-size: 14px;
+          border: none;
+        }
+      }
+    }
+  }
+}

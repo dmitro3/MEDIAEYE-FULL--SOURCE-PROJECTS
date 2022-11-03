@@ -1,0 +1,12 @@
+@import '../../../assets/css/variables.scss';
+
+.swap-popup {
+  display: flex;
+  justify-content: center;
+
+  .eyeswap-withBox {
+    border: none;
+    background: none;
+    width: 100%;
+  }
+}

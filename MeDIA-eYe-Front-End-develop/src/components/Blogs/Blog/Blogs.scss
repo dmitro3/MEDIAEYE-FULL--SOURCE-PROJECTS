@@ -1,0 +1,19 @@
+@import '../../../assets/css/variables.scss';
+.mediaeye-blogs {
+    &-tabs {
+        width: 100%;
+        &-middle {
+            margin: auto;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            width: 100%;
+        }
+        &-list {
+            margin-bottom: 40px;
+        }
+        &-content {
+            width: 100%;
+        }
+    }
+}

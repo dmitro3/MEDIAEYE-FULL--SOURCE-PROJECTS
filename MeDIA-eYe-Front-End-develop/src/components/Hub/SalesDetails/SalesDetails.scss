@@ -1,0 +1,60 @@
+@import '../../../assets/css/variables.scss';
+.sale-detail-page{
+    &-inner{
+        &-graph{
+            height: 400px;
+        }
+        &-content{
+            margin-top: 42px;
+            table{
+                width: 100%;
+                border-collapse: collapse;
+          
+            }
+            thead {
+                tr {
+                  border-bottom: 1px solid rgba(144, 144, 144, 0.5);
+        
+                  th {
+                    border: none;
+                    padding: 15px 10px;
+                    @include fontStyle(16px, 24px, 700);
+                    text-align: left;
+                    svg{
+                        transform: rotateZ(90deg);
+                        path{
+                            stroke-opacity: 100%;
+                        }
+                    }
+                  }
+                }
+              }
+        
+              tbody {
+                tr {
+                  border-bottom: 1px solid rgba(144, 144, 144, 0.5);
+                  td {
+                    padding: 12px 10px;
+                    @include fontStyle(16px, 24px, 500);
+                    border: none; 
+                  }
+                  // &:hover{
+                  //   background-color: rgba(255, 255, 255, 0.1);
+                  // }
+                  &:hover{
+                    background: rgba(206, 0, 240, 0.3);
+                    @include vendor-prefix(border-radius, 5px);
+                  }
+                }
+              }
+              &-headers{
+                  background:#412E9A;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 12px 15px;
+              }
+        }
+    }
+
+}

@@ -1,0 +1,51 @@
+.airdrop-winners-popup {
+  &-list {
+    width: 100%;
+    max-height: 28.9vw;
+    overflow-y: scroll;
+    padding-right: 10%;
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.625vw;
+      &:last-child {
+        padding-bottom: 0;
+      }
+      &-col {
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+        img {
+          width: 3.5vw;
+          height: 3.5vw;
+        }
+        a {
+          color: #ffffff !important;
+        }
+        &-user {
+          margin-right: 0.625vw;
+          color: #fff;
+        }
+      }
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: #646464;
+      border-left: 1px solid #191344;
+      border-right: 1px solid #191344;
+    }
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      border-radius: 3.5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 5px;
+      height: 73px;
+      background: #ffffff;
+      border-radius: 3.5px;
+    }
+  }
+}

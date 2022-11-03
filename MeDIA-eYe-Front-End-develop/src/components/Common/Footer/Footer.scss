@@ -1,0 +1,281 @@
+@import '../../../assets/css/variables.scss';
+
+$whiteColor: rgb(255, 255, 255, 0.5);
+
+@mixin flexJustify($displayItem, $contentPosition) {
+    display: $displayItem;
+    justify-content: $contentPosition;
+}
+
+@mixin allAboutFonts($fontSize, $fontWeight, $lineHeight, $setColor) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    color: $setColor;
+}
+
+.mediaeye-layout {
+    &-footer {
+        background: none;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+        background-color: $default-color;
+        position: relative;
+
+        &-header {
+            width: 100%;
+            padding: 50px 0;
+            margin: auto;
+            display: none;
+
+            &-main {
+                @include flexJustify(flex, space-between);
+
+                @media(max-width: 1024.98px) {
+                    @include flexJustify(inline, center);
+                }
+
+                &-left {
+                    display: flex;
+
+                    @media(max-width: 1024.98px) {
+                        display: inline;
+                    }
+
+                    .footer_logo {
+                        max-width: 150px;
+                        margin-top: 10px;
+
+                        @media(max-width: 1024.98px) {
+                            margin-left: 3%;
+                            margin-bottom: 12px;
+                        }
+                    }
+
+                    &-menu {
+                        display: flex;
+                        border-style: none !important;
+
+                        @media(max-width: 1024.98px) {
+                            @include flexJustify(flex, space-between);
+                        }
+
+                        ul {
+                            padding-left: 40px;
+                            margin: 0;
+
+                            li {
+                                list-style: none;
+                                padding: 0;
+                                margin: 0 0 3px;
+
+                                a {
+                                    @include allAboutFonts(14px, 500, 18px, $whiteColor);
+                                    background: none;
+                                    outline: none;
+                                    cursor: pointer;
+
+                                    @media(max-width: 375.98px) {
+                                        @include allAboutFonts(12px, 500, 18px, $whiteColor);
+                                    }
+
+                                    @media(max-width: 320.98px) {
+                                        @include allAboutFonts(10px, 500, 18px, $whiteColor);
+                                    }
+
+                                    &:hover,
+                                    &:focus,
+                                    &:active {
+                                        color: $link-hover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-right {
+                display: flex;
+
+                @media(max-width: 1024.98px) {
+                    @include flexJustify(flex, center);
+                    margin-top: 24px;
+                }
+
+                a {
+                    margin-left: 20px;
+                    transition: 0.4s;
+                    cursor: pointer;
+                    background: none;
+                    outline: none;
+                    border: none;
+                    display: flex;
+
+                    svg path {
+                        fill: $whiteColor;
+                        @include vendor-prefix(transition, all 0.3s);
+                    }
+
+                    @media(max-width: 320.98px) {
+                        margin-left: 8px;
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        svg {
+                            path {
+                                fill: $link-hover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-content {
+            width: 100%;
+            padding: 40px 0 25px;
+            display: flex;
+            gap: 30px;
+
+            &-heading {
+                font-size: 14px;
+                line-height: 21px;
+                margin-bottom: 20px;
+                min-height: 21px;
+            }
+
+            &-partLogo {
+                width: 20%;
+
+                &-logo {
+                    width: 100%;
+                    margin-bottom: 15px;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                &-text {
+                    font-size: 14px;
+                    font-weight: bold;
+                    line-height: 21px;
+                }
+            }
+
+            &-partLink {
+                width: 15%;
+                display: flex;
+                gap: 30px;
+
+                &-col {
+                    width: 100%;
+                }
+            }
+
+            &-partJoin {
+                width: 25%;
+            }
+
+            &-link {
+                font-size: 14px;
+                color: #fff;
+                display: block;
+                margin-bottom: 5px;
+                @include vendor-prefix(transition, all 0.3s);
+                opacity: 0.5;
+
+                &:hover {
+                    opacity: 1;
+                    color: #fff;
+                }
+            }
+
+            &-secondarylink & {
+                &-link {
+                    color: #ffffff;
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+
+            &-subscription {
+                width: 40%;
+
+                .mediaeyeform {
+                    &-input {
+                        font-size: 14px;
+                        @include vendor-prefix(border-radius, 5px);
+                    }
+
+                    &-group-input-addon {
+                        width: 100px;
+                    }
+                }
+            }
+
+            &-subscription & {
+                &-heading {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &-social {
+                width: 100%;
+                display: flex;
+                gap: 20px;
+                margin-bottom: 30px;
+
+                &-btn {
+                    cursor: pointer;
+
+                    svg {
+                        width: 22px;
+                        height: 22px;
+                        @include vendor-prefix(transition, all 0.3s);
+                        opacity: 0.5;
+                    }
+
+                    &:hover {
+                        svg {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-bottom {
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            gap: 20px;
+            padding: 15px 0;
+            display: flex;
+
+            &-left {
+                margin: auto auto auto 0;
+            }
+
+            &-right {
+                margin: auto 0 auto auto;
+            }
+
+            &-text {
+                font-size: 14px;
+                color: #fff;
+            }
+
+            img {
+                max-width: 39px;
+                max-height: 39px;
+                margin-left: 5px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+}

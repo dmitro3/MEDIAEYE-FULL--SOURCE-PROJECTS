@@ -1,0 +1,1439 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_admins",
+        "type": "address[]"
+      },
+      {
+        "internalType": "address payable",
+        "name": "_treasuryWallet",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_basisPointFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_feeContract",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_mediaEyeMarketplaceInfo",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_mediaEyeCharities",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "tokenAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "nativeAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "nativeDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "contract AggregatorV3Interface",
+            "name": "priceFeed",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "invertedAggregator",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct MediaEyeMarketplaceListing.Chainlink",
+        "name": "_chainlink",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "listingId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ListingCancelled",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "listingId",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "enum MediaEyeOrders.NftTokenType",
+                "name": "nftTokenType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "address",
+                "name": "nftTokenAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "nftTokenId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "nftNumTokens",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct MediaEyeOrders.Nft[]",
+            "name": "nfts",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "address payable",
+            "name": "seller",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address payable",
+                "name": "recipient",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "splitBasisPoint",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address payable",
+                "name": "charity",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "charityBasisPoint",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct MediaEyeOrders.Split",
+            "name": "split",
+            "type": "tuple"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct MediaEyeOrders.Listing",
+        "name": "listing",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "paymentMethod",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "price",
+            "type": "uint256"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct MediaEyeOrders.ListingPayment[]",
+        "name": "listingPayments",
+        "type": "tuple[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "isValid",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "quoteAddress",
+            "type": "address"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct MediaEyeOrders.PaymentChainlink",
+        "name": "chainlinkPayment",
+        "type": "tuple"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "data",
+        "type": "string"
+      }
+    ],
+    "name": "ListingCreated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "listingId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ListingFinished",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "listingId",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "paymentMethod",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "price",
+            "type": "uint256"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct MediaEyeOrders.ListingPayment[]",
+        "name": "listingPayments",
+        "type": "tuple[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "isValid",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "quoteAddress",
+            "type": "address"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct MediaEyeOrders.PaymentChainlink",
+        "name": "chainlinkPayment",
+        "type": "tuple"
+      }
+    ],
+    "name": "ListingUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "previousAdminRole",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "newAdminRole",
+        "type": "bytes32"
+      }
+    ],
+    "name": "RoleAdminChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleGranted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleRevoked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "listingId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "seller",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "saleAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "pricePer",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "totalPrice",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "paymentMethod",
+        "type": "address"
+      }
+    ],
+    "name": "Sale",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "DEFAULT_ADMIN_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "ROLE_ADMIN",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "basisPointFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_listingId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "paymentMethod",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "price",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeOrders.ListingPayment",
+        "name": "_paymentMethod",
+        "type": "tuple"
+      }
+    ],
+    "name": "buyTokens",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_listingId",
+        "type": "uint256"
+      }
+    ],
+    "name": "cancelListing",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_baseAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_baseDecimals",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_queryDecimals",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "_invertedAggregator",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_convertToNative",
+        "type": "bool"
+      }
+    ],
+    "name": "convertPrice",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "enum MediaEyeOrders.NftTokenType",
+                "name": "nftTokenType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "address",
+                "name": "nftTokenAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "nftTokenId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "nftNumTokens",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct MediaEyeOrders.Nft[]",
+            "name": "nfts",
+            "type": "tuple[]"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "paymentMethod",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "price",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct MediaEyeOrders.ListingPayment[]",
+            "name": "listingPayments",
+            "type": "tuple[]"
+          },
+          {
+            "components": [
+              {
+                "internalType": "bool",
+                "name": "isValid",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "quoteAddress",
+                "type": "address"
+              }
+            ],
+            "internalType": "struct MediaEyeOrders.PaymentChainlink",
+            "name": "chainlinkPayment",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint8",
+            "name": "setRoyalty",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "royalty",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address payable",
+                "name": "recipient",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "splitBasisPoint",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address payable",
+                "name": "charity",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "charityBasisPoint",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct MediaEyeOrders.Split",
+            "name": "split",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "bool",
+                "name": "isValid",
+                "type": "bool"
+              },
+              {
+                "components": [
+                  {
+                    "internalType": "address",
+                    "name": "userAddress",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "enum MediaEyeOrders.SubscriptionTier",
+                    "name": "subscriptionTier",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "startTime",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "endTime",
+                    "type": "uint256"
+                  }
+                ],
+                "internalType": "struct MediaEyeOrders.UserSubscription",
+                "name": "userSubscription",
+                "type": "tuple"
+              },
+              {
+                "internalType": "uint8",
+                "name": "v",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "r",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "s",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct MediaEyeOrders.SubscriptionSignature",
+            "name": "subscriptionSignature",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "bool",
+                "name": "feature",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "paymentMethod",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "numDays",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address[]",
+                "name": "tokenAddresses",
+                "type": "address[]"
+              },
+              {
+                "internalType": "uint256[]",
+                "name": "tokenIds",
+                "type": "uint256[]"
+              },
+              {
+                "internalType": "uint256",
+                "name": "price",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct MediaEyeOrders.Feature",
+            "name": "feature",
+            "type": "tuple"
+          },
+          {
+            "internalType": "string",
+            "name": "data",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct MediaEyeMarketplaceListing.ListingInput",
+        "name": "_listingInput",
+        "type": "tuple"
+      }
+    ],
+    "name": "createListing",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "feeContract",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "getListingAtIndex",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "listingId",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "enum MediaEyeOrders.NftTokenType",
+                "name": "nftTokenType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "address",
+                "name": "nftTokenAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "nftTokenId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "nftNumTokens",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct MediaEyeOrders.Nft[]",
+            "name": "nfts",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "address payable",
+            "name": "seller",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address payable",
+                "name": "recipient",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "splitBasisPoint",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address payable",
+                "name": "charity",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "charityBasisPoint",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct MediaEyeOrders.Split",
+            "name": "split",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct MediaEyeOrders.Listing",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "getListingIds",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getNumListings",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getRoleAdmin",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getRoundData",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "grantRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "hasRole",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "listings",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "listingId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address payable",
+        "name": "seller",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address payable",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "splitBasisPoint",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address payable",
+            "name": "charity",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "charityBasisPoint",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeOrders.Split",
+        "name": "split",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "mediaEyeCharities",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "mediaEyeMarketplaceInfo",
+    "outputs": [
+      {
+        "internalType": "contract IMarketplaceInfo",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "name": "onERC1155BatchReceived",
+    "outputs": [
+      {
+        "internalType": "bytes4",
+        "name": "",
+        "type": "bytes4"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "name": "onERC1155Received",
+    "outputs": [
+      {
+        "internalType": "bytes4",
+        "name": "",
+        "type": "bytes4"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "name": "onERC721Received",
+    "outputs": [
+      {
+        "internalType": "bytes4",
+        "name": "",
+        "type": "bytes4"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "renounceRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "revokeRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "saleChainlinkAddresses",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "isValid",
+        "type": "bool"
+      },
+      {
+        "internalType": "address",
+        "name": "quoteAddress",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "salePaymentAmounts",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "tokenAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "nativeAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "nativeDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "contract AggregatorV3Interface",
+            "name": "priceFeed",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "invertedAggregator",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct MediaEyeMarketplaceListing.Chainlink",
+        "name": "_chainlink",
+        "type": "tuple"
+      }
+    ],
+    "name": "setChainlink",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_feeContract",
+        "type": "address"
+      }
+    ],
+    "name": "setFeeContract",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "subscriptionCheckActive",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "interfaceId",
+        "type": "bytes4"
+      }
+    ],
+    "name": "supportsInterface",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "treasuryWallet",
+    "outputs": [
+      {
+        "internalType": "address payable",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_basisPointFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "updateBasisPointFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address payable",
+        "name": "_newTreasuryWallet",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_newCharityContract",
+        "type": "address"
+      }
+    ],
+    "name": "updateConstantsByOwner",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_listingId",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "paymentMethod",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "price",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MediaEyeOrders.ListingPayment[]",
+        "name": "_listingPayments",
+        "type": "tuple[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "isValid",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "quoteAddress",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct MediaEyeOrders.PaymentChainlink",
+        "name": "_chainlinkPayment",
+        "type": "tuple"
+      }
+    ],
+    "name": "updateListing",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_newInfoContract",
+        "type": "address"
+      }
+    ],
+    "name": "updateMarketplaceInfo",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "_check",
+        "type": "bool"
+      }
+    ],
+    "name": "updateSubscriptionCheck",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

@@ -1,0 +1,39 @@
+@import '../../../../assets/css/variables.scss';
+.claim-bid-card {
+    &-content {
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+    }
+    &-row {
+        margin-top: 42px;
+        margin-bottom: 24px;
+        padding-left: 4px;
+        display: flex;
+        align-items: center;
+        &-section1 {
+            svg {
+                margin-right: 12px;
+            }
+        }
+        &-section2 {
+            margin-left: 30px;
+            display: flex;
+            @include fontStyle(36px, 54px, 500);
+            align-items: center;
+            img {
+                margin: auto 10px auto 0;
+            }
+        }
+        &-section3 {
+            @include fontStyle(18px, 27px, 400);
+            color: rgba(235, 235, 235, 0.5);
+            margin-left: 12px;
+        }
+    }
+    &-bottom {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+    }
+}

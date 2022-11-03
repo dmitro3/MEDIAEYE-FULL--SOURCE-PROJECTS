@@ -1,0 +1,307 @@
+@import '../../assets/css/variables.scss';
+
+.mediaeye {
+    &-task {
+        position: relative;
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+
+            &-right {
+                background: rgba(36, 34, 66, 0.95);
+                border-radius: 15px;
+                font-size: 16px;
+                padding: 5px 15px;
+                span {
+                    color: rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+
+        h4 {
+            font-weight: 400;
+            font-size: 20px;
+            margin: 13.6px 0;
+        }
+
+        &-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 5px;
+
+            &-inner {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(100, 100, 100, 0.3);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border-radius: 23px;
+                padding: 3px 3px 3px 1.375vw;
+
+                h6 {
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin: 0;
+                }
+
+                .btn {
+                    &-complete {
+                        max-width: fit-content;
+                        margin: 0;
+                        min-width: fit-content;
+                        padding: 9.6px;
+                    }
+                }
+            }
+
+            &-inner-telegram-phone-number-active {
+                background: none;
+                border: none;
+                filter: blur(0);
+                backdrop-filter: blur(0);
+                -webkit-backdrop-filter: blur(0);
+
+                &-show {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+
+                    &-label {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #fff;
+                    }
+
+                    &-phone-code {
+                        width: 100px;
+                        background: rgba(255, 255, 255, 0.05);
+                        height: 40px;
+                        border: none;
+                        color: #ffffff;
+                        padding: 12px;
+                        @include vendor-prefix(border-radius, 20px);
+                        -moz-appearance: textfield;
+
+                        &:hover {
+                            border: 1px solid #55e0ff;
+                        }
+
+                        &:focus {
+                            border: 1px solid #55e0ff;
+                        }
+
+                        &:focus-visible {
+                            border: 1px solid #55e0ff;
+                            outline: none;
+                        }
+
+                        &::-webkit-outer-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+
+                        &::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+                    }
+
+                    &-phone-number {
+                        background: rgba(255, 255, 255, 0.05);
+                        height: 40px;
+                        border: none;
+                        color: #ffffff;
+                        padding: 12px;
+                        @include vendor-prefix(border-radius, 20px);
+                        -moz-appearance: textfield;
+
+                        &:hover {
+                            border: 1px solid #55e0ff;
+                        }
+
+                        &:focus {
+                            border: 1px solid #55e0ff;
+                        }
+
+                        &:focus-visible {
+                            border: 1px solid #55e0ff;
+                            outline: none;
+                        }
+
+                        &::-webkit-outer-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+
+                        &::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            &-inner-insta-active {
+                background: none;
+                border: none;
+                filter: blur(0);
+                backdrop-filter: blur(0);
+                -webkit-backdrop-filter: blur(0);
+
+                &-show {
+                    display: flex;
+                    gap: 50px;
+                    align-items: center;
+
+                    &-flex {
+                        display: flex;
+                        gap: 20px;
+                        align-items: center;
+
+                        &-label {
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #fff;
+                        }
+
+                        &-input {
+                            background: rgba(255, 255, 255, 0.05);
+                            height: 40px;
+                            border: none;
+                            color: #ffffff;
+                            padding: 12px;
+                            @include vendor-prefix(border-radius, 20px);
+                            -moz-appearance: textfield;
+
+                            &:hover {
+                                border: 1px solid #55e0ff;
+                            }
+
+                            &:focus {
+                                border: 1px solid #55e0ff;
+                            }
+
+                            &:focus-visible {
+                                border: 1px solid #55e0ff;
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .ttr {
+                background: rgba(29, 161, 242, 0.3);
+            }
+
+            .tiktok {
+                background: linear-gradient(90deg, rgba(255, 22, 93, 0.5) 0%, rgba(62, 193, 211, 0.5) 100%);
+            }
+
+            .snapchat {
+                background: rgba(238, 226, 24, 0.3);
+            }
+
+            .lkd {
+                background: rgba(10, 102, 194, 0.3);
+            }
+
+            .flk {
+                background: rgba(255, 0, 132, 0.3);
+            }
+
+            .rdt {
+                background: rgba(255, 69, 0, 0.3);
+            }
+
+            .inst {
+                background: linear-gradient(92.64deg, rgba(70, 99, 183, 0.3) 0%, rgba(158, 48, 188, 0.3) 21.2%, rgba(231, 73, 94, 0.3) 55.71%, rgba(247, 208, 77, 0.3) 94.65%);
+            }
+
+            .yt {
+                background: rgba(255, 0, 0, 0.3);
+            }
+
+            .dis {
+                background: rgba(88, 101, 242, 0.3);
+            }
+
+            .tel {
+                background: rgba(38, 158, 218, 0.3);
+            }
+
+            .tmb {
+                background: rgba(53, 70, 92, 0.3);
+            }
+
+            .twt {
+                background: rgba(145, 71, 255, 0.3);
+            }
+
+            .vim {
+                background: rgba(0, 168, 232, 0.3);
+            }
+
+            .spt {
+                background: rgba(46, 189, 89, 0.3);
+            }
+
+            .mcp {
+                background: rgba(255, 184, 0, 0.3);
+            }
+
+            .hub {
+                background: rgba(255, 91, 53, 0.3);
+            }
+
+            .sng {
+                background: rgba(51, 104, 250, 0.3);
+            }
+
+            .evt {
+                background: rgba(255, 128, 0, 0.3);
+            }
+
+            .medium {
+                background: rgba(0, 0, 0, 0.3);
+            }
+
+            .Clubhouse {
+                background: #AFAD9C;
+            }
+
+            .Soundcloud {
+                background: #FF6A22;
+            }
+
+            .coinmarketcap {
+                background: #0D0D0D;
+                min-width: 155px;
+            }
+
+            .coingecko {
+                background: #DDDDDD;
+            }
+        }
+
+        &-header {
+            margin: 1.5vw 0;
+        }
+
+        &-addinfo {
+            width: 66.1875vw;
+            min-height: 7.3125vw;
+        }
+    }
+}

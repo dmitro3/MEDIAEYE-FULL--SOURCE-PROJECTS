@@ -1,0 +1,382 @@
+.btn {
+    color: #fff;
+    @include vendor-prefix(border-radius, 20px);
+    display: inline-block;
+    font-family: $button-font;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 14px;
+    @include vendor-prefix(user-select, none);
+    background-color: transparent;
+    border: none;
+    @include vendor-prefix(border-radius, 50px);
+    padding: 0 15px;
+    height: 40px;
+    min-width: 130px;
+    @include vendor-prefix(transition, all 0.4s);
+
+    &-block {
+        display: block;
+        width: 100%;
+    }
+
+    &-lg {
+        font-size: 18px;
+        padding: 0 20px;
+        min-width: 150px;
+    }
+
+    &-square {
+        @include vendor-prefix(border-radius, 5px);
+    }
+
+    &-slg {
+        font-size: 24px;
+        padding: 0 60px;
+        line-height: 60px;
+        height: 60px;
+
+        @media(max-width: 991.98px) {
+            font-size: 20px;
+            padding: 0 50px;
+            line-height: 50px;
+            height: 50px;
+        }
+    }
+
+    &-sm {
+        height: 30px;
+        line-height: 30px;
+        min-width: 100px;
+        padding: 0 8px;
+    }
+
+    &-info {
+        background-color: $info-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background-color: $info-color-hover;
+        }
+    }
+
+    &-creative {
+        background-color: $creative-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background-color: $creative-color-hover;
+        }
+    }
+
+    &-transperant {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+    }
+
+    &-main {
+        background: $main-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background: $main-color-hover;
+        }
+    }
+
+    &-gaming {
+        background: $gaming-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background: $gaming-color-hover;
+        }
+    }
+
+    &-clarity {
+        background: $clarity-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background: $clarity-color-hover;
+        }
+    }
+
+    &-featured {
+        background: $featured-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background-color: rgba(255, 0, 92, 0.5);
+        }
+    }
+
+    &-event {
+        background: $event-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background-color: $event-color-hover;
+        }
+    }
+
+    &-reward {
+        background: $rewards-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background-color: $rewards-color;
+        }
+    }
+
+    &-offer {
+        background: $offer-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background-color: $offer-color-hover;
+        }
+    }
+
+    &-single {
+        background: $btnsingle-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background: $btnsingle-color-hover;
+        }
+    }
+
+    &-bundle {
+        background: $btnbundle-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background: $btnbundle-color-hover;
+        }
+    }
+
+    &-generative {
+        background: $generative-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background: $generative-color-hover;
+        }
+    }
+
+    &-jumbo {
+        background: $jumbo-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background: $jumbo-color-hover;
+        }
+    }
+
+    &-burn {
+        background: $burn-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background: $burn-color-hover;
+        }
+    }
+
+    &-live {
+        background: $burn-color;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background: $burn-color-hover;
+        }
+    }
+
+    &-charity {
+        background: $charity-color;
+        color: #2B294B;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #2B294B;
+            background: $charity-color-hover;
+        }
+    }
+
+
+    &-disable {
+        background: $disable-color;
+        color: #fff;
+        cursor: auto;
+    }
+
+    &-campaign {
+        background: $campaign-color;
+        color: #ffffff;
+        cursor: auto;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background: $campaign-color-hover;
+        }
+    }
+
+    &-disconnect {
+        background: $disconnect-color;
+        color: #fff;
+        cursor: auto;
+    }
+
+    &-avatar {
+        background: linear-gradient(90deg, #cc00ff 0%, rgba(255, 0, 92, 0.57) 100%);
+        color: #fff;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    &-outline {
+        background: transparent;
+        @include vendor-prefix(border-radius, 5px);
+        width: 165px;
+        height: 40px;
+        font-size: 14px;
+        font-family: Poppins;
+
+        &-info {
+            border: 1px solid $info-color;
+            color: #fff;
+
+            &:hover,
+            &:focus,
+            &.active {
+                color: #fff;
+                background: $info-color-hover;
+                border-color: $info-color-hover;
+            }
+        }
+    }
+
+    &-more {
+        min-width: 175px;
+        font-size: 16px;
+    }
+}
+
+.filter-action-row {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    &-btn {
+        border-style: none;
+        min-width: 114px;
+        height: 38px;
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.05);
+        @include vendor-prefix(border-radius, 5px);
+        padding: 0 15px;
+        margin: 0 10px;
+
+        &:hover,
+        &.active {
+            background: rgba(255, 255, 255, 0.15);
+        }
+    }
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-align: center;
+}
+
+.eyeswap-button {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+    background: $eyeswap-color;
+    width: 140px;
+    height: 36px;
+    @include vendor-prefix(border-radius, 20px);
+}
+
+.square-button {
+    cursor: pointer !important;
+    width: fit-content;
+    padding: 12px 34px;
+    @include vendor-prefix(border-radius, 8px);
+
+    &-gamming {
+        background: $eyeswap-color;
+        color: #fff;
+        cursor: auto;
+    }
+
+    &-disable {
+        background: $disable-color;
+        color: #fff;
+        cursor: auto;
+    }
+}

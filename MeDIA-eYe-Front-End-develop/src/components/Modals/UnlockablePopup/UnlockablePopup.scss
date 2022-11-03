@@ -1,0 +1,50 @@
+.unlockable-popup {
+    &-content {
+        max-width: 500px !important;
+
+        &-inner {
+            .unlockable-popup-scroll {
+                height: 18.75vw;
+                overflow: auto;
+                margin-bottom: 30px;
+            }
+
+            &-middle {
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 5px;
+                padding: 20px 25px;
+                // max-height: 18.75vw;
+                // overflow: auto;
+                margin-right: 20px;
+
+                &-text {
+                    font-size: 16px;
+                }
+            }
+
+            &-transform {
+                margin-bottom: 30px;
+
+                &-text {
+                    display: block;
+                    height: 10px;
+                    margin-bottom: 10px;
+                    background: rgba(255, 255, 255, 0.05);
+                    border-radius: 5px;
+
+                    &.last {
+                        width: 50%;
+                    }
+                }
+
+                &-content {
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    opacity: 0.5;
+                    margin-top: 19px;
+                }
+            }
+
+        }
+    }
+}

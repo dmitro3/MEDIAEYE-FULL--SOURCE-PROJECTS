@@ -1,0 +1,118 @@
+@import '../../../assets/css/variables.scss';
+
+.feature-event-page {
+  background-position: right top;
+  background-size: 1000px;
+  background-repeat: no-repeat;
+  &-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img {
+      width: 70%;
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+    span {
+      cursor: pointer;
+      @include fontStyle(16px, 24px, 400);
+    }
+    &-arrowleft {
+      position: absolute;
+      left: 12%;
+      z-index: 99;
+      transition: transform 100ms ease-in-out;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+    &-arrowright {
+      position: absolute;
+      right: 12%;
+      transition: transform 100ms ease-in-out;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+  &-inner {
+    .mediaeye-tabss-lists {
+      margin: 34px 0px;
+      button {
+        margin-right: 64px;
+      }
+    }
+    &-bar {
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      .mediaeye-searchbar {
+        margin-left: 100px;
+        input {
+          width: 250px;
+          height: 38px;
+        }
+      }
+      @media (max-width: 1023px) {
+        display: inline;
+        text-align: right;
+        margin-top: 34px;
+        .mediaeye-searchbar {
+          margin-left: 0px;
+          margin-top: 20px;
+        }
+      }
+    }
+    &-content {
+      &-text {
+        @include fontStyle(24px, 36px, 500);
+        margin-bottom: 42px;
+        @media (max-width: 1023px) {
+          text-align: center;
+          margin-top: 42px;
+        }
+      }
+      &-cards {
+        h2 {
+          margin: 24px 0px;
+          margin-bottom: 54px;
+        }
+        &-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        .not-available {
+          span {
+            @include fontStyle(24px, 36px, 500);
+            color: rgba(235, 235, 235, 0.5);
+          }
+          margin-top: 54px;
+          display: grid;
+          justify-content: center;
+          button {
+            margin: 0px auto;
+            margin-top: 34px;
+            width: fit-content;
+          }
+        }
+      }
+    }
+    .mediaeyepage-bottom.isfixed {
+      left: 0;
+      z-index: 99;
+    }
+    @media (max-width: 1023px) {
+      .mediaeye-tabss-lists {
+        margin: 20px 0px;
+        justify-content: center;
+        button {
+          margin-right: 12px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

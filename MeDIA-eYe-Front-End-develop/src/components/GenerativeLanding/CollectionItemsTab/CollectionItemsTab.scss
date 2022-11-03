@@ -1,0 +1,21 @@
+@import '../../../assets/css/variables.scss';
+
+.collectionItem-tab {
+  display: flex;
+  align-items: flex-start;
+}
+.collection-items-tab {
+  &-wrapper {
+    width: 100%;
+    .marketplace-page-wrapper-content {
+      width: 100% !important;
+    }
+    .mediaeye-nft-row {
+      &.filtersActive {
+        .mediaeye-nft-card {
+          width: 30%;
+        }
+      }
+    }
+  }
+}

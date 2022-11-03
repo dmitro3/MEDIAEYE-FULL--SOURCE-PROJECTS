@@ -1,0 +1,283 @@
+@import '../../assets/css/variables.scss';
+
+.collections-page {
+    &-title {
+        font-size: 48px;
+        line-height: 103.5%;
+        font-weight: 700;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    &-header-poster {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 20px;
+
+        .feature-airdrop-page-header-arrowleft,
+        .feature-airdrop-page-header-arrowright {
+            position: unset;
+            cursor: pointer;
+        }
+
+        .nftmarketplace-header-poster-fullscreen {
+            width: 92%;
+            cursor: pointer;
+        }
+
+        @media(max-width: 768px) {
+            .nftmarketplace-header-poster-fullscreen {
+                display: block;
+            }
+        }
+
+        svg {
+            width: 13px;
+            height: 24px;
+        }
+
+        &-fullscreen {
+            width: 90%;
+            margin: 0 24px;
+        }
+
+        &-inner {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            object-fit: cover;
+            cursor: pointer;
+
+            .slick-arrow {
+                z-index: 1;
+            }
+
+            .slick-prev {
+                left: 15px;
+            }
+
+            .slick-next {
+                right: 15px;
+            }
+
+            &-slide {
+                height: 240px;
+                position: relative;
+                width: 100%;
+                display: block;
+                overflow: hidden;
+                @include vendor-prefix(border-radius, 10px);
+
+                &-banners {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    min-height: 100%;
+                    @include vendor-prefix(transform, translateY(-50%));
+                    &-container {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &-bottomtags {
+        position: absolute;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0 74px;
+        margin-top: -45px;
+
+        &-left {
+            @include fontStyle(24px, 25px, 700);
+            background: rgba(52, 47, 123, 0.95);
+            @include vendor-prefix(border-radius, 10px);
+            padding: 12px 24px;
+        }
+
+        &-right {
+            @include fontStyle(16px, 17px, 400);
+            background: $featured-color;
+            @include vendor-prefix(border-radius, 109px);
+            padding: 6px 30px;
+            margin-left: 48%;
+        }
+    }
+
+    &-trade-volume {
+        display: flex;
+        gap: 15px;
+        padding: 15px 0;
+        margin-bottom: 20px;
+        align-items: center;
+        // justify-content: center;
+
+        &-value {
+            margin-right: 8px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        &-points {
+            font-size: 18px;
+        }
+
+        &-network {
+            width: 100px;
+        }
+    }
+
+    &-filters {
+        .css-14el2xx-placeholder {
+            color: #ffffff;
+        }
+
+        .css-5do86t-option,
+        .css-1gwwng4-option {
+            color: #ffffff;
+            display: flex;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .css-qc6sy-singleValue {
+            color: #ffffff;
+        }
+
+        .css-1m414af-option {
+            display: flex;
+            gap: 6px;
+        }
+
+        .css-v88d42-option {
+            display: flex;
+            gap: 6px;
+        }
+
+        .css-319lph-ValueContainer {
+            padding: 2px 0 2px 4px;
+            white-space: nowrap;
+        }
+
+        .css-1hb7zxy-IndicatorsContainer .css-tlfecz-indicatorContainer,
+        .css-1hb7zxy-IndicatorsContainer .css-1gtu0rj-indicatorContainer {
+            color: #ffffff;
+        }
+
+        .css-1hb7zxy-IndicatorsContainer .css-1gtu0rj-indicatorContainer {
+            transform: rotateZ(180deg);
+        }
+
+        .css-b62m3t-container {
+            width: 170px;
+
+            .css-1pahdxg-control {
+                background-color: rgba(255, 255, 255, 0.05);
+                border: none;
+                box-shadow: none;
+            }
+
+            .css-1okebmr-indicatorSeparator {
+                display: none;
+            }
+        }
+
+        .css-1s2u09g-control {
+            border: none;
+            background-color: rgba(255, 255, 255, 0.05);
+            white-space: nowrap;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.15);
+            }
+
+            .css-14el2xx-placeholder {
+                color: #ffffff;
+                white-space: nowrap;
+            }
+
+            .css-1okebmr-indicatorSeparator {
+                display: none;
+            }
+
+            .css-1rhbuit-multiValue {
+                display: none !important;
+            }
+        }
+
+        .css-26l3qy-menu {
+            background: $default-color;
+        }
+
+        .droplabel label.active {
+            color: #ffff;
+        }
+
+        input[type='checkbox'] {
+            -webkit-appearance: none;
+            background-color: #2a284a;
+            padding: 10px;
+            @include vendor-prefix(border-radius, 3px);
+            display: inline-block;
+            position: relative;
+            margin-right: 4px;
+
+            &:checked {
+                &::after {
+                    content: '\2714';
+                    font-size: 10px;
+                    position: absolute;
+                    top: 0;
+                    padding-top: 5px;
+                    left: 6px;
+                    color: #ffffff;
+                }
+            }
+        }
+
+        .css-1hb7zxy-IndicatorsContainer .css-tlfecz-indicatorContainer:not(:last-child),
+        .css-1hb7zxy-IndicatorsContainer .css-1gtu0rj-indicatorContainer:not(:last-child) {
+            display: none !important;
+        }
+
+        &-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+            &-options {
+                display: flex;
+                gap: 20px;
+            }
+
+            .mediaeye-selectsearch__input {
+                padding-right: 30px;
+            }
+
+            .mediaeye-searchbar {
+                width: 300px;
+                // height: 40px;
+                margin: 0;
+
+                input {
+                    &::placeholder {
+                        color: rgba(255, 255, 255, 0.5);
+                    }
+                }
+            }
+
+            .css-6j8wv5-Input {
+                white-space: nowrap;
+            }
+        }
+    }
+}

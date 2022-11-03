@@ -1,0 +1,74 @@
+@import '../../../assets/css/variables.scss';
+
+.choose-collection {
+    &-inner {
+
+        width: 563px;
+        margin: 200px auto;
+
+        &-title {
+            @include fontStyle(24px, 24px, 600);
+            text-align: center;
+        }
+
+        &-block {
+            background: rgba(255, 255, 255, 0.08);
+            @include vendor-prefix(border-radius, 5px);
+            padding: 13px 20px;
+            cursor: pointer;
+
+            &-boxPadding {
+                position: relative;
+
+                &-purple {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &-text {
+                        @include fontStyle(18px, 27px, 700);
+                    }
+
+                    &-levels {
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+
+                &-responsive {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    &-left {
+                        width: 80%;
+
+                        &-upper {
+                            @include fontStyle(18px, 27px, 700);
+                        }
+
+                        &-bottom {
+                            @include fontStyle(12px, 14px, 400);
+                        }
+                    }
+
+                    &-right {
+                        &-inner {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+
+                            span {
+                                margin-top: 5px;
+                            }
+
+                            img {
+                                width: 48px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

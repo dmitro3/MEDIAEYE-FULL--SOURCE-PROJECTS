@@ -1,0 +1,431 @@
+// library-tabs
+@import '../../assets/css/variables.scss';
+
+.medialibrarypage {
+  @media (max-width: 767.98px) {
+    padding: 0 14px;
+  }
+  @media (max-width: 399.98px) {
+    padding: 0 14px;
+  }
+  &-header {
+    padding: 10px 0;
+    margin-bottom: 40px;
+    @media (max-width: 399.98px) {
+      margin-bottom: 10px;
+    }
+    &-inside {
+      &-title {
+        font-size: 24px;
+        color: #fff;
+        line-height: 28.8px;
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+  }
+  .library-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @media (max-width: 767.98px) {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    @media (max-width: 399.98px) {
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    &-inner {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      @media (max-width: 1199.98px) {
+        gap: 10px;
+      }
+      @media (max-width: 767.98px) {
+        gap: 20px;
+      }
+      @media (max-width: 399.98px) {
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .btntab {
+        border: none;
+        background-color: #ffffff20;
+        border-radius: 10px;
+        padding: 15px 20px;
+        color: #fff;
+        font-size: 16px;
+        line-height: 19.2px;
+        font-weight: 400;
+        &:hover {
+          background-color: #cc00ff;
+        }
+        @media (max-width: 1199.98px) {
+          padding: 15px 18px;
+          font-size: 15px;
+        }
+        @media (max-width: 767.98px) {
+          padding: 15px 18px;
+          font-size: 15px;
+        }
+      }
+      .active {
+        background-color: #cc00ff;
+      }
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      @media (max-width: 1199.98px) {
+        gap: 10px;
+      }
+      @media (max-width: 767.98px) {
+        gap: 10px;
+      }
+      @media (max-width: 399.98px) {
+        gap: 10px;
+      }
+      .btntab {
+        border: none;
+        background-color: #ffffff20;
+        border-radius: 10px;
+        padding: 14px 38px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.2px;
+        @media (max-width: 399.98px) {
+          padding: 14px 18px;
+          font-size: 15px;
+        }
+      }
+      .sortfilter{
+        position: relative;
+        border: none;
+        padding: 12px 28px;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.1254901961);
+        border-radius: 10px;
+        .sortgrp{
+          display: flex;
+          align-items: center;
+          svg{
+            width: 16px;
+          }
+
+        }
+        &.active2{
+          svg{
+            transform: rotate(180deg);
+            transition: all 0.3s;
+          }
+        }
+        
+        &-list{
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translate(0px, 60%);
+          width: 120px;
+          list-style: none;
+          border: none;
+          background-color: rgba(255, 255, 255, 0.1254901961);
+          border-radius: 10px;
+          &-name{
+            padding: 8px 15px;
+            &:hover{
+              background: #cc00ff;
+              border-radius: 10px;
+              &.disabled{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mediaLibrarypage {
+    // @media(max-width: 399.98px){
+    //   padding: 0 14px;
+    // }
+    &-contentdata {
+      // border: 1px solid red;
+      display: grid;
+      // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-bottom: 50px;
+      @media(min-width: 768px) and (max-width: 1199.98px){
+        grid-template-columns: repeat(3, 1fr);  
+      }
+      @media(max-width: 767.98px){
+        grid-template-columns: repeat(2, 1fr);  
+      }
+      @media(max-width: 425px){
+        grid-template-columns: repeat(1, 1fr);  
+      }
+      .mediaLibrarypage-cardbox {
+        background: linear-gradient(
+          126.6deg,
+          rgba(0, 0, 0, 0.6) 28.69%,
+          rgba(0, 0, 0, 0.6) 100%
+        );
+        border-radius: 10px;
+        padding: 20px;
+        // width: 265px;
+        height: 330px;
+        .avatarprofile {
+          &-avtimg {
+            width: 100%;
+            height: 225px;
+            border-radius: 10px;
+          }
+        }
+        .avatardetail {
+          &-title {
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 600;
+            margin-top: 15px;
+            margin-bottom: 10px;
+          }
+          .avatarinside {
+            display: flex;
+            justify-content: space-between;
+            .name {
+              font-size: 16px;
+              color: #fff;
+              font-weight: 400;
+              .color {
+                color: #ff008a;
+              }
+            }
+            .plan {
+              color: #fff;
+              font-weight: 600;
+              font-size: 16px;
+              display: flex;
+              align-items: center;
+              .tokenimg{
+                width: 16px;
+                height: 16px;
+              }
+              
+            }
+          }
+        }
+      }
+    }
+    &-uploaddata {
+      margin: 25px 0;
+      text-align: center;
+      .contentbtn {
+        background: linear-gradient(
+          104.43deg,
+          rgba(0, 226, 50, 0.6) 10.42%,
+          rgba(0, 224, 255, 0.6) 89.96%
+        );
+        border-radius: 10px;
+        padding: 18px 47px;
+        font-weight: 600;
+        font-size: 16px;
+        color: #ffffff;
+        border: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.salesHistory{
+  
+    &-inner{
+      .title{
+       text-align: center;
+       font-size: 48px;
+       color: $white-color;
+       margin-bottom: 25px;
+       text-transform: capitalize;
+       font-weight: 700;
+       font-family: $Poppins-font;
+      
+      }
+      &-searchbar{
+        display: flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-bottom: 40px;
+         @media(max-width: 1400px){
+            margin-bottom: 30px;
+         }
+        
+        .search-btn{
+          display: flex;
+          align-items: center;
+          width: 324px;
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 5px;
+          padding: 12px 20px;
+          height: 39px;
+          gap: 10px;
+          .search-input{
+          border: none;
+          background: transparent;
+          outline: none;
+          color: $white-color;
+            &::placeholder{
+              color: $white-color;
+            }
+          }
+         
+        }
+        .search-tabs{
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          
+          .purchase-btn{
+            width: 150px;
+            height: 39px;
+            background-color: #8F00FF;
+            border-radius: 5px;
+            border: none;
+            color: $white-color;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 9px;
+            text-align: center;
+           }
+           .sales-btn{
+            width: 150px;
+            height: 39px;
+            background-color: $dark-pink-color;
+            border-radius: 5px;
+            border: none;
+            color: $white-color;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 9px;
+            text-align: center;
+
+            
+           }
+           .all-tab{
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+            height: 39px;
+            width: 164px;
+            padding: 7px;
+            position: relative;
+            font-size: 14px;
+            font-weight: 400;
+            &.active3{
+              svg{
+                transform: rotate(180deg);
+                transition: all .3s;
+              }
+            
+             }
+           .all-date-tab{
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+             .all-dates-name{
+                font-size: 14px;
+                font-weight: 400;
+                font-family: $Poppins-font;
+              }
+            }&-list{
+              list-style: none;
+              background-color:rgba(255, 255, 255, 0.05);
+              position: absolute;
+              width: 100%;
+              z-index: 2;
+              top: 40px;
+              border-radius: 10px;
+              left: 0;
+              &-name{
+                padding: 8px 15px;
+                &:hover{
+                  background: #cc00ff;
+                  border-radius: 10px;
+                  &.disabled{
+                    display: none;
+                  }
+                }
+              }
+
+               
+            }
+            
+           }
+        }
+      }
+      &-table{
+        &-head{
+          &.content-table{
+            height: 200px;
+            overflow:scroll;
+            padding: 0 4px;
+          }
+         .salesHistory-head-data{  
+            width: 100%;
+            height: 50px;
+            font-size: 16px;
+            font-weight:400;
+            font-family:$Poppins-font;
+            background: linear-gradient(126.6deg, rgba(0, 0, 0, 0.6) 28.69%, rgba(0, 0, 0, 0.6) 100%);
+            opacity: 0.7;
+            border-radius: 3px;
+           color: $white-color;
+        
+tbody{
+              tr{
+                td{
+                  padding: 12px 30px;
+                  width: 10%;
+                }
+              }
+            }
+          } 
+          .salesHistory-content-data{  
+          //  height: 50px;
+            font-weight:400;
+            font-family:$Poppins-font;
+            border-spacing: 0 10px;
+            opacity: 0.7;
+            border-radius: 3px;
+            color: $white-color;
+            font-size: 14px;
+            tbody{
+              tr{
+                background: rgba(255, 255, 255, 0.05);
+                
+                td{
+                  padding: 12px 30px;
+                  width: 10%;
+                  .sale-title{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    .token-img{
+                      width:11px;
+                      height:11px;
+                    }
+                  }
+                }
+              }
+            }
+          } 
+        }
+       }
+    }
+
+}

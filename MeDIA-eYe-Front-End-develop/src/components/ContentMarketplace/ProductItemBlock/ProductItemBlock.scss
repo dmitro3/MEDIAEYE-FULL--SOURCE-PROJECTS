@@ -1,0 +1,116 @@
+@import '../../../assets/css/variables.scss';
+.mediaeye-products {
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    .mediaeye-products-col {
+      width: 25%;
+      margin-bottom: 30px;
+      @media (max-width: 1199.98px) {
+        width: 33.33%;
+      }
+      @media (max-width: 991.98px) {
+        width: 50%;
+      }
+      @media (max-width: 767.98px) {
+        width: 100%;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  &-slide {
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+    .mediaeye-products-col {
+      width: 100%;
+    }
+  }
+  &-col {
+    position: relative;
+  }
+  &-card {
+    position: relative;
+    padding: 0px 5px;
+    width: 28.5%;
+    float: left;
+    &-small {
+      width: 14.33%;
+    }
+
+    &-inner {
+      background: transparent;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      color: #fff;
+      height: 100%;
+      width: 100%;
+      display: block;
+      @include vendor-prefix(border-radius, 15px);
+      &-img {
+        width: 100%;
+        @include vendor-prefix(border-radius, 15px);
+      }
+      &::after {
+        content: '';
+        background: linear-gradient(
+          0deg,
+          #1b1242 1.73%,
+          rgba(0, 0, 0, 0) 46.79%,
+          rgba(0, 0, 0, 0) 98.27%
+        );
+        border-radius: 15px;
+        // @include vendor-prefix(transform,rotate(-90deg));
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        top: 0px;
+        right: 0px;
+      }
+      &-content {
+        position: absolute;
+        z-index: 1;
+        padding: 20px 20px;
+        bottom: 0px;
+        &-title {
+          color: #fff;
+          font-weight: 700;
+          font-size: 20px;
+          @include vendor-prefix(transition, all 0.3s);
+        }
+        &-des {
+          color: #fff;
+          font-size: 14px;
+        }
+      }
+      &:hover & {
+        &-content {
+          &-title {
+            color: $link-hover;
+          }
+        }
+      }
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+    }
+    &-small & {
+      &-inner {
+        &-content {
+          padding: 15px 10px;
+          &-title {
+            font-size: 14px;
+          }
+          &-des {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

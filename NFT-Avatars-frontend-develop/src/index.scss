@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+textarea {
+  resize: vertical;
+}
+button {
+  outline: none !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-transition: background-color 600000s 0s, color 600000s 0s !important;
+  transition: background-color 600000s 0s, color 600000s 0s !important;
+}
+
+@import "./assets/css/common.scss";

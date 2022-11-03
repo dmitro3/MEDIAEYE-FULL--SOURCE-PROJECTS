@@ -1,0 +1,138 @@
+@import '../../../assets/css/variables.scss';
+
+.feature_airdrop {
+    &-header {
+        margin-bottom: 42px;
+
+        &-banner {
+            position: relative;
+
+            &-bgbck {
+                width: 100%;
+            }
+
+            &-heading {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                width: 100%;
+                transform: translate(-50%, -35px);
+                text-align: center;
+
+                &-title {
+                    color: #ffff;
+                    @include fontStyle(24px, 36px, 600);
+                }
+
+                &-description {
+                    @include fontStyle(62px, 80px, 700);
+                    color: #ffff;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &-airdropbtn {
+            text-align: center;
+            padding-top: 35px;
+            padding-bottom: 35px;
+
+            &-createairdrop {
+                font-size: 20px;
+                padding: 8px 38px;
+                background-color: #960bdf;
+                font-family: $button-font;
+                font-weight: 500;
+                color: #fff;
+                border-radius: 25px;
+            }
+        }
+    }
+
+    &_tabpart {
+
+        margin-top: 20px;
+
+        .content_wrapper .new-search-filter {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 15px;
+            gap: 15px;
+        }
+
+        .content_wrapper .searchbox {
+            display: flex;
+            border: 1px solid;
+            width: fit-content;
+            border-radius: 6px;
+            border: 1px solid #ffffff50;
+            padding: 0 10px;
+            align-items: center;
+        }
+
+        .content_wrapper .searchbox .searchicon {
+            width: 22px;
+            height: 22px;
+        }
+
+        .content_wrapper .searchbox .search-bar-btn {
+            border: none;
+            background: transparent;
+            color: #ffffff50;
+            padding: 0;
+            width: 250px;
+            height: 38px;
+        }
+
+        .content_wrapper .searchbox .search-bar-btn:focus-visible {
+            outline: none;
+        }
+
+        .content_wrapper .new-search-filter .filter-new-btn {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            border-radius: 6px;
+            border: 1px solid #ffffff50;
+            padding: 6px 8px;
+            color: #ffffff50;
+        }
+
+        .airdrop_content .airdrop_heading {
+            margin-bottom: 20px;
+        }
+
+        .airdrop_content .airdrop_heading .airdrop_heading_title .airdrop_heading_title-color {
+            color: #ff005c;
+        }
+    }
+}
+
+.content_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .btn-airdrop {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.05);
+
+        &:hover {
+            background: $airdrop-color;
+        }
+    }
+
+    &_dropdown {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        .mediaeye-searchbar {
+            width: 300px;
+        }
+
+        .mediaeye-selectsearch {
+            width: 170px;
+        }
+    }
+}

@@ -1,0 +1,206 @@
+@import '../../assets/css/variables.scss';
+
+.rewards-pool {
+    &-header {
+        position: relative;
+        height: 250px;
+
+        &-img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        &-inner {
+            max-width: 1580px;
+            width: 95vw;
+            margin: 0 auto;
+            height: 100%;
+
+            &-data {
+                max-width: 1280px;
+                width: 85vw;
+                position: relative;
+                margin: 0 auto;
+                height: 100%;
+
+                &-banner {
+                    width: 78%;
+                    margin: 0 auto;
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    height: 100%;
+                    transform: translateX(-50%);
+                    /* text-align: right; */
+                    display: flex;
+                    align-items: center;
+
+                    &-text {
+                        margin: 0;
+                        font-size: 3.875vw;
+                    }
+
+                    &-image {
+                        height: 100%;
+                        width: auto;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    &-page {
+        // background: url('../../assets/img/RewardsPoolPageShadow1.png') no-repeat top center;
+        background-size: cover !important;
+        background-attachment: fixed !important;
+
+        &-heading {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            right: -30px;
+            top: -40px;
+            background: linear-gradient(65.39deg, #ff4db1 14.2%, #ff9d34 25.58%, #ffe62c 36.96%, #90ff41 48.34%, #3cd7ff 59.72%, #ab4efb 71.09%);
+            filter: blur(76px);
+            transform: rotate(46.38deg);
+        }
+
+        &-main {
+            &-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 78%;
+                margin: 0 auto;
+
+                &-text {
+                    font-size: 16px;
+                    color: #e7efff;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    text-align: center;
+                }
+
+                &-form {
+                    padding-top: 10px;
+                    width: 100%;
+                    height: auto;
+                    background: $default-color;
+                    backdrop-filter: blur(16px);
+                    border-radius: 12px;
+                    margin-bottom: 50px;
+                    overflow: hidden;
+                    text-align: center;
+
+                    &.rewards-pool-total {
+                        background: transparent;
+                        backdrop-filter: none;
+                        padding-top: 24px;
+                    }
+
+                    // &-shadow {
+                    // position: absolute;
+                    // width: 50%;
+                    // height: 100%;
+                    // left: 40%;
+                    // top: 150px;
+                    // background: linear-gradient(65.39deg,
+                    //       #ff4db1 14.2%,
+                    //       #ff9d34 25.58%,
+                    //       #ffe62c 36.96%,
+                    //       #90ff41 48.34%,
+                    //       #3cd7ff 59.72%,
+                    //       #ab4efb 71.09%);
+                    // filter: blur(100px);
+                    // transform: rotate(46.38deg);
+                    // }
+
+                    &-heading {
+                        text-align: center;
+                        font-size: 24px;
+                        margin-bottom: 30px;
+                        margin-top: 24px;
+                        filter: blur(0);
+                        font-weight: 600;
+                    }
+
+                    &-message {
+                        font-size: 16px;
+                        color: #e7efff;
+                        margin-top: 80px;
+                        margin-bottom: 80px;
+                    }
+
+                    &-btn {
+                        filter: blur(0);
+                        margin: 30px auto;
+
+                        .btn-reward {
+                            color: black;
+                        }
+                    }
+
+                    &-rewards {
+                        // display: flex;
+                        // height: 40px;
+                        // background: #191341;
+                        // border-radius: 30px;
+                        // width: 70%;
+                        // margin: 30px auto;
+                        // align-items: center;
+                        // justify-content: space-between;
+                        // padding: 20px 30px;
+                        // filter: blur(0);
+                        display: flex;
+                        justify-content: space-evenly;
+
+                        &-data {
+                            // display: flex;
+                            // gap: 7px;
+                            // align-items: center;
+                            // filter: blur(0px);
+                            display: flex;
+                            justify-content: flex-start;
+                            background: #2A284A;
+                            border-radius: 26px;
+                            padding: 3px 4px;
+                            align-items: center;
+                            gap: 7px;
+                            min-width: 180px;
+
+                            & img {
+                                width: 30px;
+                                height: 30px;
+                            }
+
+                            & span {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+
+                &-sellers {
+                    padding: 50px 0;
+                }
+
+            }
+
+            &-bottom {
+                width: 78%;
+                margin: 0 auto;
+            }
+
+            .mediaeye-centerbtn {
+                .btn-reward {
+                    color: black;
+                }
+            }
+        }
+    }
+}

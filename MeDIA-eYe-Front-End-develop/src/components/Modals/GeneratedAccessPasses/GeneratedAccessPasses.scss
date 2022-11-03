@@ -1,0 +1,46 @@
+@import '../../../assets/css/variables.scss';
+
+.generated-access{
+    width: fit-content;
+    &-inner{
+        &-title{
+            @include fontStyle(24px, 25px, 500);
+        }
+        &-content{
+            height: 300px;
+            margin: auto;
+            overflow: auto;
+            &-row{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding: 0px 20px;
+                span{
+                    @include fontStyle(16px, 24px, 400);
+                }
+            }
+        }
+        &-bottom{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+        }
+        &-landing{
+            height: 300px;
+            overflow: auto;
+            &-passes{
+                @include fontStyle(16px, 24px, 400);
+                &-title{
+                    @include fontStyle(16px, 24px, 400);
+                    padding: 0px 20px;
+                }
+                .generated-access-inner-content-row{
+                    span{
+                        color: rgba(255, 255, 255, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}

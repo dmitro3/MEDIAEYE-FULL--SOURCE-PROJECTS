@@ -1,0 +1,212 @@
+@import "../../../assets/css/variables.scss";
+
+.mediaProfilepage-datacontent-profiledetail-body {
+  .creatives-wrap {
+    position: relative;
+    &-heading {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $white-color;
+      text-transform: capitalize;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 30px;
+      font-family: $Poppins-font;
+      path {
+        stroke: $dark-pink-color;
+      }
+    }
+    &-music {
+      margin-bottom: 62px;
+      &-list {
+        list-style-type: none;
+        font-family: $Poppins-font;
+        &-single {
+          margin-bottom: 8px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 9px;
+          &-a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: $white-color;
+            transition: 0.3s;
+            width: fit-content;
+            path {
+              transition: 0.3s;
+            }
+            &:hover {
+              color: $dark-pink-color;
+              transition: 0.3s;
+              path {
+                stroke: $dark-pink-color;
+                transition: 0.3s;
+              }
+            }
+          }
+          &-pencil-btn {
+            background-color: transparent;
+            padding: 0;
+            line-height: normal;
+            border: none;
+            cursor: pointer;
+            &:hover {
+              path {
+                stroke: $dark-pink-color;
+                fill: $dark-pink-color;
+                transition: 0.3s;
+              }
+            }
+            path {
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+      &-add-btn {
+        font-family: $Poppins-font;
+        min-width: 93px;
+        display: flex;
+        align-items: center;
+        color: $white-color;
+        border-radius: 5px;
+        border: none;
+        padding: 5px 6px;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 400;
+        background: linear-gradient(
+          126.6deg,
+          rgba(255, 255, 255, 0.1) 28.69%,
+          rgba(255, 255, 255, 0.1) 100%
+        );
+        backdrop-filter: blur(140px);
+        line-height: 21px;
+        cursor: pointer;
+        margin-top: 15px;
+        svg {
+          width: 15px;
+        }
+      }
+    }
+    &-video {
+      margin-bottom: 62px;
+    }
+    &-com-slider {
+      color: red;
+      position: relative;
+      .slick-list {
+        overflow: hidden;
+        margin: 0 -10px;
+        .slick-track {
+          display: flex;
+        }
+        .slick-slide {
+          margin: 0 10px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      &-single-slide {
+        height: 107px;
+        cursor: pointer;
+        overflow: hidden;
+        &:hover {
+          overflow: hidden;
+          img {
+            transform: scale(1.1);
+            transition: 0.5s ease-in-out;
+            filter: none;
+          }
+        }
+        img {
+          // filter: blur(1px);
+          transition: 0.5s ease-in-out;
+        }
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+        video {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+        }
+        &-add {
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(
+            126.6deg,
+            rgba(255, 255, 255, 0.1) 28.69%,
+            rgba(255, 255, 255, 0.1) 100%
+          );
+          backdrop-filter: blur(140px);
+          border: none;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          color: $white-color;
+          font-size: 16px;
+          margin: 0;
+          cursor: pointer;
+          svg {
+            width: 15px;
+          }
+        }
+      }
+      .slick-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      .slick-prev {
+        left: -25px;
+        @media (max-width: 1200px) {
+          left: -18px;
+        }
+        &:after {
+          content: "\276E";
+          font-size: 12px;
+          color: #fff;
+        }
+      }
+      .slick-next {
+        right: -25px;
+        @media (max-width: 1200px) {
+          right: -18px;
+        }
+        &:after {
+          content: "\276F";
+          font-size: 12px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.choose-img-wrap {
+  &-input {
+    display: none;
+  }
+}
+
+.d-none {
+  display: none !important;
+}
+.d-block {
+  display: block !important;
+}

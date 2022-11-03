@@ -1,0 +1,212 @@
+@import '../../assets/css/variables.scss';
+
+.home-page {
+
+
+    &-topBannerSection {
+        width: 100%;
+        position: relative;
+        background-image: url('../../assets/img/home/home-slide-bg.png');
+        background-position: 10% center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        &::after {
+            content: "";
+            background: linear-gradient(180deg, rgba(11, 7, 34, 0.47) 0%, rgba(13, 9, 40, 0) 100%);
+            height: 100px;
+            display: block;
+            width: 100%;
+        }
+        &-paginationbox {
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+
+        }
+        &-slide {
+            position: relative;
+            width: 100%;
+            &-img {
+                width: 100%;
+                height: auto;
+                max-width: 1920px;
+                margin: auto;
+            }
+            &-content {
+                width: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                &-inner {
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                }
+                &-textpart {
+                    max-width: 40%;
+                    margin-left: auto;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    &-inner {
+                        margin: auto 0;
+                    }
+                    &-heading {
+                        font-weight: 700;
+                        font-size: 48px;
+                        line-height: 50px;
+                        color: #fff;
+                        margin-bottom: 17px;
+                    }
+                    &-text {
+                        font-size: 20px;
+                        color: rgba(255, 255, 255, 0.7);
+                        line-height: 30px;
+                        margin-bottom: 40px;
+                        max-width: 285px;
+                    }
+                    &-btn {}
+                }
+                &-imgpart {
+                    max-width: 60%;
+                    margin: auto 0 auto auto;
+                    height: 100%;
+                    display: flex;
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        margin-bottom: 0;
+                        margin-top: auto;
+                    }
+                    &-center {
+                        img {
+                            margin-bottom: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-advertisement {
+        &-banners {
+            margin: 0 -15px;
+            display: flex;
+            &-col {
+                padding: 0 15px;
+                width: 45.20%;
+                &-large {
+                    width: 54.80%;
+                }
+                &-img {
+                    width: 100%;
+                    @include vendor-prefix(border-radius,10px);
+                    @include vendor-prefix(transition,all 0.3s);
+                    // cursor: pointer;
+                    &:not(:last-child) {
+                        margin-bottom: 29px;
+                    };
+                    // &:hover {
+                    //     opacity: 0.8;
+                    // }
+                }
+            }
+        }
+    }
+
+
+    &-topCollectionsSection {
+        &-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-selection {
+                position: relative;
+                width: 130px;
+                margin-left: 20px;
+            }
+        }
+    }
+
+
+    &-featuredCollectionSection {}
+    &-blogSection {}
+
+    &-topLiveBidsSection {}
+
+    &-airdropsEventsSection {}
+
+    &-rewardsCollectionSection {
+        &-counterbox {
+            display: flex;
+            align-items: center;
+            max-width: 930px;
+            margin: auto auto 30px;
+
+            &-heading {
+                color: #fff;
+                font-weight: 600;
+                font-size: 20px;
+                padding: 0 10px;
+            }
+
+            &-network {
+                margin-left: 20px;
+
+                .mediaeye-selectsearch {
+                    max-width: 90px;
+                    font-size: 16px;
+
+                    &__input {
+                        background: rgba(255, 255, 255, 0.1) !important;
+                        font-weight: 500;
+                        font-size: 16px;
+                        height: 30px;
+                    }
+
+                }
+            }
+
+            &-right {
+                margin-left: auto;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                @include vendor-prefix(border-radius,50px);
+                align-items: center;
+                padding: 8px 10px;
+                background-color: $rewards-color;
+            }
+
+            &-counter {
+                background-color: #17133b;
+                line-height: 37px;
+                padding: 0 10px 0 4px;
+                @include vendor-prefix(border-radius, 26px);
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                min-width: 155px;
+
+                span {
+                    font-size: 18px;
+                }
+
+                img {
+                    max-width: 27px;
+                }
+            }
+        }
+    }
+
+    &-marketingCampaignsSection {
+        &-content {
+            margin-top: 20px;
+        }
+    }
+}

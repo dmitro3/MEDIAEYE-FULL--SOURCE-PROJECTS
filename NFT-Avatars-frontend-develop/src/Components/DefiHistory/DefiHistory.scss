@@ -1,0 +1,59 @@
+.defi-history{
+  &-table-header{
+    width: 100%;
+    &-body{
+      tr{
+        td{
+          width: 10%;
+          padding: 8px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &-table-body{
+    height: 250px;
+    overflow: scroll;
+    margin-bottom: 20px;
+    &-main{
+      width: 100%;
+      &-indata{
+        tr{
+          td{
+            width: 10%;
+            padding: 8px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  &-table-footer{
+    position: relative;
+    padding-top: 20px;
+    &::after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 80%;
+      height: 1px;
+      border-radius: 2px;
+      background-color: #ffffff15;
+      padding: 0 8px;
+      transform: translate(10px, 0px);
+    }
+    &-body{
+      width: 100%;
+      &-main{
+        tr{
+          td{
+            width: 10%;
+            padding: 8px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

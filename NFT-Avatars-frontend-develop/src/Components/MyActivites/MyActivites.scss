@@ -1,0 +1,92 @@
+@import "../../assets/css/variables.scss";
+
+.mediaProfilepage {
+  &-datacontent {
+    &-profiledetail {
+      &-body {
+        &-activitybox {
+          padding-bottom: 80px;
+          &-content {
+            overflow-x: scroll;
+          }
+          &-table {
+            width: 100%;
+            min-width: 600px;
+            min-height: 290px;
+            margin-bottom: 50px;
+            overflow-x: scroll;
+            thead {
+              height: 100px;
+              @media (max-width: 767.98px) {
+                height: auto;
+              }
+              th {
+                font-family: $Poppins-font;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: $white-color;
+                text-align: left;
+              }
+            }
+            tbody {
+              tr {
+                height: 45px;
+              }
+              td {
+                font-family: $Poppins-font;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                color: $white-color;
+                svg {
+                  width: 20px;
+                  height: 20px;
+                  margin-right: 16px;
+                  position: absolute;
+                  left: 0;
+                }
+                &:first-child {
+                  cursor: pointer;
+                  padding-left: 35px;
+                  position: relative;
+                }
+                a {
+                  text-decoration-line: underline;
+                  color: $white-color;
+                }
+              }
+            }
+          }
+          &-previous {
+            // max-height: 30px;
+            // overflow: hidden;
+            // &.active{
+            //     max-height: 1000px;
+            // }
+            &-prevdrop {
+              font-family: $Poppins-font;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              display: flex;
+              align-items: center;
+              gap: 18px;
+              color: $white-color;
+              background: transparent;
+              border: none;
+              cursor: pointer;
+              svg {
+                width: 15px;
+                height: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

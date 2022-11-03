@@ -1,0 +1,18 @@
+@import '../../../assets/css/variables.scss';
+
+.account-charity-page {
+  margin-top: 24px;
+  &-searchBar {
+    display: flex;
+    justify-content: right;
+    .mediaeye-searchbar {
+      input {
+        height: 38px;
+        width: 300px;
+      }
+    }
+  }
+  &-inner {
+    margin-top: 24px;
+  }
+}

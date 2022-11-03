@@ -1,0 +1,30 @@
+.mediaeye {
+    &-PrivacyPage {
+        ul {
+            padding-left: 32px;
+        }
+
+        &-DecList {
+            li {
+                list-style: decimal;
+                font-size: 15px;
+            }
+        }
+
+        &-DiscList {
+            li {
+                list-style: disc;
+            }
+        }
+
+        &-CircleList {
+            li {
+                list-style: circle;
+            }
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+    }
+}

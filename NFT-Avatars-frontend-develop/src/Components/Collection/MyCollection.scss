@@ -1,0 +1,21 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.pd {
+  &-50 {
+    padding-bottom: 50px;
+  }
+  &-35 {
+    padding-bottom: 35px;
+  }
+}
+.pu {
+  &-50 {
+    @media (max-width: 767.98px) {
+      padding-top: 50px;
+    }
+  }
+}

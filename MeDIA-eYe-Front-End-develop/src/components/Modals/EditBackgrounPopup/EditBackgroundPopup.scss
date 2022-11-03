@@ -1,0 +1,117 @@
+@import '../../../assets/css/variables.scss';
+
+.edit-background {
+
+  width: 800px;
+  .common-section {
+    background: rgba(255, 255, 255, 0.05);
+    @include vendor-prefix(border-radius, 5px);
+    padding: 20px;
+    margin-top: 20px;
+  }
+  &-inner {
+    &-title {
+      @include fontStyle(20px, 30px, 400);
+      margin-top: 20px;
+    }
+    &-metadata {
+      display: grid;
+      &-maintitle {
+        @include fontStyle(16px, 24px, 400);
+      }
+      &-subtitle {
+        @include fontStyle(14px, 21px, 400);
+      }
+      &-attribute {
+        display: grid;
+      }
+    }
+    &-trait {
+      display: grid;
+      &-head {
+        @include fontStyle(16px, 24px, 400);
+      }
+      &-head {
+        @include fontStyle(16px, 24px, 400);
+      }
+      &-subhead {
+        @include fontStyle(14px, 21px, 400);
+      }
+      &-content {
+        margin-top: 34px;
+        margin-right: 24px;
+        &-heading {
+          display: flex;
+          justify-content: right;
+          gap: 40px;
+        }
+        &-data {
+          &-inner {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 124px;
+            &-left {
+              display: flex;
+              align-items: center;
+              gap: 20px;
+              img {
+                width: 70px;
+                height: 70px;
+                @include vendor-prefix(border-radius, 5px);
+                &:hover {
+                  width: 100px;
+                  height: 100px;
+                }
+              }
+              span {
+                @include fontStyle(14px, 21px, 400);
+              }
+            }
+            &-right {
+              display: flex;
+              align-items: center;
+              gap: 46px;
+              &-range {
+                width: 200px;
+              }
+              &-hashper {
+                display: flex;
+                align-items: center;
+                padding: 1px 5px;
+                background: rgba(255, 255, 255, 0.05);
+                @include vendor-prefix(border-radius, 3px);
+                gap: 4px;
+                cursor: pointer;
+                .value{
+                    background: rgba(255, 255, 255, 0.1);
+                    padding: 1px 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &-ratio {
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        input {
+          width: 90%;
+        }
+        .ratio-button {
+          padding: 10px;
+          background: rgba(255, 255, 255, 0.05);
+          @include vendor-prefix(border-radius, 3px);
+        }
+      }
+    }
+    &-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      gap: 10px;
+    }
+  }
+}

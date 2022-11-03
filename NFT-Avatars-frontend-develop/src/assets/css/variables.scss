@@ -1,0 +1,57 @@
+$body-font: "Poppins", sans-serif;
+// $body-font: "Golos", sans-serif;
+$heading-font: "Goldman", sans-serif;
+$button-font: "Golos", sans-serif;
+$Poppins-font: "Poppins", sans-serif;
+$default-color: #0D0C2C;
+$link-color: rgba(255, 255, 255, 0.5);
+$link-hover: #fff;
+$button-background: #cc00ff;
+$button-background-hover: #9500bb;
+$button-color: #fff;
+$white-color: #fff;
+$pink-color: #cc00ff;
+$dark-pink-color: #ff008a;
+$dark-pink-hover: #d30072;
+$dark-blue-color: #0d0c2c;
+$gray-color: #d2d2d2;
+$dark-gray-color: #8b8b8b;
+$info-color: #6100ff;
+$info-color-hover: #4f01ccf1;
+$error-color: #dc3545;
+$green-bg: linear-gradient(126.6deg,
+    rgba(85, 223, 20, 0.4) 28.69%,
+    rgba(85, 223, 20, 0.4) 100%);
+$dark-bg-black: linear-gradient(126.6deg, rgba(0, 0, 0, 0.6) 28.69%, rgba(0, 0, 0, 0.6) 100%);
+
+@mixin vendor-prefix($property, $value) {
+  #{$property}: $value;
+
+  @each $prefix in('webkit', 'moz', 'ms', 'o') {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+}
+
+@mixin fontStyle($fontSize, $lineHeight, $fontWeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+}
+
+@mixin mediaeye-placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

@@ -1,0 +1,143 @@
+@import '../../../../assets/css/variables.scss';
+
+.Collection-setting-page {
+  width: 760px;
+  margin: auto;
+  &-inner {
+    width: 70%;
+    &-blockchain-collection {
+      &-card {
+        margin-top: 64px;
+        width: fit-content;
+        &-header {
+          &-heading {
+            @include fontStyle(16px, 17px, 400);
+          }
+        }
+        &-body {
+          margin-top: 30;
+        }
+      }
+      &-content {
+        &-shorinput {
+          width: 48%;
+        }
+        &-inner {
+          display: flex;
+          gap: 20px;
+        }
+      }
+    }
+    &-metadata {
+      margin-top: 100px;
+      &-header {
+        @include fontStyle(24px, 36px, 600);
+      }
+      &-inner {
+        margin-top: 50px;
+        display: flex;
+        gap: 20px;
+        &-left {
+          width: 50%;
+        }
+        &-right {
+          width: 50%;
+          background: #211f3d;
+          padding: 20px;
+          @include vendor-prefix(border-radius, 5px);
+          max-height: 440px;
+          &-data {
+            height: 400px;
+            overflow-y: auto;
+          }
+        }
+      }
+    }
+    &-reveal {
+      width: 100%;
+      margin-top: 100px;
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        .mediaeyeform-label {
+          width: fit-content;
+        }
+        &-title {
+          @include fontStyle(24px, 36px, 600);
+        }
+      }
+      &-uploader {
+        &-title {
+          @include fontStyle(16px, 24px, 400);
+        }
+        img{
+          position: absolute;
+          top: 0;
+          object-fit: contain;
+          aspect-ratio: 1/1;
+        }
+        &-input {
+          input {
+            opacity: 0;
+            height: 300px;
+            width: 300px;
+          }
+          height: 300px;
+          width: 300px;
+          background: #242242;
+          @include vendor-prefix(border-radius, 5px);
+          position: relative;
+          &-text {
+            position: absolute;
+            top: 0;
+            text-align: center;
+            margin-left: 38%;
+            margin-top: 35%;
+            svg {
+              transform: rotateZ(-90deg);
+              width: 62px;
+              height: 60px;
+            }
+          }
+        }
+      }
+      &-bottom {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        &-radiobtn{
+          display: flex;
+          gap: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+    &-bottom {
+      margin-top: 100px;
+      &-title {
+        @include fontStyle(24px, 36px, 600);
+      }
+      &-row {
+        display: flex;
+        gap: 20px;
+        .mediaeyeform-group-input {
+          display: flex;
+          gap: 15px;
+          .mediaeyeform-input {
+            &.shortone {
+              width: 100px;
+            }
+          }
+        }
+        .mediaeye-searchbar {
+          input {
+            width: 245px;
+          }
+        }
+        &.shortInput {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+@import "../../../assets/css/variables.scss";
+
+.mediaProfilepage-datacontent-profiledetail-body {
+  .connecting-accounts {
+    &-label {
+      color: $white-color;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      display: block;
+      font-family: $Poppins-font;
+    }
+    &-social {
+      background: linear-gradient(
+        126.6deg,
+        rgba(255, 255, 255, 0.1) 28.69%,
+        rgba(255, 255, 255, 0.1) 100%
+      );
+      backdrop-filter: blur(140px);
+      border-radius: 5px;
+      list-style: none;
+      display: flex;
+      padding: 15px;
+      gap: 17px;
+      margin-bottom: 34px;
+      align-items: center;
+      width: fit-content;
+      flex-wrap: wrap;
+      &-li {
+        line-height: 0;
+        &-a {
+          display: block;
+          svg {
+            &:hover {
+              path {
+                fill: $pink-color;
+                transition: 0.3s;
+              }
+            }
+            path {
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+    }
+    &-social-detail {
+      display: flex;
+      list-style-type: none;
+      gap: 17px;
+      flex-wrap: wrap;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+      &-li {
+        border-radius: 5px;
+        font-family: $Poppins-font;
+        background: linear-gradient(
+          126.6deg,
+          rgba(255, 255, 255, 0.1) 28.69%,
+          rgba(255, 255, 255, 0.1) 100%
+        );
+        backdrop-filter: blur(140px);
+        width: 261px;
+        padding: 14px 15px;
+        display: flex;
+        gap: 8px;
+        color: $white-color;
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+        &-close {
+          border: none;
+          padding: 0;
+          position: absolute;
+          line-height: normal;
+          background-color: transparent;
+          top: 11px;
+          right: 12px;
+          cursor: pointer;
+          svg {
+            width: 9px;
+            path {
+              stroke: $white-color;
+            }
+          }
+        }
+        &-detail-name {
+          margin: 0;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 14px;
+        }
+        &-detail-social-name {
+          color: #8b8b8b;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 18px;
+        }
+        &-detail-display {
+          margin-top: 15px;
+          display: flex;
+          align-items: center;
+          &-input {
+            width: 0;
+            margin: 0;
+            &:checked {
+              & + label {
+                background-color: $pink-color;
+                transition: 0.3s;
+                span {
+                  left: 16px;
+                  transition: 0.3s;
+                }
+              }
+            }
+          }
+          &-toggle {
+            width: 30px;
+            height: 16px;
+            background-color: #444444;
+            border-radius: 20px;
+            position: relative;
+            transition: 0.3s;
+            margin-left: 22px;
+            cursor: pointer;
+            span {
+              width: 12px;
+              height: 12px;
+              background-color: #d9d9d9;
+              display: block;
+              border-radius: 50%;
+              position: absolute;
+              top: 50%;
+              left: 2.5px;
+              transform: translateY(-50%);
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

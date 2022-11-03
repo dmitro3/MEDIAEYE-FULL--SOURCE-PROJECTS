@@ -1,0 +1,112 @@
+@import '../../../assets/css/variables.scss';
+
+.feature-campaign-page {
+    background-position: right top;
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    &-headbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        margin-top: 24px;
+        @include fontStyle(24px, 34px, 500);
+        &-inner {
+            button {
+                background: $default-color;
+                @include fontStyle(14px, 24px, 500);
+                padding: 10px 24px;
+                @include vendor-prefix(border-radius, 5px);
+            }
+            .mediaeye-searchbar {
+                input {
+                    height: 40px;
+                    @include fontStyle(14px, 24px, 500);
+                    width: 300px;
+                }
+            }
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+    }
+    &-responsive {
+        display: none;
+        @media(max-width: 1026px) {
+            display: block;
+        }
+    }
+    &-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        img {
+            width: 100%;
+            @media(max-width: 1026px) {
+                display: none;
+            }
+        }
+        span {
+            cursor: pointer;
+            @include fontStyle(16px, 24px, 400);
+        }
+        &-arrowleft {
+            position: absolute;
+            left: 12%;
+            z-index: 99;
+            transition: transform 100ms ease-in-out;
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+        &-arrowright {
+            position: absolute;
+            right: 12%;
+            transition: transform 100ms ease-in-out;
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+    }
+    &-inner {
+        .mediaeye-tabss-lists {
+            margin: 34px 0;
+            button {
+                margin-right: 64px;
+            }
+        }
+        &-bar {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            .mediaeye-searchbar {
+                margin-left: 100px;
+                input {
+                    width: 250px;
+                    height: 38px;
+                }
+            }
+            @media(max-width: 1026px) {
+                display: inline;
+                text-align: right;
+                margin-top: 34px;
+                .mediaeye-searchbar {
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        @media(max-width: 1026px) {
+            .mediaeye-tabss-lists {
+                margin: 20px 0;
+                justify-content: center;
+                button {
+                    margin-right: 12px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

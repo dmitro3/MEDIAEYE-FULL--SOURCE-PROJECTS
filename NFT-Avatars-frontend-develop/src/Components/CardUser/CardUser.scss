@@ -1,0 +1,58 @@
+@import '../../assets/css/variables.scss';
+
+.Carduser{
+  .marketplace-card{
+    &-inner{
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      .marketplace-card-proimg{
+        width: 100%;
+      }
+      &-detail{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 15px;
+        background: linear-gradient(0deg, #242242 0%, rgba(23, 19, 58, 0) 100%);
+        .name{
+          font-size: 12px;
+          font-weight: 400;
+          font-family: $Poppins-font;
+          margin: 0; 
+          margin-bottom: 5px;
+          color: $white-color;
+          opacity: 0.5;
+        }
+        .valhas{
+          font-size: 14px;
+          font-weight: 400;
+          font-family: $Poppins-font;
+          margin: 0; 
+          margin-bottom: 5px;
+        }
+        .social-rate{
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          .likes{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 400;
+            font-family: $Poppins-font;
+            margin: 0;
+          }
+          .title{
+            font-size: 14px;
+            font-weight: 400;
+            font-family: $Poppins-font;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

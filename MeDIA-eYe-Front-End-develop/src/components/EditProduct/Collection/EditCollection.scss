@@ -1,0 +1,356 @@
+@import '../../../assets/css/variables.scss';
+
+.edit-collection-page {
+    &-inner {
+
+        &-content {
+            width: 100%;
+            &-row {
+                width: 100%;
+                display: flex;
+                margin-bottom: 30px;
+                &-card {
+                    background: rgba(255, 255, 255, 0.02);
+                    padding: 30px;
+                    @include vendor-prefix(border-radius,12px);
+                    &-header {
+                        width: 100%;
+                        margin-bottom: 30px;
+                        &-heading {
+                            color: #fff;
+                            font-size: 20px;
+                            font-weight: 500;
+                        }
+                    }
+                    &-body {
+                        width: auto;
+                    }
+                }
+                &-metadata & {
+                    &-card {
+                        min-width: 100%;
+                        &-body {
+                            display: flex;
+                            margin: 0 -15px;
+                            &-colleft {
+                                width: 35%;
+                                padding: 0 15px;
+                            }
+                            &-colright {
+                                width: 65%;
+                                padding: 0 15px;
+                            }
+                        }
+                    }
+                }
+
+                &-appearance & {
+                    &-card {
+                        min-width: 100%;
+                        &-body {
+                            display: flex;
+                            margin: 0 -15px;
+                            &-colleft {
+                                width: 15%;
+                                padding: 0 15px;
+                            }
+                            &-colmiddle {
+                                width: 20%;
+                                padding: 0 15px;
+                            }
+                            &-colright {
+                                width: 65%;
+                                padding: 0 15px;
+                            }
+                        }
+                    }
+                }
+                &-uploadBox {
+                    &-content {
+                        width: 100%;
+                        min-height: 170px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &-inputfile {
+                            display: none;
+                        }
+                        &-action {
+                            position: absolute;
+                            right: 5px;
+                            top: 5px;
+                            text-align: center;
+                            svg {
+                                width: 15px;
+                                height: auto;
+                            }
+                        }
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            aspect-ratio: 1 / 1;
+                            object-fit: cover;
+                        }
+                    }
+                    &-logo {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        width: 70px;
+                        height: 70px;
+                        cursor: pointer;
+                        position: relative;
+                        &-inner {
+                            width: 100%;
+                            height: 100%;
+                            @include vendor-prefix(border-radius, 50px);
+                            overflow: hidden;
+                            background-color: rgba(255, 255, 255, 0.05);
+                            @include vendor-prefix(transition, background-color 0.15s ease-in-out 0.05s);
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.15);
+                            }
+                        }
+                        &-action {
+                            bottom: 5px;
+                            right: 0;
+                            top: auto;
+                        }
+                    }
+                    &-display {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 85px;
+                        max-width: 140px;
+                        @include vendor-prefix(border-radius, 5px);
+                        overflow: hidden;
+                        cursor: pointer;
+                        position: relative;
+                        &-inner {
+                            width: 100%;
+                            height: 100%;
+                            @include vendor-prefix(border-radius, 5px);
+                            overflow: hidden;
+                            background-color: rgba(255, 255, 255, 0.05);
+                            @include vendor-prefix(transition, background-color 0.15s ease-in-out 0.05s);
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.15);
+                            }
+
+                        }
+                    }
+                    &-banner {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 120px;
+                        @include vendor-prefix(border-radius, 5px);
+                        overflow: hidden;
+                        cursor: pointer;
+                        position: relative;
+                        &-inner {
+                            width: 100%;
+                            height: 100%;
+                            @include vendor-prefix(border-radius, 5px);
+                            overflow: hidden;
+                            background-color: rgba(255, 255, 255, 0.05);
+                            @include vendor-prefix(transition, background-color 0.15s ease-in-out 0.05s);
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.15);
+                            }
+
+                        }
+                    }
+
+
+                    &-bottom {
+                        width: 100%;
+                        color: #A7A7A7;
+                        text-align: center;
+                    }
+                }
+                &-social & {
+                    &-card {
+                        min-width: 50%;
+                        max-width: 800px;
+                    }
+                }
+                &-setting & {
+                    &-card {
+                        min-width: 100%;
+                    }
+                }
+
+
+            }
+
+
+            &-box-5 {
+                background-color: #ffffff02;
+                width: 80%;
+                padding: 20px 25px 35px;
+                @include vendor-prefix(border-radius, 12px);
+                margin-bottom: 20px;
+                h5 {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #ebebeb;
+                    margin-top: 0;
+                    margin-bottom: 45px;
+                }
+                &-setting {
+                    display: block;
+                    align-items: center;
+                    &-simple {
+                        display: flex;
+                        gap: 15px;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        label {
+                            font-size: 16px;
+                            color: #ebebeb;
+                        }
+                        span {
+                            margin-bottom: 0;
+                            font-size: 14px;
+                        }
+                    }
+                    &-lvl-2 {
+                        background: #960bdf;
+                        font-size: calc(26px - 12px);
+                        color: #ffffff;
+                        padding: 0 10px;
+                        @include vendor-prefix(border-radius, 20px);
+                        margin-right: 0;
+                        line-height: 22px;
+                    }
+                    &-para {
+                        font-size: 14px;
+                        color: #a7a7a7;
+                        margin-bottom: 25px;
+                        line-height: 22px;
+                    }
+                    &-grid {
+                        display: flex;
+                        gap: 50px;
+                        &-flex {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: flex-start;
+                            max-width: 35%;
+                            gap: 70px;
+                        }
+                        label {
+                            display: block;
+                            margin-bottom: 20px;
+                            font-size: 16px;
+                        }
+                        &-box {
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+                            &-inner {
+                                display: flex;
+                                justify-content: space-between;
+                                gap: 20px;
+                                padding: 4px 40px 4px 2px;
+                                align-items: center;
+                                background-color: #ffffff15;
+                                font-weight: 200;
+                                width: fit-content;
+                                justify-content: flex-start;
+                                @include vendor-prefix(border-radius, 20px);
+                                img {
+                                    height: 30px;
+                                    width: 30px;
+                                }
+                            }
+                            &-bg {
+                                background-color: #ffffff30;
+                                padding: 6px 15px;
+                                width: fit-content;
+                                @include vendor-prefix(border-radius, 20px);
+                                font-weight: 200;
+                            }
+                        }
+                        &-address {
+                            margin-top: 18px;
+                            width: 100%;
+                            &-search_select {
+                                min-width: 100%;
+                                max-width: 300px;
+                            }
+                            div[class*='-control'] {
+                                min-width: 100%;
+                                max-width: 300px;
+                                width: 100%;
+                                background: #ffffff05;
+                                border: 1px solid #64646430;
+                                @include vendor-prefix(border-radius, 20px);
+                                color: #ebebeb;
+                                outline: none;
+                                min-height: 40px;
+                                div[class*='-indicatorSeparator'] {
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                        &-five {
+                            display: grid;
+                            grid-template-columns: repeat(5, 1fr);
+                            gap: 15px;
+                            max-width: 65%;
+                            &-inner {
+                                position: relative;
+                                padding: 5px 10px 0;
+                                text-align: center;
+                                span {
+                                    font-size: 20px !important;
+                                    color: #fff !important;
+                                    display: inline !important;
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                }
+                                p {
+                                    color: #55e0ff;
+                                    font-size: 12px;
+                                    margin-top: 7px;
+                                }
+                                &-image {
+                                    width: 90px;
+                                    height: 90px;
+                                    object-fit: cover;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                        &-active_minters {
+                            overflow-x: auto;
+                        }
+                    }
+                }
+            }
+        }
+        &-btn {
+            text-align: center;
+            margin-top: 80px;
+            button {
+                padding: 0 30px;
+            }
+        }
+    }
+}
+
+@media(min-width: 1150px) and(max-width: 1300px) {
+    .edit-collection-page-inner-content-box-5-setting-grid-five-inner-image {
+        height: 75px;
+    }
+}

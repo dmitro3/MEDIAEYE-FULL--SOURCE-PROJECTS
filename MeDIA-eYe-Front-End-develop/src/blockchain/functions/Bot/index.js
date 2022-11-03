@@ -1,0 +1,1 @@
+export { twitterPostAuto } from './Twitter';

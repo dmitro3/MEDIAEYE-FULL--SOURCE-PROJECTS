@@ -1,0 +1,366 @@
+@import "../../assets/css/variables.scss";
+
+.mediaProfilepage-datacontent-collection {
+  .icon {
+    display: inline-block;
+  }
+  &-heading {
+    color: $white-color;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  &-upload-box {
+    width: 245px;
+    height: 254px;
+    background: rgba(196, 196, 196, 0.1);
+    margin: 0 auto 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 100%;
+    padding-bottom: 35px;
+    &.drag-img {
+      justify-content: center;
+      padding-bottom: 0;
+      cursor: pointer;
+      .drag-img-wrap {
+        height: 100%;
+        width: 100%;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+    &-input {
+      display: none;
+    }
+    &-label {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      color: $white-color;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 14px;
+      margin-bottom: 11px;
+      align-items: flex-end;
+      cursor: pointer;
+    }
+    &-format {
+      color: #a7a7a7;
+      font-weight: 400;
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+    &-span {
+      color: #a7a7a7;
+      display: block;
+      margin-bottom: 20px;
+      text-align: center;
+      width: 245px;
+      margin: -98px auto 74px;
+      &-a {
+        color: #a7a7a7;
+        text-decoration: underline;
+      }
+    }
+  }
+  &-metadata {
+    margin-top: 22px;
+    &-form {
+      &-grp-row {
+        display: flex;
+        gap: 36px;
+        margin-bottom: 42px;
+        @media (max-width: 767px) {
+          flex-wrap: wrap;
+        }
+      }
+      &-grp {
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+        &.collection-name-grp {
+          width: 100%;
+        }
+        &-label {
+          font-size: 18px;
+          font-weight: 500;
+          margin-bottom: 7px;
+          color: $white-color;
+          white-space: nowrap;
+          svg {
+            vertical-align: sub;
+          }
+        }
+        &-input {
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(16px);
+          border-radius: 12px;
+          border: none;
+          padding: 11px 12px 11px 20px;
+          font-size: 16px;
+          color: rgb(255 255 255 / 50%);
+          outline: none;
+          &::placeholder {
+            color: rgb(255 255 255 / 50%);
+          }
+          &.collection-name {
+            width: 100%;
+          }
+          &.symbol {
+            width: 177px;
+            @media (max-width: 767px) {
+              width: 100%;
+            }
+          }
+          &.description-textarea {
+            min-height: 150px;
+            width: 100%;
+            resize: none;
+            padding: 22px 30px;
+            @media (max-width: 767px) {
+              padding: 11px 20px;
+            }
+          }
+        }
+        &-max {
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(16px);
+          border-radius: 12px;
+          width: 178px;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 42px;
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+          .royalities {
+            background: none;
+            backdrop-filter: none;
+            width: 70%;
+          }
+          &-btn {
+            text-transform: uppercase;
+            color: $white-color;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+          }
+        }
+      }
+      .btn-info {
+        font-size: 16px;
+        min-width: 140px;
+        margin-top: 54px;
+      }
+    }
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+.mediaProfilepage-datacontent-profiledetail.collection {
+  padding: 36px 64px 75px;
+  height: -moz-fit-content;
+  height: fit-content;
+  @media (max-width: 1200px) {
+    padding: 30px;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.fav-mint-button-row-div {
+  &-input {
+    display: none;
+    &:checked + label {
+      .bttn {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+    &-label {
+      margin: 0;
+    }
+  }
+}
+
+.mediaMinters{
+  margin-top: 45.6px;
+  &-inner{
+    &-head{
+      display: flex;
+      align-items: center;
+      gap: 22.22px;
+      margin-bottom: 22px;
+      .title{
+        
+      }
+      button {
+        background-color: transparent;
+        border: 2px solid $white-color;
+        border-radius: 50px;
+        cursor: pointer;
+        height: 20px;
+        position: relative;
+        width: 50px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+      
+      button:hover { background-color: #ffffff50; }
+      button:focus,
+      button:active { outline: none; }
+      button::-moz-focus-inner { border: 0; }
+      
+      .pin {
+        background-color: $white-color;
+        border-radius: 98px;
+        height: 13px;
+        left: 2.4px;
+        position: absolute;
+        top: 2px;
+        width: 13px;
+        transition: left ease .5s;
+      }
+      
+      button.on {
+        background-color: green;
+      }
+      
+      button.on .pin {
+        left: 30px;
+      }
+    }
+    &-filter{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      .addMint{
+        display: flex;
+        align-items: center;
+        gap: 22.92px;
+        .self{
+          display: flex;
+          align-items: center;
+          gap: 13px;
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(8px);
+          border-radius: 30px;
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          padding: 2px 2.5px;
+          width: 115px;
+          max-width: 100%;
+          .user-img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+          }
+          .user-name{
+            font-weight: 400;
+            font-size: 14px;
+            color: $white-color;
+            font-family: $Poppins-font;
+          }
+        }
+        .btn-mint{
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 30px;
+          padding: 7.7px 8.2px;
+          font-weight: 400;
+          font-size: 14px;
+          color: $white-color;
+          width: 145px;
+          max-width: 100%;
+          font-family: $Poppins-font;
+        }
+      }
+      .search{
+        background: rgba(255, 255, 255, 0.05);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        border-radius: 5px;
+        padding: 7px 5px 7px 5px;
+        display: flex;
+        align-items: center;
+        width: 282px;
+        max-width: 100%;
+        justify-content: center;
+        font-family: $Poppins-font;
+        &-input{
+          border: none;
+          background: transparent;
+          width: 226px;
+          max-width: 100%;
+          font-size: 14px;
+          &::placeholder{
+            color: rgba(255, 255, 255, 0.5);
+          }
+        }
+        .btn-search{
+          border: none;
+          background: transparent;
+          outline: none;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+    &-data{
+      .mintUser{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        align-items: center;
+        gap: 20px;
+        .card{
+          position: relative;
+          text-align: center;
+          &-close{
+            border: none;
+            background: transparent;
+            outline: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0;
+            margin: 0;
+            transform: translate(0px, 0px);
+            .closeImg{
+              width: 8px;
+            }
+          }
+          &-userImg{
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-bottom: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+          }
+          &-userName{
+            font-size: 12px;
+            font-weight: 400;
+            color: #55E0FF;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+}

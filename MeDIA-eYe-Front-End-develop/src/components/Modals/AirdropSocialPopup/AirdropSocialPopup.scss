@@ -1,0 +1,73 @@
+@import '../../../assets/css/variables.scss';
+
+.airdrop-social-popup {
+  width: 40%;
+  margin-top: 10%;
+  &-main-content {
+    text-align: center;
+    &-head {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+    &-iframe {
+      width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+      &-content {
+        width: 100%;
+        height: 21em;
+        &-spotify {
+          width: 100%;
+          height: 13vh;
+        }
+      }
+      .modal-airdrop-token-follow-snapchat{
+        &-head{
+          text-align: left;
+          margin-bottom: 15px;
+          font-weight: 600;
+        }
+        &-hidden-input{
+          visibility: hidden;
+        }
+        &-drop-label{
+          padding: 30px;
+          background-color: #1f1954;
+          @include vendor-prefix(border-radius, 12px);
+          border: 1px dashed #fff;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 15px;
+          color: #96949F;
+          svg{
+            height: 20px;
+            fill: #96949F;
+          }
+        }
+        &-flex{
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 15px;
+          letter-spacing: 0.5px;
+          color: #96949F;
+          svg{
+            height: 15px;
+            width: 15px;
+            fill: #96949F;
+            &:first-child{
+              height: 25px;
+              width: 25px;
+              fill: #96949F;
+              transform: scale(0.8);
+            }
+          }
+        }
+      }
+    }
+  }
+}

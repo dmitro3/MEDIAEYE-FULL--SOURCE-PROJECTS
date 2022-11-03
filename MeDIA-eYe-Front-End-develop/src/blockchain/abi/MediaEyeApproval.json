@@ -1,0 +1,17 @@
+[
+  {
+    "inputs": [
+      { "internalType": "address[]", "name": "_tokens", "type": "address[]" },
+      {
+        "internalType": "address[]",
+        "name": "_operators",
+        "type": "address[]"
+      },
+      { "internalType": "bool[]", "name": "_approved", "type": "bool[]" }
+    ],
+    "name": "setApprovalForAllMultiple",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

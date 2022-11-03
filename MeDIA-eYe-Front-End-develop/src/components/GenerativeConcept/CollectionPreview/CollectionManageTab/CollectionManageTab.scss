@@ -1,0 +1,183 @@
+@import '../../../../assets/css/variables.scss';
+.generative-manage-tab{
+    margin-top: 50px;
+    position: relative;
+
+    &-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-left{
+            display: grid;
+            &-top{
+                @include fontStyle(20px, 30px, 500);
+            }
+        }
+        &-right{
+            .btn-square{
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+            svg{
+                width: 10px;
+                height: 10px;
+                stroke: #ffffff;
+            }
+        }
+    }
+    &-content{
+        margin-top: 54px;
+        &-row{
+            &-title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                &-left{
+                    @include fontStyle(16px, 24px, 500);
+                    cursor: pointer;
+                }
+                &-dropdown{
+                    position: absolute;
+                    top: 30px;
+                    z-index: 2;
+                    &-inner{
+                        background: #242242;
+                        width: 130px;
+                        @include vendor-prefix(border-radius, 5px);
+                        ul{
+                            li{
+                                padding: 10px;
+                                @include fontStyle(14px, 21px, 400);
+                                color: rgba(255, 255, 255, 0.5);
+                                &:hover{
+                                    color: #ffffff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-list{
+                margin-top: 24px;
+                &-block{
+                    margin-right: 20px;
+                    &-image{
+                        width: 100%;
+                        height: 180px;
+                        position: relative;
+                        &-delete{
+                            display: none;
+                            position: absolute;
+                            top: 0px;
+                            right: 0px;
+                            padding: 5px;
+                            padding-bottom: 3px;
+                            @include vendor-prefix(border-top-right-radius, 5px);
+                            @include vendor-prefix(border-bottom-left-radius, 5px);
+                            background: #242242;
+                        }
+                        &:hover{
+                            .generative-manage-tab-content-row-list-block-image-delete{
+                                display: block;
+                            }
+                        }
+                    }
+                    &-content{
+                        padding: 10px;
+                        background: #242242;
+                        @include vendor-prefix(border-bottom-left-radius, 5px);
+                        @include vendor-prefix(border-bottom-right-radius, 5px);
+                        &-editname{
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            &-input{
+                                    background: rgba(255, 255, 255, 0.05);
+                                    border: none;
+                                    @include vendor-prefix(border-radius, 3px);
+                                    color: #ffffff;
+                                    padding: 0px 4px;
+                                    height: 20px;
+                                &:focus{
+                                    outline: none;
+                                }
+                            }
+                            .svg-group{
+                                display: flex;
+                                align-items: center;
+                                gap: 2px;
+                                svg{
+                                    stroke: #ffffff;
+                                    fill: #ffffff;
+                                    width: 12px;
+                                    height: 8px;
+                                    path{
+                                        fill: #ffffff;
+                                    }
+                                }
+                            }
+                        }
+                        &-range{
+                            margin: 10px 0px;
+                            input{
+                                width: 100%;
+                            }
+                        }
+                        &-estimate{
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            &-right{
+                                display: flex;
+                                .hash{
+                                    background: rgba(255, 255, 255, 0.05);
+                                    @include vendor-prefix(border-top-left-radius, 5px);
+                                    @include vendor-prefix(border-bottom-right-radius, 5px);
+                                    padding: 1px 5px;
+                                    color: rgba(255, 255, 255, 0.5);
+                                }
+                                .per{
+                                    background: rgba(255, 255, 255, 0.05);
+                                    @include vendor-prefix(border-top-right-radius, 5px);
+                                    @include vendor-prefix(border-bottom-right-radius, 5px);
+                                    padding: 1px 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-updates{
+        // width: fit-content;
+        // position: absolute;
+        // bottom: -50px;
+        // right: 0px;
+        // z-index: 9;
+        &-inner{
+            background: #242242;
+            @include vendor-prefix(border-radius, 5px);
+            padding: 10px;
+            &-title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &-buttonsection{
+                margin: 12px 0px;
+                display: flex;
+                justify-content: center;
+                .btn-square{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}

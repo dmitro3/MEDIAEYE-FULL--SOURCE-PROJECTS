@@ -1,0 +1,69 @@
+@import '../../../assets/css/variables.scss';
+
+.graph-charts-page{
+    .mediaeye-tabss-lists button{
+        @include fontStyle(16px, 27px, 500);
+        padding: 10px 24px;
+    }
+   &-graph{
+       &-charts{
+        .mediaeye-tabss-lists button{
+            @include fontStyle(16px, 27px, 500);
+            padding: 10px 24px;
+        }
+        &-holder{
+            margin: 24px;
+            &-sold{
+                height: 400px;
+                &-header{
+                    margin-bottom: -60px;
+                    text-align: flex-end;
+                    button{
+                        border: none;
+                        background: none;
+                         outline: none;
+                    font-family: Poppins;
+                    font-style: normal;
+                     font-weight: 500;
+                    font-size: 15px;
+                    line-height: 22px;
+                    color: #ffffff;
+                    cursor: pointer;
+                        margin: 0 5px;
+                    position: relative;
+                    z-index: 1;
+                    &.active{
+                        color: #0075ff;
+                    }
+                    }
+                }
+            }
+            &-trade{
+                height: 400px;
+                &-header{
+                    margin-bottom: -60px;
+                    text-align: flex-end;
+                    button{
+                        border: none;
+                        background: none;
+                         outline: none;
+                    font-family: Poppins;
+                    font-style: normal;
+                     font-weight: 500;
+                    font-size: 15px;
+                    line-height: 22px;
+                    color: #ffffff;
+                    cursor: pointer;
+                        margin: 0 5px;
+                    position: relative;
+                    z-index: 1;
+                    &.active{
+                        color: #0075ff;
+                    }
+                    }
+                }
+            }
+        }
+       }
+   }
+}

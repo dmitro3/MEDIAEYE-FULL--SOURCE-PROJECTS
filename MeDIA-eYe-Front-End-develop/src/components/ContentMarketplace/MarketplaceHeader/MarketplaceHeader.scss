@@ -1,0 +1,125 @@
+@import '../../../assets/css/variables.scss';
+.nft-marketplace-page {
+    &-inner {
+        margin-top: 20px;
+    }
+}
+
+.nftmarketplace-header {
+    width: 100%;
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &-poster {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        img {
+            width: 100%;
+        }
+        &-container {
+            position: relative;
+            height: 100%;
+        }
+        svg {
+            width: 13px;
+            height: 24px;
+        }
+        &-slide {
+            margin-bottom: 30px;
+        }
+        &-fullscreen {
+            width: 100%;
+            // margin: 0px 24px;
+        }
+        &-responsive {
+            display: none;
+        }
+
+        &-hero {
+            background: rgba(52, 47, 123, 0.95);
+            bottom: 0;
+            padding: 12px 24px;
+            position: absolute;
+            @include fontStyle(16px, 103.5%, 700);
+            @include vendor-prefix(border-bottom-left-radius, 10px);
+            @include vendor-prefix(border-top-right-radius, 10px);
+        }
+        &-hero2 {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            background: $featured-color;
+            bottom: 0;
+            padding: 12px 24px;
+            position: absolute;
+            @include vendor-prefix(border-bottom-left-radius, 10px);
+            @include vendor-prefix(border-top-right-radius, 10px);
+            img {
+                width: 112px;
+            }
+            span {
+                @include fontStyle(16px, 17px, 400);
+            }
+        }
+        .swiper-scrollbar {
+            display: none;
+        }
+    }
+
+    @media(max-width: '992.80px') {
+        &-title {
+            margin-right: 50px;
+        }
+    }
+
+    @media(max-width: '768px') {
+        &-title {
+            @include fontStyle(36px, 103.5%, 700);
+            text-align: center;
+            padding: 42px 0;
+            margin-right: 0;
+            @media(max-width: '365px') {
+                @include fontStyle(30px, 103.5%, 700);
+            }
+        }
+
+        &-poster {
+            &-fullscreen {
+                display: none;
+            }
+
+            &-responsive {
+                display: block;
+                margin: 0 12px;
+                width: 85%;
+            }
+
+            &-hero {
+                left: 20%;
+                bottom: 0;
+                padding: 12px 42px;
+                @include fontStyle(16px, 103.5%, 700);
+                @media(max-width: '668px') {
+                    padding: 12px 24px;
+                }
+                @media(max-width: '568px') {
+                    left: 18%;
+                    bottom: -2%;
+                }
+                @media(max-width: '468px') {
+                    left: 15%;
+                    bottom: -9%;
+                }
+                @media(max-width: '414px') {
+                    left: 11%;
+                    bottom: -20%;
+                }
+            }
+        }
+    }
+}
